@@ -33,34 +33,52 @@ ALLOWED_HOSTS = ['*']
 
 
 # Application definition
+DJANGO_APPS = [
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
+]
 
-INSTALLED_APPS = [
-    'signup',
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'customauth.apps.UserAppConfig',
-    'corsheaders',
-    'rest_framework',
+THIRD_PARTY_APPS = [
+    "rest_framework",
+    "rest_framework.authtoken",
+    "anymail",
+    "corsheaders",
+    "drf_spectacular",
+    "debug_toolbar",
     'rest_framework_simplejwt',
     'rest_framework_simplejwt.token_blacklist',
     'django_filters',
 ]
+
+
+CUSTOM_APPS = [
+    'customauth.apps.UserAppConfig',
+    "core",
+    "emailer",
+    'signup',
+]
+
+INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + CUSTOM_APPS
 
 AUTH_USER_MODEL = 'customauth.CustomUser'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    "core.middleware.RequestIDMiddleware",
+    "core.middleware.ExceptionHandlerMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
 ROOT_URLCONF = 'charitydonate.urls'
@@ -145,7 +163,20 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+    "EXCEPTION_HANDLER": "core.exception_handlers.custom_exception_handler",
 }
+
+# ? Documentation Settings
+SPECTACULAR_SETTINGS = {
+    "TITLE": "DONATION TRACE API",
+    "DESCRIPTION": "API Documentation for Donation TRACE",
+    "VERSION": "0.0.1",
+    "SERVE_INCLUDE_SCHEMA": False,
+    "DISABLE_ERRORS_AND_WARNINGS": True,
+    "SCHEMA_COERCE_PATH_PK_SUFFIX": True,
+}
+
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:8000",
 ]
@@ -170,3 +201,45 @@ SIMPLE_JWT = {
     "BLACKLIST_AFTER_ROTATION": True,
     "UPDATE_LAST_LOGIN": False,
     }
+
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.googlemail.com"
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+DEFAULT_FROM_EMAIL = config("DEFAULT_SENDER")
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "handlers": {
+        "console": {"class": "logging.StreamHandler", "formatter": "simple"},
+        "file": {
+            "class": "logging.FileHandler",
+            "filename": "general.log",
+            "formatter": "verbose",
+            "level": config("DJANGO_LOG_LEVEL", "WARNING"),
+        },
+    },
+    "loggers": {
+        "": {  # The empty string indicates ~ All Apps including installed apps
+            "handlers": ["file"],
+            "propagate": True,
+        },
+    },
+    "formatters": {
+        "verbose": {
+            "format": (
+                "{asctime} ({levelname}) -  {module} {name} {process:d} {thread:d}"
+                " {message}"
+            ),
+            "style": "{",
+        },
+        "simple": {
+            "format": "{asctime} ({levelname}) -  {message}",
+            "style": "{",
+        },
+    },
+}

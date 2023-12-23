@@ -1,0 +1,6 @@
+2023-12-23 22:19:47,702 (WARNING) -  log django.request 28871 140369817761344 Bad Request: /api/v1/auth/register/
+2023-12-23 22:19:50,204 (WARNING) -  log django.request 28871 140369817761344 Bad Request: /api/v1/auth/register/
+2023-12-23 22:19:59,607 (WARNING) -  log django.request 28871 140369817761344 Bad Request: /api/v1/auth/register/
+2023-12-23 22:20:30,655 (WARNING) -  log django.request 28871 140369817761344 Unauthorized: /api/v1/auth/update_profile/
+2023-12-23 22:25:27,995 (WARNING) -  log django.request 29394 140475888563776 Unauthorized: /api/token/
+2023-12-23 22:27:47,555 (WARNING) -  log django.request 29394 140475888563776 Unauthorized: /api/token/verify/

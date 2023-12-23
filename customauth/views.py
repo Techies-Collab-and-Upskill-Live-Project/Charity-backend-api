@@ -6,6 +6,7 @@ from rest_framework_simplejwt.tokens import RefreshToken, OutstandingToken
 from .serializers import UserLoginSerializer, UserProfileSerializer, UserProfileUpdateSerializer, UserRegisterSerializer
 from django.contrib.auth import authenticate
 from rest_framework.viewsets import GenericViewSet
+from drf_spectacular.utils import extend_schema
 
 
 class UserRegisterView(GenericViewSet):
@@ -15,6 +16,7 @@ class UserRegisterView(GenericViewSet):
 
     Allows users to register by providing email and password.
     """
+    @extend_schema(tags=['Authentication'], summary='Register a new user')
     def register(self, request, *args, **kwargs):
         """
         Handle POST requests for user registration.
@@ -43,6 +45,7 @@ class UserLoginView(GenericViewSet):
 
     Allows users to log in by providing their email and password.
     """
+    @extend_schema(tags=['Authentication'], summary='Login a user')
     def login(self, request, *args, **kwargs):
         """
         Handle POST requests for user login.
@@ -75,6 +78,7 @@ class UserLogoutView(GenericViewSet):
     """
     permission_classes = [IsAuthenticated]
 
+    @extend_schema(tags=['Authentication'], summary='Logout a user')
     def logout(self, request, *args, **kwargs):
         """
         Handle POST requests for user logout.
@@ -109,6 +113,7 @@ class UpdateProfileView(APIView):
     """
     permission_classes = [IsAuthenticated]
 
+    @extend_schema(tags=['User Profile'], summary='Get user profile(Authenticated)')
     def get_object(self, request):
         """
         Get the user profile object associated with the authenticated user.
@@ -120,7 +125,7 @@ class UpdateProfileView(APIView):
         - The user profile object.
         """
         return request.user.userprofile
-
+    @extend_schema(tags=['User Profile'], summary='Get a user profile')
     def get(self, request, *args, **kwargs):
         """
         Handle GET requests for retrieving user profile.
@@ -137,6 +142,7 @@ class UpdateProfileView(APIView):
         serializer = UserProfileSerializer(profile)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
+    @extend_schema(tags=['User Profile'], summary='Update user profile')
     def put(self, request, *args, **kwargs):
         """
         Handle PUT requests for updating user profile.
@@ -158,6 +164,7 @@ class UpdateProfileView(APIView):
 class PasswordResetView(APIView):
     permission_classes = [IsAuthenticated]
 
+    @extend_schema(tags=['Authentication'], summary='Reset user password')
     def put(self, request, *args, **kwargs):
         profile = request.user.userprofile
         serializer = UserProfileUpdateSerializer(profile, data=request.data, partial=True)
@@ -177,7 +184,7 @@ class UserProfileView(APIView):
     """
     permission_classes = [IsAuthenticated]
 
-
+    @extend_schema(tags=['User Profile'], summary='Access user profile details')
     def get(self, request, *args, **kwargs):
         # Access the UserProfile from the CustomUser instance
         profile = request.user.userprofile
