@@ -7,7 +7,8 @@ from .serializers import UserLoginSerializer, UserProfileSerializer, UserProfile
 from django.contrib.auth import authenticate
 from rest_framework.viewsets import GenericViewSet
 from drf_spectacular.utils import extend_schema
-
+import datetime
+from emailer.email_backend import send_email
 
 class UserRegisterView(GenericViewSet):
     serializer_class = UserRegisterSerializer
@@ -32,6 +33,20 @@ class UserRegisterView(GenericViewSet):
         serializer = UserRegisterSerializer(data=request.data)
         if serializer.is_valid():
             user_data = serializer.save()
+
+            email = user_data['email']
+
+            subscriber_name = email.split('@')[0]
+            # Prepare the HTML content from the template
+            context = {'subscriber_name': subscriber_name}
+
+            # Send email using the existing backend
+            subject = 'Donation Trace - Registration Alert'
+            recipient_list = [email]
+            template = 'signup_alert.html'
+
+            send_email(subject=subject, recipient_list=recipient_list, context=context, template=template)
+
             return Response({
                 'detail': 'User registered successfully',
                 'user_data': user_data,
@@ -65,9 +80,37 @@ class UserLoginView(GenericViewSet):
         if not user:
             return Response({'detail': 'Invalid credentials'}, status=status.HTTP_401_UNAUTHORIZED)
         refresh = RefreshToken.for_user(user)
+
+        # Get the metadata from where the request is coming from
+        # including device and IP address
+        try:
+                user_agent = request.META.get('HTTP_USER_AGENT', None)
+                ip_address = request.META.get('REMOTE_ADDR', None)
+        except AttributeError:
+                print(AttributeError)
+                user_agent = None
+                ip_address = None
+
+        subscriber_name = email.split('@')[0]
+        current_date = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        # split date and time
+        date, time = current_date.split(' ')
+        date = datetime.datetime.strptime(date, "%Y-%m-%d").strftime("%dth of %B, %Y")
+        time = datetime.datetime.strptime(time, "%H:%M:%S").strftime("%I:%M %p")
+        formated_time = f"{date} at {time}"
+        # Prepare the HTML content from the template
+        context = {'subscriber_name': subscriber_name, 'user_agent': user_agent, 'ip_address': ip_address, 'time': formated_time}
+
+        # Send email using the existing backend
+        subject = 'Donation Trace - Login Alert'
+        recipient_list = [email]
+        template = 'login_alert.html'
+
+        send_email(subject=subject, recipient_list=recipient_list, context=context, template=template)
+
         return Response({
             'refresh': str(refresh),
-            'access': str(refresh.access_token),
+            'access': str(refresh.access_token)
         }, status=status.HTTP_200_OK)
 
 class UserLogoutView(GenericViewSet):
@@ -190,3 +233,12 @@ class UserProfileView(APIView):
         profile = request.user.userprofile
         serializer = UserProfileSerializer(profile)
         return Response(serializer.data)
+
+class DeleteUserView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    @extend_schema(tags=['User Profile'], summary='Delete user profile')
+    def delete(self, request, *args, **kwargs):
+        user = request.user
+        user.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
