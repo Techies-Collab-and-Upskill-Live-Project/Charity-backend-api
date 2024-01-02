@@ -8347,3 +8347,1293 @@ TypeError: Object of type CustomUser is not JSON serializable
 2023-12-24 18:21:21,203 (WARNING) -  log django.request 60600 140364909694976 Bad Request: /api/v1/auth/register/
 2023-12-24 18:24:47,936 (WARNING) -  log django.request 60795 139963952136192 Unauthorized: /api/v1/auth/delete-user/
 2023-12-24 18:26:59,281 (WARNING) -  log django.request 60794 139963952136192 Unauthorized: /api/v1/auth/login/
+2023-12-26 11:05:12,063 (WARNING) -  log django.request 101037 140340686222912 Bad Request: /api/v1/auth/register/
+2023-12-26 11:05:39,720 (WARNING) -  log django.request 101037 140340686222912 Unauthorized: /api/v1/auth/login/
+2023-12-26 11:08:38,229 (WARNING) -  log django.request 101037 140340686222912 Unauthorized: /api/v1/auth/delete-user/
+2023-12-26 19:12:48,494 (ERROR) -  middleware core.middleware 104972 140379454170688 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/ap” does not exist, Request_ID: a015517f-43e4-4dab-8af0-ecdab7b83ee8
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 50, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/ap” does not exist
+2023-12-26 19:12:48,499 (ERROR) -  log django.request 104972 140379454170688 Internal Server Error: /ap
+2023-12-26 19:12:49,233 (ERROR) -  middleware core.middleware 104972 140379445777984 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/api” does not exist, Request_ID: 6dc00cec-5ec6-442a-9fa0-051c765c34e9
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 50, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/api” does not exist
+2023-12-26 19:12:49,235 (ERROR) -  log django.request 104972 140379445777984 Internal Server Error: /api
+2023-12-26 19:12:51,266 (ERROR) -  middleware core.middleware 104972 140379437385280 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/api/v” does not exist, Request_ID: 046f5ce8-1f51-4fce-880b-5a9d4f371a2d
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 50, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/api/v” does not exist
+2023-12-26 19:12:51,269 (ERROR) -  log django.request 104972 140379437385280 Internal Server Error: /api/v
+2023-12-26 19:12:52,016 (ERROR) -  middleware core.middleware 104972 140379428992576 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/api/v1” does not exist, Request_ID: 7963d7a1-0e6f-4828-bdd2-b5f4e18a15d0
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 50, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/api/v1” does not exist
+2023-12-26 19:12:52,017 (ERROR) -  log django.request 104972 140379428992576 Internal Server Error: /api/v1/
+2023-12-26 19:12:54,133 (ERROR) -  middleware core.middleware 104972 140379420599872 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/api/v1/auth” does not exist, Request_ID: 095d4e33-9657-44af-9f7f-cbc8c8c91c07
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 50, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/api/v1/auth” does not exist
+2023-12-26 19:12:54,134 (ERROR) -  log django.request 104972 140379420599872 Internal Server Error: /api/v1/auth
+2023-12-26 19:12:54,996 (ERROR) -  middleware core.middleware 104972 140379412207168 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/api/v1/auth/logi” does not exist, Request_ID: e918cbc8-ad83-4156-a86a-7b7f050f0e1c
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 50, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/api/v1/auth/logi” does not exist
+2023-12-26 19:12:54,998 (ERROR) -  log django.request 104972 140379412207168 Internal Server Error: /api/v1/auth/logi
+2023-12-26 19:12:56,217 (ERROR) -  middleware core.middleware 104972 140378925692480 An exception occurred: 'UserLoginView' should either include a `serializer_class` attribute, or override the `get_serializer_class()` method., Request_ID: d98264de-1a34-40ab-8618-a7425dc3bbd0
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/renderers.py", line 723, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/renderers.py", line 654, in get_context
+    raw_data_post_form = self.get_raw_data_form(data, view, 'POST', request)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/renderers.py", line 553, in get_raw_data_form
+    serializer = view.get_serializer()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 108, in get_serializer
+    serializer_class = self.get_serializer_class()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 122, in get_serializer_class
+    assert self.serializer_class is not None, (
+AssertionError: 'UserLoginView' should either include a `serializer_class` attribute, or override the `get_serializer_class()` method.
+2023-12-26 19:12:56,219 (ERROR) -  log django.request 104972 140378925692480 Internal Server Error: /api/v1/auth/login/
+2023-12-26 19:13:51,096 (WARNING) -  log django.request 104972 140378917299776 Method Not Allowed: /api/v1/auth/login/
+2023-12-27 02:36:00,405 (WARNING) -  log django.request 127471 140032232912448 Bad Request: /api/v1/auth/register/
+2023-12-27 02:37:24,590 (WARNING) -  log django.request 127471 140032232912448 Bad Request: /api/v1/auth/register/
+2023-12-27 02:37:52,507 (WARNING) -  log django.request 127471 140032232912448 Unauthorized: /api/v1/auth/delete-user/
+2023-12-27 02:38:03,700 (ERROR) -  middleware core.middleware 127471 140032232912448 An exception occurred: CustomUser() got unexpected keyword arguments: 'first_name', 'last_name', Request_ID: a7c19278-4333-4663-b6bd-c99997e570da
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/customauth/views.py", line 35, in register
+    user_data = serializer.save()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/customauth/serializers.py", line 40, in create
+    user = get_user_model().objects.create_user(
+  File "/home/samuel/Documents/freelance/Charity-backend-api/customauth/models.py", line 12, in create_user
+    user = self.model(email=email, **extra_fields)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/base.py", line 567, in __init__
+    raise TypeError(
+TypeError: CustomUser() got unexpected keyword arguments: 'first_name', 'last_name'
+2023-12-27 02:38:03,711 (ERROR) -  log django.request 127471 140032232912448 Internal Server Error: /api/v1/auth/register/
+2023-12-27 03:12:52,650 (ERROR) -  middleware core.middleware 131394 140070746060352 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/api/v1/campaign_category/list” does not exist, Request_ID: 43ed4baa-f548-46a9-9b5d-dfcf3aa9c79d
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 50, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/api/v1/campaign_category/list” does not exist
+2023-12-27 03:12:52,705 (ERROR) -  log django.request 131394 140070746060352 Internal Server Error: /api/v1/campaign_category/list
+2023-12-27 12:16:21,536 (ERROR) -  middleware core.middleware 135729 140480388003392 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/api/v1/campaign_category/list” does not exist, Request_ID: 35162bb8-9a60-4571-9cb8-e72422286afc
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 50, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/api/v1/campaign_category/list” does not exist
+2023-12-27 12:16:21,537 (ERROR) -  log django.request 135729 140480388003392 Internal Server Error: /api/v1/campaign_category/list
+2023-12-27 12:19:19,126 (WARNING) -  log django.security.csrf 135910 140628417574464 Forbidden (CSRF cookie not set.): /api/v1/campaign_category/create
+2023-12-27 12:20:22,034 (WARNING) -  log django.security.csrf 135910 140628417574464 Forbidden (CSRF cookie not set.): /api/v1/campaign_category/create
+2023-12-27 12:25:32,113 (ERROR) -  middleware core.middleware 137978 140159111657024 An exception occurred: list indices must be integers or slices, not str, Request_ID: c2e3d4f9-f7ff-4350-87e6-f3b1c2721535
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/campaign_category/views.py", line 35, in list
+    serializer.data["count"] = len(campaign_categories)
+TypeError: list indices must be integers or slices, not str
+2023-12-27 12:25:32,116 (ERROR) -  log django.request 137978 140159111657024 Internal Server Error: /api/v1/campaign_category/list/
+2023-12-27 12:26:08,341 (ERROR) -  middleware core.middleware 138091 139691194054208 An exception occurred: list indices must be integers or slices, not str, Request_ID: 1b90ffab-a8de-4f5f-858d-e3a3e02541de
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/campaign_category/views.py", line 35, in list
+    serializer.data["count"] = len(campaign_categories)
+TypeError: list indices must be integers or slices, not str
+2023-12-27 12:26:08,342 (ERROR) -  log django.request 138091 139691194054208 Internal Server Error: /api/v1/campaign_category/list/
+2023-12-27 12:26:23,406 (ERROR) -  middleware core.middleware 138211 140109349385792 An exception occurred: list indices must be integers or slices, not str, Request_ID: b9c20b33-30fb-4963-9400-5b5f16ba2f2c
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/campaign_category/views.py", line 35, in list
+    serializer.data["count"] = len(campaign_categories)
+TypeError: list indices must be integers or slices, not str
+2023-12-27 12:26:23,407 (ERROR) -  log django.request 138211 140109349385792 Internal Server Error: /api/v1/campaign_category/list/
+2023-12-27 12:29:31,837 (WARNING) -  log django.request 138351 140225270511168 Bad Request: /api/v1/campaign_category/create/
+2023-12-27 12:30:17,331 (WARNING) -  log django.request 138351 140225270511168 Bad Request: /api/v1/campaign_category/create/
+2023-12-27 12:30:34,931 (WARNING) -  log django.request 138351 140225270511168 Bad Request: /api/v1/campaign_category/create/
+2023-12-27 12:35:15,578 (ERROR) -  middleware core.middleware 139266 140205483882048 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/api/v1/campaign_category/retrieve” does not exist, Request_ID: 2f154f16-f218-4fee-baa5-d2c0b1832648
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 50, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/api/v1/campaign_category/retrieve” does not exist
+2023-12-27 12:35:15,580 (ERROR) -  log django.request 139266 140205483882048 Internal Server Error: /api/v1/campaign_category/retrieve/
+2023-12-27 12:35:44,667 (ERROR) -  middleware core.middleware 139266 140205483882048 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/api/v1/campaign_category/retrieve/8fa52d39-27e0-4190-a89b-2daa1ed81350” does not exist, Request_ID: 93ffde74-9922-43bc-a055-7f65b0775100
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 50, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/api/v1/campaign_category/retrieve/8fa52d39-27e0-4190-a89b-2daa1ed81350” does not exist
+2023-12-27 12:35:44,668 (ERROR) -  log django.request 139266 140205483882048 Internal Server Error: /api/v1/campaign_category/retrieve/8fa52d39-27e0-4190-a89b-2daa1ed81350
+2023-12-27 12:35:51,135 (ERROR) -  middleware core.middleware 139266 140205483882048 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/api/v1/campaign_category/retrieve/8fa52d39-27e0-4190-a89b-2daa1ed81350” does not exist, Request_ID: 7821b6cf-5aeb-42fd-8389-4a6d0a13f41e
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 50, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/api/v1/campaign_category/retrieve/8fa52d39-27e0-4190-a89b-2daa1ed81350” does not exist
+2023-12-27 12:35:51,136 (ERROR) -  log django.request 139266 140205483882048 Internal Server Error: /api/v1/campaign_category/retrieve/8fa52d39-27e0-4190-a89b-2daa1ed81350/
+2023-12-27 12:36:41,232 (ERROR) -  middleware core.middleware 139266 140205483882048 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/api/v1/campaign_category/retrieve/8fa52d39-27e0-4190-a89b-2daa1ed81350” does not exist, Request_ID: 931b5127-3854-47ec-aea8-c934ebbe478f
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 50, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/api/v1/campaign_category/retrieve/8fa52d39-27e0-4190-a89b-2daa1ed81350” does not exist
+2023-12-27 12:36:41,233 (ERROR) -  log django.request 139266 140205483882048 Internal Server Error: /api/v1/campaign_category/retrieve/8fa52d39-27e0-4190-a89b-2daa1ed81350/
+2023-12-27 12:40:11,002 (ERROR) -  middleware core.middleware 139266 140205483882048 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/api/v1/campaign_category/retrieve/8fa52d3927e04190a89b2daa1ed81350” does not exist, Request_ID: a10fd3c5-03cc-4796-90a5-2ad2403676aa
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 50, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/api/v1/campaign_category/retrieve/8fa52d3927e04190a89b2daa1ed81350” does not exist
+2023-12-27 12:40:11,003 (ERROR) -  log django.request 139266 140205483882048 Internal Server Error: /api/v1/campaign_category/retrieve/8fa52d3927e04190a89b2daa1ed81350/
+2023-12-27 12:42:47,757 (ERROR) -  middleware core.middleware 140291 139725738341952 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/api/v1/campaign_category/retrieve/8fa52d3927e04190a89b2daa1ed81350” does not exist, Request_ID: 16e7a53e-aa1f-4bff-b741-a66c8056b5a6
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 50, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/api/v1/campaign_category/retrieve/8fa52d3927e04190a89b2daa1ed81350” does not exist
+2023-12-27 12:42:47,758 (ERROR) -  log django.request 140291 139725738341952 Internal Server Error: /api/v1/campaign_category/retrieve/8fa52d3927e04190a89b2daa1ed81350/
+2023-12-27 12:42:53,596 (ERROR) -  middleware core.middleware 140291 139725738341952 An exception occurred: 'UUID' object has no attribute 'replace', Request_ID: 62edc137-3d72-445f-85b9-2dbf5d7f906e
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/campaign_category/views.py", line 53, in retrieve
+    uuid_obj = UUID(pk)
+  File "/usr/lib/python3.10/uuid.py", line 174, in __init__
+    hex = hex.replace('urn:', '').replace('uuid:', '')
+AttributeError: 'UUID' object has no attribute 'replace'
+2023-12-27 12:42:53,601 (ERROR) -  log django.request 140291 139725738341952 Internal Server Error: /api/v1/campaign_category/retrieve/8fa52d39-27e0-4190-a89b-2daa1ed81350/
+2023-12-27 12:43:25,256 (ERROR) -  middleware core.middleware 140426 140029721572928 An exception occurred: 'UUID' object has no attribute 'replace', Request_ID: 389fd598-3c9a-4a8e-af8e-5e2fcbf56214
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/campaign_category/views.py", line 54, in retrieve
+    uuid_obj = UUID(pk)
+  File "/usr/lib/python3.10/uuid.py", line 174, in __init__
+    hex = hex.replace('urn:', '').replace('uuid:', '')
+AttributeError: 'UUID' object has no attribute 'replace'
+2023-12-27 12:43:25,258 (ERROR) -  log django.request 140426 140029721572928 Internal Server Error: /api/v1/campaign_category/retrieve/8fa52d39-27e0-4190-a89b-2daa1ed81350/
+2023-12-27 12:43:40,636 (WARNING) -  log django.request 140500 139667956561472 Bad Request: /api/v1/campaign_category/retrieve/8fa52d39-27e0-4190-a89b-2daa1ed81350/
+2023-12-27 12:44:10,143 (WARNING) -  log django.request 140603 139722243438144 Bad Request: /api/v1/campaign_category/retrieve/8fa52d39-27e0-4190-a89b-2daa1ed81350/
+2023-12-27 12:44:24,181 (WARNING) -  log django.request 140727 140362819565120 Bad Request: /api/v1/campaign_category/retrieve/8fa52d39-27e0-4190-a89b-2daa1ed81350/
+2023-12-27 12:45:09,638 (WARNING) -  log django.request 140903 139711974733376 Bad Request: /api/v1/campaign_category/retrieve/8fa52d39-27e0-4190-a89b-2daa1ed81350/
+2023-12-27 12:47:40,917 (ERROR) -  middleware core.middleware 141437 139759656629824 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/api/v1/campaign_category/retrieve/8fa52d39-27e0-4190-a89b-2daa1ed8135” does not exist, Request_ID: de78d912-980b-4726-91b2-c206a1e70139
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 50, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/api/v1/campaign_category/retrieve/8fa52d39-27e0-4190-a89b-2daa1ed8135” does not exist
+2023-12-27 12:47:40,921 (ERROR) -  log django.request 141437 139759656629824 Internal Server Error: /api/v1/campaign_category/retrieve/8fa52d39-27e0-4190-a89b-2daa1ed8135/
+2023-12-27 12:55:34,176 (ERROR) -  middleware core.middleware 141984 140683331499584 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/api/v1/campaign_category/retrieve/8fa52d39-27e0-4190-a89b-2daa1ed8135” does not exist, Request_ID: 73e75687-8912-487c-a0d2-0de327854bc5
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 50, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/api/v1/campaign_category/retrieve/8fa52d39-27e0-4190-a89b-2daa1ed8135” does not exist
+2023-12-27 12:55:34,178 (ERROR) -  log django.request 141984 140683331499584 Internal Server Error: /api/v1/campaign_category/retrieve/8fa52d39-27e0-4190-a89b-2daa1ed8135/
+2023-12-27 13:07:51,285 (WARNING) -  log django.request 142696 140006851081792 Bad Request: /api/v1/campaign_category/retrieve/8fa52d39-27e0-4190-a89b-2daa1ed81350/
+2023-12-27 13:09:05,155 (WARNING) -  log django.request 142805 140162822567488 Bad Request: /api/v1/campaign_category/retrieve/8fa52d39-27e0-4190-a89b-2daa1ed81350/
+2023-12-27 13:09:14,630 (ERROR) -  middleware core.middleware 142805 140162822567488 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/api/v1/campaign_category/retrieve/8fa52d39-27e0-4190-a89b-2daa1ed81350s” does not exist, Request_ID: 80bf1945-7097-4070-b413-cc73a16c5db5
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 50, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/api/v1/campaign_category/retrieve/8fa52d39-27e0-4190-a89b-2daa1ed81350s” does not exist
+2023-12-27 13:09:14,631 (ERROR) -  log django.request 142805 140162822567488 Internal Server Error: /api/v1/campaign_category/retrieve/8fa52d39-27e0-4190-a89b-2daa1ed81350s/
+2023-12-27 14:42:52,842 (WARNING) -  log django.request 149131 139760043554368 Unauthorized: /api/v1/auth/user-profile/
+2023-12-27 14:48:42,930 (ERROR) -  middleware core.middleware 150131 139922384090688 An exception occurred: no such table: campaign_campaign, Request_ID: 9368bb91-acc7-4564-938c-f884274c4fcc
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: campaign_campaign
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/customauth/views.py", line 229, in delete
+    user.delete()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1171, in delete
+    return collector.delete()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/deletion.py", line 472, in delete
+    count = qs._raw_delete(using=self.using)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1208, in _raw_delete
+    cursor = query.get_compiler(using).execute_sql(CURSOR)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: campaign_campaign
+2023-12-27 14:48:42,987 (ERROR) -  log django.request 150131 139922384090688 Internal Server Error: /api/v1/auth/delete-user/
+2023-12-27 14:49:09,368 (ERROR) -  middleware core.middleware 150131 139922384090688 An exception occurred: no such table: campaign_campaign, Request_ID: 2062c099-3302-443e-b106-de69830cb34a
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: campaign_campaign
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/customauth/views.py", line 229, in delete
+    user.delete()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1171, in delete
+    return collector.delete()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/deletion.py", line 472, in delete
+    count = qs._raw_delete(using=self.using)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1208, in _raw_delete
+    cursor = query.get_compiler(using).execute_sql(CURSOR)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: campaign_campaign
+2023-12-27 14:49:09,369 (ERROR) -  log django.request 150131 139922384090688 Internal Server Error: /api/v1/auth/delete-user/
+2023-12-27 14:56:43,098 (WARNING) -  log django.request 150131 139922384090688 Bad Request: /api/v1/auth/register/
+2023-12-27 14:56:53,937 (ERROR) -  middleware core.middleware 150131 139922384090688 An exception occurred: no such table: campaign_campaign, Request_ID: 5fcf5579-790c-4be3-a4d4-1c0db3db66cb
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: campaign_campaign
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/customauth/views.py", line 229, in delete
+    user.delete()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1171, in delete
+    return collector.delete()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/deletion.py", line 472, in delete
+    count = qs._raw_delete(using=self.using)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1208, in _raw_delete
+    cursor = query.get_compiler(using).execute_sql(CURSOR)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: campaign_campaign
+2023-12-27 14:56:53,938 (ERROR) -  log django.request 150131 139922384090688 Internal Server Error: /api/v1/auth/delete-user/
+2023-12-27 14:57:18,869 (ERROR) -  middleware core.middleware 150131 139922384090688 An exception occurred: no such table: campaign_campaign, Request_ID: 6239bf96-0de0-4b3d-8f0b-31159ff964a4
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: campaign_campaign
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/customauth/views.py", line 229, in delete
+    user.delete()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1171, in delete
+    return collector.delete()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/deletion.py", line 472, in delete
+    count = qs._raw_delete(using=self.using)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1208, in _raw_delete
+    cursor = query.get_compiler(using).execute_sql(CURSOR)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: campaign_campaign
+2023-12-27 14:57:18,869 (ERROR) -  log django.request 150131 139922384090688 Internal Server Error: /api/v1/auth/delete-user/
+2023-12-27 14:59:00,422 (ERROR) -  middleware core.middleware 150131 139922384090688 An exception occurred: no such table: campaign_campaign, Request_ID: c6604833-e448-4d11-8859-55a6f1082998
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: campaign_campaign
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/customauth/views.py", line 229, in delete
+    user.delete()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1171, in delete
+    return collector.delete()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/deletion.py", line 472, in delete
+    count = qs._raw_delete(using=self.using)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1208, in _raw_delete
+    cursor = query.get_compiler(using).execute_sql(CURSOR)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: campaign_campaign
+2023-12-27 14:59:00,423 (ERROR) -  log django.request 150131 139922384090688 Internal Server Error: /api/v1/auth/delete-user/
+2023-12-27 15:09:47,581 (ERROR) -  middleware core.middleware 151339 139866924906048 An exception occurred: no such table: campaign_campaign, Request_ID: 121a6f2b-1bd0-4a3e-ac4c-7b3ac54c745d
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: campaign_campaign
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/customauth/views.py", line 229, in delete
+    user.delete()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1171, in delete
+    return collector.delete()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/deletion.py", line 472, in delete
+    count = qs._raw_delete(using=self.using)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1208, in _raw_delete
+    cursor = query.get_compiler(using).execute_sql(CURSOR)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: campaign_campaign
+2023-12-27 15:09:47,584 (ERROR) -  log django.request 151339 139866924906048 Internal Server Error: /api/v1/auth/delete-user/
+2023-12-27 15:23:53,313 (ERROR) -  middleware core.middleware 152078 139941126338112 An exception occurred: no such table: campaign_campaign, Request_ID: 888eb760-8419-4e22-bd13-9288c9a87eb3
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: campaign_campaign
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/customauth/views.py", line 233, in delete
+    user_profile.delete()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1171, in delete
+    return collector.delete()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/deletion.py", line 472, in delete
+    count = qs._raw_delete(using=self.using)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1208, in _raw_delete
+    cursor = query.get_compiler(using).execute_sql(CURSOR)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: campaign_campaign
+2023-12-27 15:23:53,316 (ERROR) -  log django.request 152078 139941126338112 Internal Server Error: /api/v1/auth/delete-user/
+2023-12-27 15:23:58,851 (ERROR) -  middleware core.middleware 152078 139941126338112 An exception occurred: no such table: campaign_campaign, Request_ID: 108befc4-64a8-462d-824e-c9ae5fa84b0e
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: campaign_campaign
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/customauth/views.py", line 233, in delete
+    user_profile.delete()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1171, in delete
+    return collector.delete()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/deletion.py", line 472, in delete
+    count = qs._raw_delete(using=self.using)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1208, in _raw_delete
+    cursor = query.get_compiler(using).execute_sql(CURSOR)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: campaign_campaign
+2023-12-27 15:23:58,851 (ERROR) -  log django.request 152078 139941126338112 Internal Server Error: /api/v1/auth/delete-user/
+2023-12-27 15:27:07,426 (WARNING) -  log django.request 152437 140479614154304 Bad Request: /api/v1/auth/delete-user/
+2023-12-27 15:31:48,454 (ERROR) -  middleware core.middleware 152666 140478154536512 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/api/v1/campaign_category/list” does not exist, Request_ID: 67d73976-bd13-4e4e-a622-cede31d08edd
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 50, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/api/v1/campaign_category/list” does not exist
+2023-12-27 15:31:48,454 (ERROR) -  log django.request 152666 140478154536512 Internal Server Error: /api/v1/campaign_category/list/
+2023-12-27 15:31:56,994 (WARNING) -  log django.request 152666 140478154536512 Method Not Allowed: /api/v1/campaign_category/
+2023-12-27 15:32:41,997 (WARNING) -  log django.request 152666 140478154536512 Method Not Allowed: /api/v1/campaign_category/
+2023-12-27 15:35:45,490 (ERROR) -  middleware core.middleware 152666 140478154536512 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/api/v1/campaign_category/retrieve/8fa52d39-27e0-4190-a89b-2daa1ed81350” does not exist, Request_ID: 595a674a-7ced-44ee-a7b2-48db78f9e38a
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 50, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/api/v1/campaign_category/retrieve/8fa52d39-27e0-4190-a89b-2daa1ed81350” does not exist
+2023-12-27 15:35:45,491 (ERROR) -  log django.request 152666 140478154536512 Internal Server Error: /api/v1/campaign_category/retrieve/8fa52d39-27e0-4190-a89b-2daa1ed81350/
+2023-12-27 15:36:16,819 (WARNING) -  log django.request 152666 140478154536512 Method Not Allowed: /api/v1/campaign_category/e5759c23-a296-47d0-a416-cbce7c5b1e43/
+2023-12-27 15:36:31,590 (WARNING) -  log django.request 152666 140478154536512 Method Not Allowed: /api/v1/campaign_category/e5759c23-a296-47d0-a416-cbce7c5b1e43/
+2023-12-27 15:36:47,313 (WARNING) -  log django.request 152666 140478154536512 Method Not Allowed: /api/v1/campaign_category/
+2023-12-27 15:37:58,992 (WARNING) -  log django.request 153707 139974010730048 Bad Request: /api/v1/campaign_category/update/e5759c23-a296-47d0-a416-cbce7c5b1e43/
+2023-12-27 15:38:26,457 (WARNING) -  log django.request 153762 140253866227264 Bad Request: /api/v1/campaign_category/delete/e5759c23-a296-47d0-a416-cbce7c5b1e43/
+2023-12-27 18:09:35,555 (WARNING) -  log django.request 159552 140498158220864 Bad Request: /api/v1/campaign_category/delete/e5759c23-a296-47d0-a416-cbce7c5b1e43/
+2023-12-27 18:11:21,079 (WARNING) -  log django.request 159552 140498158220864 Unauthorized: /api/v1/campaign/
+2023-12-27 18:31:47,450 (WARNING) -  log django.request 177692 139688672224832 Not Found: /api/v1/campaign/402a0b85-09da-4752-a36d-28bca9348919/
+2023-12-28 20:53:36,977 (ERROR) -  middleware core.middleware 52045 139905835464256 An exception occurred: 'CampaignView' object has no attribute 'list_by_category', Request_ID: 64733026-f434-4594-aa3a-48b632f00c01
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 281, in get_schema
+    paths=self.parse(request, public),
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 202, in parse
+    endpoints = self._get_paths_and_endpoints()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 192, in _get_paths_and_endpoints
+    view = self.create_view(callback, method)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 143, in create_view
+    action = getattr(view, view.action)
+AttributeError: 'CampaignView' object has no attribute 'list_by_category'
+2023-12-28 20:53:36,981 (ERROR) -  log django.request 52045 139905835464256 Internal Server Error: /api/schema/
+2023-12-28 20:53:37,040 (ERROR) -  middleware core.middleware 52045 139905835464256 An exception occurred: 'CampaignView' object has no attribute 'list_by_category', Request_ID: 0bc36750-9307-4768-be45-bde1f9575291
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 281, in get_schema
+    paths=self.parse(request, public),
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 202, in parse
+    endpoints = self._get_paths_and_endpoints()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 192, in _get_paths_and_endpoints
+    view = self.create_view(callback, method)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 143, in create_view
+    action = getattr(view, view.action)
+AttributeError: 'CampaignView' object has no attribute 'list_by_category'
+2023-12-28 20:53:37,041 (ERROR) -  log django.request 52045 139905835464256 Internal Server Error: /api/schema/
+2023-12-28 21:11:12,695 (WARNING) -  log django.request 52045 139905835464256 Unauthorized: /api/v1/auth/delete-user/
+2023-12-29 13:43:09,465 (ERROR) -  middleware core.middleware 102126 139716927157824 An exception occurred: 'CampaignView' object has no attribute 'list_by_category', Request_ID: 9975b44d-942f-42d8-83bd-be379d72d3a4
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 281, in get_schema
+    paths=self.parse(request, public),
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 202, in parse
+    endpoints = self._get_paths_and_endpoints()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 192, in _get_paths_and_endpoints
+    view = self.create_view(callback, method)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 143, in create_view
+    action = getattr(view, view.action)
+AttributeError: 'CampaignView' object has no attribute 'list_by_category'
+2023-12-29 13:43:09,487 (ERROR) -  log django.request 102126 139716927157824 Internal Server Error: /api/schema/
+2023-12-29 13:43:09,619 (ERROR) -  middleware core.middleware 102126 139716927157824 An exception occurred: 'CampaignView' object has no attribute 'list_by_category', Request_ID: 29a7a945-0183-413b-b8f0-073d8bc4e801
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 281, in get_schema
+    paths=self.parse(request, public),
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 202, in parse
+    endpoints = self._get_paths_and_endpoints()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 192, in _get_paths_and_endpoints
+    view = self.create_view(callback, method)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 143, in create_view
+    action = getattr(view, view.action)
+AttributeError: 'CampaignView' object has no attribute 'list_by_category'
+2023-12-29 13:43:09,620 (ERROR) -  log django.request 102126 139716927157824 Internal Server Error: /api/schema/
+2023-12-29 13:49:40,362 (ERROR) -  middleware core.middleware 102737 139721030235712 An exception occurred: 'CampaignView' object has no attribute 'list_by_category', Request_ID: 7708fcd7-fb96-46ef-9308-c6f8f854f77d
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 281, in get_schema
+    paths=self.parse(request, public),
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 202, in parse
+    endpoints = self._get_paths_and_endpoints()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 192, in _get_paths_and_endpoints
+    view = self.create_view(callback, method)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 143, in create_view
+    action = getattr(view, view.action)
+AttributeError: 'CampaignView' object has no attribute 'list_by_category'
+2023-12-29 13:49:40,365 (ERROR) -  log django.request 102737 139721030235712 Internal Server Error: /api/schema/
+2023-12-29 13:49:40,392 (ERROR) -  middleware core.middleware 102737 139721030235712 An exception occurred: 'CampaignView' object has no attribute 'list_by_category', Request_ID: 8d3f2d9a-3bb4-4092-88d8-4e512508ac7b
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 281, in get_schema
+    paths=self.parse(request, public),
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 202, in parse
+    endpoints = self._get_paths_and_endpoints()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 192, in _get_paths_and_endpoints
+    view = self.create_view(callback, method)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 143, in create_view
+    action = getattr(view, view.action)
+AttributeError: 'CampaignView' object has no attribute 'list_by_category'
+2023-12-29 13:49:40,394 (ERROR) -  log django.request 102737 139721030235712 Internal Server Error: /api/schema/
+2023-12-29 13:51:25,187 (WARNING) -  log django.request 102737 139721012401728 Not Found: /api/v1/campaign/402a0b85-09da-4752-a36d-28bca9348919/
+2023-12-29 14:08:40,821 (WARNING) -  log django.request 105393 140692786509376 Unauthorized: /api/v1/campaign/402a0b85-09da-4752-a36d-28bca9348919/create/
+2023-12-29 14:08:58,209 (WARNING) -  log django.request 105393 140692786509376 Unauthorized: /api/v1/campaign/402a0b85-09da-4752-a36d-28bca9348919/create/
+2023-12-29 14:09:03,048 (WARNING) -  log django.request 105393 140692786509376 Unauthorized: /api/v1/auth/login/
+2023-12-29 14:09:34,459 (ERROR) -  middleware core.middleware 105393 140692786509376 An exception occurred: NOT NULL constraint failed: campaign_campaign.name, Request_ID: 80a9b6c4-4311-464f-a755-98b835b5de45
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: campaign_campaign.name
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/campaign/views.py", line 48, in create
+    campaign = Campaign.objects.create(
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/query.py", line 677, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/base.py", line 901, in save_base
+    updated = self._save_table(
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1059, in _save_table
+    results = self._do_insert(
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1100, in _do_insert
+    return manager._insert(
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1845, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: campaign_campaign.name
+2023-12-29 14:09:34,470 (ERROR) -  log django.request 105393 140692786509376 Internal Server Error: /api/v1/campaign/402a0b85-09da-4752-a36d-28bca9348919/create/
+2023-12-29 14:11:18,929 (ERROR) -  middleware core.middleware 105816 140059414099520 An exception occurred: local variable 'name' referenced before assignment, Request_ID: 2e7102d1-a299-44df-b8e9-5d102d62bec7
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/campaign/views.py", line 31, in create
+    if not name or not title or not description or not goal or not raised or not image or not end_date or not beneficiary_name or not background_description or not what_campaign_will_do in request.data:
+UnboundLocalError: local variable 'name' referenced before assignment
+2023-12-29 14:11:18,931 (ERROR) -  log django.request 105816 140059414099520 Internal Server Error: /api/v1/campaign/402a0b85-09da-4752-a36d-28bca9348919/create/
+2023-12-29 14:14:04,401 (ERROR) -  middleware core.middleware 105816 140059414099520 An exception occurred: local variable 'name' referenced before assignment, Request_ID: 89d90570-220e-4174-839f-9006f3c24fd7
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/campaign/views.py", line 31, in create
+    if not name or not title or not description or not goal or not raised or not image or not end_date or not beneficiary_name or not background_description or not what_campaign_will_do in request.data:
+UnboundLocalError: local variable 'name' referenced before assignment
+2023-12-29 14:14:04,402 (ERROR) -  log django.request 105816 140059414099520 Internal Server Error: /api/v1/campaign/402a0b85-09da-4752-a36d-28bca9348919/create/
+2023-12-29 14:16:45,634 (WARNING) -  log django.request 106346 140505962772032 Bad Request: /api/v1/campaign/402a0b85-09da-4752-a36d-28bca9348919/create/
+2023-12-29 14:20:28,951 (WARNING) -  log django.request 106808 140533963945536 Bad Request: /api/v1/campaign/402a0b85-09da-4752-a36d-28bca9348919/create/
+2023-12-29 14:23:16,568 (WARNING) -  log django.request 107165 140665089422912 Unauthorized: /api/v1/campaign/
+2023-12-29 14:25:00,530 (WARNING) -  log django.request 107422 140159708296768 Bad Request: /api/v1/campaign/402a0b85-09da-4752-a36d-28bca9348919/create/
+2023-12-29 14:32:55,085 (ERROR) -  middleware core.middleware 108463 140168673621568 An exception occurred: Object of type CampaignCategory is not JSON serializable, Request_ID: 5bc667e9-42df-47f9-a7f9-d5368c72f51b
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/renderers.py", line 99, in render
+    ret = json.dumps(
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/usr/lib/python3.10/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/usr/lib/python3.10/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.10/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/utils/encoders.py", line 67, in default
+    return super().default(obj)
+  File "/usr/lib/python3.10/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type CampaignCategory is not JSON serializable
+2023-12-29 14:32:55,140 (ERROR) -  log django.request 108463 140168673621568 Internal Server Error: /api/v1/campaign/
+2023-12-29 14:37:10,121 (ERROR) -  middleware core.middleware 109099 140149409183296 An exception occurred: 'Campaign' object has no attribute 'created_at', Request_ID: 9aeb0981-41ec-4a0c-935e-83aecf21d66c
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/campaign/views.py", line 85, in list
+    "campaigns": serializer.data,
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/samuel/Documents/freelance/Charity-backend-api/campaign/serializers.py", line 42, in to_representation
+    'created_at': instance.created_at,
+AttributeError: 'Campaign' object has no attribute 'created_at'
+2023-12-29 14:37:10,128 (ERROR) -  log django.request 109099 140149409183296 Internal Server Error: /api/v1/campaign/
+2023-12-29 14:39:33,483 (WARNING) -  log django.request 109255 140289114109504 Unauthorized: /api/v1/campaign/13ced8a3-6222-41ba-94c8-698649719c66/
+2023-12-29 14:48:07,017 (WARNING) -  log django.request 110411 140035251762752 Bad Request: /api/v1/campaign/402a0b85-09da-4752-a36d-28bca9348919/create/
+2023-12-29 14:48:29,029 (WARNING) -  log django.request 110411 140035251762752 Bad Request: /api/v1/campaign/402a0b85-09da-4752-a36d-28bca9348919/create/
+2023-12-29 14:48:59,660 (WARNING) -  log django.request 110411 140035251762752 Bad Request: /api/v1/campaign/402a0b85-09da-4752-a36d-28bca9348919/create/
+2023-12-29 14:56:22,559 (WARNING) -  log django.request 110767 140005993346624 Bad Request: /api/v1/campaign/402a0b85-09da-4752-a36d-28bca9348919/create/
+2024-01-01 20:12:54,978 (ERROR) -  middleware core.middleware 67512 140003635099200 An exception occurred: 'CampaignView' object has no attribute 'list_by_category', Request_ID: f6515ded-3557-4000-a3e1-8dd6a21e2744
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 281, in get_schema
+    paths=self.parse(request, public),
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 202, in parse
+    endpoints = self._get_paths_and_endpoints()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 192, in _get_paths_and_endpoints
+    view = self.create_view(callback, method)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 143, in create_view
+    action = getattr(view, view.action)
+AttributeError: 'CampaignView' object has no attribute 'list_by_category'
+2024-01-01 20:12:54,983 (ERROR) -  log django.request 67512 140003635099200 Internal Server Error: /api/schema/
+2024-01-01 20:12:55,069 (ERROR) -  middleware core.middleware 67512 140003635099200 An exception occurred: 'CampaignView' object has no attribute 'list_by_category', Request_ID: 3a0e1ae8-1d0b-418e-aaec-864dff85c7a9
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 281, in get_schema
+    paths=self.parse(request, public),
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 202, in parse
+    endpoints = self._get_paths_and_endpoints()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 192, in _get_paths_and_endpoints
+    view = self.create_view(callback, method)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 143, in create_view
+    action = getattr(view, view.action)
+AttributeError: 'CampaignView' object has no attribute 'list_by_category'
+2024-01-01 20:12:55,071 (ERROR) -  log django.request 67512 140003635099200 Internal Server Error: /api/schema/
+2024-01-01 20:13:46,373 (ERROR) -  middleware core.middleware 67954 139624172222016 An exception occurred: 'CampaignView' object has no attribute 'list_by_category', Request_ID: a898becb-7a4f-42f4-be81-7b8e954dcdfe
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 281, in get_schema
+    paths=self.parse(request, public),
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 202, in parse
+    endpoints = self._get_paths_and_endpoints()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 192, in _get_paths_and_endpoints
+    view = self.create_view(callback, method)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 143, in create_view
+    action = getattr(view, view.action)
+AttributeError: 'CampaignView' object has no attribute 'list_by_category'
+2024-01-01 20:13:46,380 (ERROR) -  log django.request 67954 139624172222016 Internal Server Error: /api/schema/
+2024-01-01 20:13:46,482 (ERROR) -  middleware core.middleware 67954 139624172222016 An exception occurred: 'CampaignView' object has no attribute 'list_by_category', Request_ID: b8fb7c5c-6baf-401b-97fe-b3f706cbf038
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 281, in get_schema
+    paths=self.parse(request, public),
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 202, in parse
+    endpoints = self._get_paths_and_endpoints()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 192, in _get_paths_and_endpoints
+    view = self.create_view(callback, method)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 143, in create_view
+    action = getattr(view, view.action)
+AttributeError: 'CampaignView' object has no attribute 'list_by_category'
+2024-01-01 20:13:46,484 (ERROR) -  log django.request 67954 139624172222016 Internal Server Error: /api/schema/
+2024-01-01 20:16:16,449 (ERROR) -  middleware core.middleware 68225 140055985256000 An exception occurred: 'CampaignView' object has no attribute 'list', Request_ID: 8bdbe1f9-ab9b-48af-96d4-616605996028
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 281, in get_schema
+    paths=self.parse(request, public),
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 202, in parse
+    endpoints = self._get_paths_and_endpoints()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 192, in _get_paths_and_endpoints
+    view = self.create_view(callback, method)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 143, in create_view
+    action = getattr(view, view.action)
+AttributeError: 'CampaignView' object has no attribute 'list'
+2024-01-01 20:16:16,455 (ERROR) -  log django.request 68225 140055985256000 Internal Server Error: /api/schema/
+2024-01-01 20:16:16,542 (ERROR) -  middleware core.middleware 68225 140055985256000 An exception occurred: 'CampaignView' object has no attribute 'list', Request_ID: 2536430c-7051-43f5-ae78-fda3b7f04608
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 281, in get_schema
+    paths=self.parse(request, public),
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 202, in parse
+    endpoints = self._get_paths_and_endpoints()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 192, in _get_paths_and_endpoints
+    view = self.create_view(callback, method)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 143, in create_view
+    action = getattr(view, view.action)
+AttributeError: 'CampaignView' object has no attribute 'list'
+2024-01-01 20:16:16,543 (ERROR) -  log django.request 68225 140055985256000 Internal Server Error: /api/schema/
+2024-01-01 20:20:23,869 (WARNING) -  log django.request 68412 140550842873408 Unauthorized: /api/v1/campaign/
+2024-01-01 20:28:21,081 (WARNING) -  log django.request 68412 140550842873408 Unauthorized: /api/v1/campaign/402a0b85-09da-4752-a36d-28bca9348919/
+2024-01-01 20:28:30,430 (WARNING) -  log django.request 68412 140550842873408 Not Found: /api/v1/campaign/402a0b85-09da-4752-a36d-28bca9348919/
+2024-01-01 20:46:36,205 (WARNING) -  log django.request 70234 140572132111936 Unauthorized: /api/v1/campaign/13ced8a3-6222-41ba-94c8-698649719c66/
+2024-01-01 20:46:46,662 (WARNING) -  log django.request 70234 140572132111936 Unauthorized: /api/v1/campaign/13ced8a3-6222-41ba-94c8-698649719c66/
+2024-01-01 20:47:00,391 (WARNING) -  log django.request 70234 140572132111936 Unauthorized: /api/v1/campaign/eba7ad4a-2ee9-40da-81ef-d74084911cde/
+2024-01-01 20:47:07,647 (WARNING) -  log django.request 70234 140572132111936 Method Not Allowed: /api/v1/campaign/eba7ad4a-2ee9-40da-81ef-d74084911cde/
+2024-01-01 20:47:18,943 (WARNING) -  log django.request 70234 140572132111936 Method Not Allowed: /api/v1/campaign/eba7ad4a-2ee9-40da-81ef-d74084911cde/
+2024-01-01 20:51:43,111 (WARNING) -  log django.request 70234 140572132111936 Method Not Allowed: /api/v1/campaign/eba7ad4a-2ee9-40da-81ef-d74084911cde/
+2024-01-01 20:53:12,649 (WARNING) -  log django.request 70234 140572115334720 Unauthorized: /api/v1/campaign/eba7ad4a-2ee9-40da-81ef-d74084911cde/
+2024-01-01 20:53:33,893 (WARNING) -  log django.request 70234 140572115334720 Method Not Allowed: /api/v1/campaign/eba7ad4a-2ee9-40da-81ef-d74084911cde/
+2024-01-01 20:59:49,328 (WARNING) -  log django.request 71470 140153870874176 Bad Request: /api/v1/campaign_category/delete/e5759c23-a296-47d0-a416-cbce7c5b1e43/
+2024-01-01 21:00:29,174 (WARNING) -  log django.request 71470 140153870874176 Unauthorized: /api/v1/campaign/402a0b85-09da-4752-a36d-28bca9348919/create/
+2024-01-01 21:00:36,809 (WARNING) -  log django.request 71470 140153870874176 Unauthorized: /api/v1/campaign/402a0b85-09da-4752-a36d-28bca9348919/create/
+2024-01-01 21:00:45,922 (WARNING) -  log django.request 71470 140153870874176 Unauthorized: /api/v1/campaign/402a0b85-09da-4752-a36d-28bca9348919/create/
+2024-01-01 21:01:08,135 (WARNING) -  log django.request 71470 140153870874176 Not Found: /api/v1/campaign/402a0b85-09da-4752-a36d-28bca9348919/create/
+2024-01-01 21:01:33,612 (WARNING) -  log django.request 71470 140153870874176 Bad Request: /api/v1/campaign_category/create/
+2024-01-01 21:06:12,950 (WARNING) -  log django.request 72302 139905875310144 Not Found: /api/v1/campaign/402a0b85-09da-4752-a36d-28bca9348919/list/
