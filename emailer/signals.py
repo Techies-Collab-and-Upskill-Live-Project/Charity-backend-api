@@ -1,8 +1,9 @@
 # import datetime
 
 # from django.conf import settings
-# from django.db.models.signals import post_save
-# from django.dispatch import receiver
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+from customauth.models import CustomUser
 # from faker import Faker
 
 # from attendee_kyc.models import AttendeeKYC
@@ -83,3 +84,18 @@
 #             context=context,
 #             template="email/book_ticket.html",
 #         )
+
+# @receiver(post_save, sender=CustomUser)
+# def send_registration_email(sender, instance, created, **kwargs):
+#     if created:  # Check if a new user is created
+#         email = instance.email
+#         # Send email to the registered user
+#         subscriber_name = email.split('@')[0]
+#         # Prepare the HTML content from the template
+#         context = {'subscriber_name': subscriber_name}
+#         # Send email using the existing backend
+#         subject = 'Donation Trace - Registration Alert'
+#         recipient_list = [email]
+#         template = 'email/signup_alert.html'
+#         send_email(subject=subject, recipient_list=recipient_list, context=context, template=template)
+

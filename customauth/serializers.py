@@ -10,27 +10,26 @@ from django.contrib.auth.password_validation import validate_password
 from rest_framework_simplejwt.tokens import RefreshToken
 
 class UserRegisterSerializer(serializers.ModelSerializer):
+    first_name = serializers.CharField(max_length=50, required=True)
+    last_name = serializers.CharField(max_length=50, required=True)
+    email = serializers.EmailField(required=True)
     password = serializers.CharField(write_only=True, required=True)
-    password2 = serializers.CharField(write_only=True, required=True)
+
 
     class Meta:
         model = get_user_model()
-        fields = ('email', 'password', 'password2')
+        fields = ('first_name', 'last_name', 'email', 'password')
 
     def validate(self, data):
         password = data.get('password')
-        password2 = data.get('password2')
-
-        if password != password2:
-            raise serializers.ValidationError("Passwords do not match.")
-
         validate_password(password)
-
         return data
 
     def create(self, validated_data):
         email = validated_data['email']
         password = validated_data['password']
+        first_name = validated_data['first_name']
+        last_name = validated_data['last_name']
 
         # Check if a user with the same email already exists
         existing_user = get_user_model().objects.filter(email=email).first()
@@ -41,6 +40,8 @@ class UserRegisterSerializer(serializers.ModelSerializer):
         user = get_user_model().objects.create_user(
             email=email,
             password=password,
+            first_name=first_name,
+            last_name=last_name,
         )
 
         refresh = RefreshToken.for_user(user)

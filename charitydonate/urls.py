@@ -50,6 +50,8 @@ urlpatterns = [
             [
                 path('auth/', include('customauth.urls')),
                 path("", include("emailer.urls")),
+                path("campaign_category/", include("campaign_category.urls")),
+                path("campaign/", include("campaign.urls")),
             ]
         ),
     ),

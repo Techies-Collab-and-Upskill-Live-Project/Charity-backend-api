@@ -33,20 +33,6 @@ class UserRegisterView(GenericViewSet):
         serializer = UserRegisterSerializer(data=request.data)
         if serializer.is_valid():
             user_data = serializer.save()
-
-            email = user_data['email']
-
-            subscriber_name = email.split('@')[0]
-            # Prepare the HTML content from the template
-            context = {'subscriber_name': subscriber_name}
-
-            # Send email using the existing backend
-            subject = 'Donation Trace - Registration Alert'
-            recipient_list = [email]
-            template = 'signup_alert.html'
-
-            send_email(subject=subject, recipient_list=recipient_list, context=context, template=template)
-
             return Response({
                 'detail': 'User registered successfully',
                 'user_data': user_data,
@@ -239,6 +225,15 @@ class DeleteUserView(APIView):
 
     @extend_schema(tags=['User Profile'], summary='Delete user profile')
     def delete(self, request, *args, **kwargs):
-        user = request.user
-        user.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
+        try:
+                user = request.user
+
+                # Retrive the user profile if it exists
+                user_profile = getattr(user, 'userprofile', None)
+                if user_profile:
+                    user_profile.delete()
+
+                user.delete()
+                return Response(status=status.HTTP_204_NO_CONTENT)
+        except Exception as e:
+                return Response({"message": str(e)}, status=status.HTTP_400_BAD_REQUEST)
