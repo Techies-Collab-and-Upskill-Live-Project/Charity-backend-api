@@ -9637,3 +9637,57 @@ AttributeError: 'CampaignView' object has no attribute 'list'
 2024-01-01 21:01:08,135 (WARNING) -  log django.request 71470 140153870874176 Not Found: /api/v1/campaign/402a0b85-09da-4752-a36d-28bca9348919/create/
 2024-01-01 21:01:33,612 (WARNING) -  log django.request 71470 140153870874176 Bad Request: /api/v1/campaign_category/create/
 2024-01-01 21:06:12,950 (WARNING) -  log django.request 72302 139905875310144 Not Found: /api/v1/campaign/402a0b85-09da-4752-a36d-28bca9348919/list/
+2024-01-02 10:41:08,160 (WARNING) -  log django.request 91237 139856632084032 Bad Request: /api/v1/auth/register/
+2024-01-02 15:01:02,932 (WARNING) -  log django.request 105468 140061495522880 Unauthorized: /api/v1/campaign/
+2024-01-02 15:01:23,762 (ERROR) -  middleware core.middleware 105468 140061495522880 An exception occurred: no such column: campaign_campaign.donor_count, Request_ID: 504b8f9f-c71b-4b31-8e81-bf09a15b006f
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such column: campaign_campaign.donor_count
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/campaign/views.py", line 102, in list
+    count = len(campaigns)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/query.py", line 380, in __len__
+    self._fetch_all()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1926, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such column: campaign_campaign.donor_count
+2024-01-02 15:01:23,773 (ERROR) -  log django.request 105468 140061495522880 Internal Server Error: /api/v1/campaign/
+2024-01-02 15:05:25,935 (WARNING) -  log django.request 105720 140589777548864 Unauthorized: /api/v1/campaign/12692dfe-4b64-4bbe-91af-17aebec892aa/

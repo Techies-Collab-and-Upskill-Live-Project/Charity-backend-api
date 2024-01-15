@@ -14,3 +14,4 @@ class CampaignSerializer(serializers.ModelSerializer):
                 instance.name = validated_data.get('name', instance.name)
                 instance.save()
                 return instance
+

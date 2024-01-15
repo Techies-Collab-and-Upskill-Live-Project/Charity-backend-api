@@ -12,6 +12,7 @@ class Campaign(BaseModel):
         raised = models.IntegerField()
         image = models.ImageField(upload_to='campaign_images/')
         end_date = models.DateTimeField()
+        donor_count = models.IntegerField(default=0)
         is_active = models.BooleanField(default=False)
         is_featured = models.BooleanField(default=False)
         is_approved = models.BooleanField(default=False)
@@ -29,33 +30,3 @@ class Campaign(BaseModel):
 
         def __str__(self):
                 return self.name
-
-        def representation(self):
-                return {
-                        'id': self.id,
-                        'name': self.name,
-                        'title': self.title,
-                        'description': self.description,
-                        'goal': self.goal,
-                        'raised': self.raised,
-                        'image': self.image,
-                        'end_date': self.end_date,
-                        'is_active': self.is_active,
-                        'is_featured': self.is_featured,
-                        'is_approved': self.is_approved,
-                        'is_completed': self.is_completed,
-                        'is_successful': self.is_successful,
-                        'is_cancelled': self.is_cancelled,
-                        'is_deleted': self.is_deleted,
-                        'is_draft': self.is_draft,
-                        'is_rejected': self.is_rejected,
-                        'user_profile': self.user_profile,
-                        'beneficiary_name': self.beneficiary_name,
-                        'background_description': self.background_description,
-                        'what_campaign_will_do': self.what_campaign_will_do,
-                        'campaign_category': self.campaign_category,
-                        'campain_category_name': self.campaign_category.name,
-                        'created_at': self.created_at,
-                        'updated_at': self.updated_at,
-
-                }
