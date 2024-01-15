@@ -28,10 +28,6 @@ SECRET_KEY = 'h3$9j3%^*63(=j-2(@col83qx#qmk%-8f$539dgi=&b&8mptq+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
-
-
-
 # Application definition
 DJANGO_APPS = [
     "django.contrib.admin",
@@ -180,13 +176,11 @@ SPECTACULAR_SETTINGS = {
     "SCHEMA_COERCE_PATH_PK_SUFFIX": True,
 }
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:8000",
-]
+ALLOWED_HOSTS = ['*']
 
-CSRF_TRUSTED_ORIGINS = [
-    'http://localhost:8000',
-]
+CORS_ALLOWED_ORIGINS = ['http://localhost:8000', 'http://localhost:3000']
+
+CSRF_TRUSTED_ORIGINS = ['http://localhost:8000', 'http://localhost:3000']
 
 CSRF_COOKIE_SECURE = False
 CSRF_COOKIE_HTTPONLY = False
