@@ -52,6 +52,7 @@ urlpatterns = [
                 path("", include("emailer.urls")),
                 path("campaign_category/", include("campaign_category.urls")),
                 path("campaign/", include("campaign.urls")),
+                path("contactus/", include("contactus.urls")),
             ]
         ),
     ),

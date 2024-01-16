@@ -59,6 +59,7 @@ CUSTOM_APPS = [
     'donations',
     'campaign_category',
     'campaign',
+    'contactus',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + CUSTOM_APPS
