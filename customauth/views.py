@@ -9,6 +9,7 @@ from rest_framework.viewsets import GenericViewSet
 from drf_spectacular.utils import extend_schema
 import datetime
 from emailer.email_backend import send_email
+from rest_framework.exceptions import ValidationError
 
 class UserRegisterView(GenericViewSet):
     serializer_class = UserRegisterSerializer
@@ -134,77 +135,6 @@ class UserLogoutView(GenericViewSet):
             return Response({'detail': 'Both access and refresh tokens are required for logout'}, status=status.HTTP_400_BAD_REQUEST)
 
 
-class UpdateProfileView(APIView):
-    """
-    View for updating user profile.
-
-    Allows authenticated users to view and update their profile information.
-    """
-    permission_classes = [IsAuthenticated]
-
-    @extend_schema(tags=['User Profile'], summary='Get user profile(Authenticated)')
-    def get_object(self, request):
-        """
-        Get the user profile object associated with the authenticated user.
-
-        Parameters:
-        - `request`: The HTTP request object.
-
-        Returns:
-        - The user profile object.
-        """
-        return request.user.userprofile
-    @extend_schema(tags=['User Profile'], summary='Get a user profile')
-    def get(self, request, *args, **kwargs):
-        """
-        Handle GET requests for retrieving user profile.
-
-        Parameters:
-        - `request`: The HTTP request object.
-        - `args`: Additional arguments passed to the view.
-        - `kwargs`: Additional keyword arguments passed to the view.
-
-        Returns:
-        - A Response containing the user profile data.
-        """
-        profile = self.get_object(request)
-        serializer = UserProfileSerializer(profile)
-        return Response(serializer.data, status=status.HTTP_200_OK)
-
-    @extend_schema(tags=['User Profile'], summary='Update user profile')
-    def put(self, request, *args, **kwargs):
-        """
-        Handle PUT requests for updating user profile.
-
-        Parameters:
-        - `request`: The HTTP request object.
-        - `args`: Additional arguments passed to the view.
-        - `kwargs`: Additional keyword arguments passed to the view.
-
-        Returns:
-        - A Response containing the updated user profile data.
-        """
-        profile = self.get_object(request)
-        serializer = UserProfileUpdateSerializer(profile, data=request.data, partial=True)
-        serializer.is_valid(raise_exception=True)
-        serializer.save()
-        return Response(serializer.data, status=status.HTTP_200_OK)
-
-class PasswordResetView(APIView):
-    permission_classes = [IsAuthenticated]
-
-    @extend_schema(tags=['Authentication'], summary='Reset user password')
-    def put(self, request, *args, **kwargs):
-        profile = request.user.userprofile
-        serializer = UserProfileUpdateSerializer(profile, data=request.data, partial=True)
-
-        if serializer.is_valid():
-            serializer.save()
-            return Response({'detail': 'Password reset successfully'}, status=status.HTTP_200_OK)
-        else:
-            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-
 class UserProfileView(APIView):
     """
     API view to retrieve details of the user profile.
@@ -219,6 +149,59 @@ class UserProfileView(APIView):
         profile = request.user.userprofile
         serializer = UserProfileSerializer(profile)
         return Response(serializer.data)
+
+
+class UpdateProfileView(APIView):
+    """
+    View for updating user profile.
+
+    Allows authenticated users to view and update their profile information.
+    """
+    permission_classes = [IsAuthenticated]
+
+    @extend_schema(tags=['User Profile'], summary='Update user profile')
+    def put(self, request, *args, **kwargs):
+        """
+        Handle PUT requests for updating user profile.
+
+        Parameters:
+        - `request`: The HTTP request object.
+        - `args`: Additional arguments passed to the view.
+        - `kwargs`: Additional keyword arguments passed to the view.
+
+        Returns:
+        - A Response containing the updated user profile data.
+        """
+        profile = request.user.userprofile
+        if not profile:
+            return Response({'detail': 'User profile not found'}, status=status.HTTP_404_NOT_FOUND)
+        
+        if request.user != profile.user:
+            return Response({'detail': 'You are not authorized to update this profile'}, status=status.HTTP_403_FORBIDDEN)
+        
+        if not request.data:
+            return Response({'detail': 'No data provided'}, status=status.HTTP_400_BAD_REQUEST)
+        
+        valid_attributes = [
+            'first_name', 'last_name', 'about', 'short_description',
+            'instagram_link', 'facebook_link', 'twitter_link', 'profile_photo', 'new_password'
+        ]
+        for key in request.data.keys():
+            if key not in valid_attributes:
+                raise ValidationError(f"Invalid attribute '{key}'")
+
+        
+        try:
+                serializer = UserProfileUpdateSerializer(profile, data=request.data, partial=True)
+                serializer.is_valid(raise_exception=True)
+                serializer.save()
+                response = {
+                    'detail': 'Profile updated successfully',
+                    'data': serializer.data
+                }
+                return Response(response, status=status.HTTP_200_OK)
+        except Exception as e:
+                return Response({'detail': e.detail}, status=status.HTTP_400_BAD_REQUEST)
 
 class DeleteUserView(APIView):
     permission_classes = [IsAuthenticated]
@@ -237,3 +220,17 @@ class DeleteUserView(APIView):
                 return Response(status=status.HTTP_204_NO_CONTENT)
         except Exception as e:
                 return Response({"message": str(e)}, status=status.HTTP_400_BAD_REQUEST)
+        
+class PasswordResetView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    @extend_schema(tags=['Authentication'], summary='Reset user password')
+    def put(self, request, *args, **kwargs):
+        profile = request.user.userprofile
+        serializer = UserProfileUpdateSerializer(profile, data=request.data, partial=True)
+
+        if serializer.is_valid():
+            serializer.save()
+            return Response({'detail': 'Password reset successfully'}, status=status.HTTP_200_OK)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

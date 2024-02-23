@@ -43,3 +43,17 @@ class UserProfile(models.Model):
     instagram_link = models.URLField(blank=True)
     facebook_link = models.URLField(blank=True)
     twitter_link = models.URLField(blank=True)
+
+    @property
+    def name(self):
+        """
+        Returns the concatenation of the last name and first name.
+        """
+        if self.first_name and self.last_name:
+            return f"{self.last_name} {self.first_name}"
+        elif self.first_name:
+            return self.first_name
+        elif self.last_name:
+            return self.last_name
+        else:
+            return ""
