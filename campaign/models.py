@@ -1,6 +1,7 @@
 from typing import Any
 from django.db import models
 from core.models import BaseModel
+from cloudinary.models import CloudinaryField
 
 
 class Campaign(BaseModel):
@@ -10,7 +11,11 @@ class Campaign(BaseModel):
         campaign_category = models.ForeignKey('campaign_category.CampaignCategory', on_delete=models.CASCADE)
         goal = models.IntegerField()
         raised = models.IntegerField()
-        image = models.ImageField(upload_to='campaign_images/')
+        image = CloudinaryField(
+                'image',
+                null=True,
+                blank=True,
+                default='https://asset.cloudinary.com/dbn9ejpno/dcbb0fbcd596ecbbd4f91c9d47c7cdc7')
         end_date = models.DateTimeField()
         donor_count = models.IntegerField(default=0)
         is_active = models.BooleanField(default=False)

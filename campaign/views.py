@@ -6,7 +6,6 @@ from rest_framework import status
 from .models import Campaign
 from campaign_category.models import CampaignCategory
 from drf_spectacular.utils import extend_schema
-import uuid
 from rest_framework.permissions import IsAuthenticated
 
 
@@ -15,23 +14,14 @@ class CampaignView(GenericViewSet):
 
         permission_classes = [IsAuthenticated]
 
-
         # View to create a new campaign using the campaign category ID
+
         @response_schemas(
             response_model=CampaignSerializer, code=201, schema_response_codes=[400]
         )
         @extend_schema(tags=['Campaign'], summary='Create a new campaign')
         def create(self, request, campaign_category_id, *args, **kwargs):
                 try:
-                        try:
-                                # Retrieve the campaign category or raise Http404 if not found
-                                campaign_category = CampaignCategory.objects.get(id=campaign_category_id)
-                        except CampaignCategory.DoesNotExist:
-                                return Response(
-                                        {'error': 'Campaign category does not exist.'},
-                                        status=status.HTTP_404_NOT_FOUND
-                                )
-
                         # Define mandatory fields
                         mandatory_fields = ['name', 'title', 'description', 'goal', 'end_date', 'image', 'beneficiary_name', 'background_description', 'what_campaign_will_do']
 
@@ -43,49 +33,20 @@ class CampaignView(GenericViewSet):
                             error_message = f"Missing or empty fields: {', '.join(missing_fields)}"
                             return Response({'error': error_message}, status=status.HTTP_400_BAD_REQUEST)
 
-                        # Get the attributes from the request data
-                        name = data['name']
-                        title = data['title']
-                        description = data['description']
-                        goal = data['goal']
-                        raised = 0
-                        image = data['image']
-                        end_date = data['end_date']
-                        beneficiary_name = data['beneficiary_name']
-                        background_description = data['background_description']
-                        what_campaign_will_do = data['what_campaign_will_do']
 
+                        # Set the context for the serializer
+                        serializer_context = {'campaign_category_id': campaign_category_id, 'user_id': request.user.id}
 
-
-                        # Extract user ID from the access token in the header
-                        user_id = request.user.id
-
-                        # Create a new campaign
-                        campaign = Campaign.objects.create(
-                                name=name,
-                                title=title,
-                                description=description,
-                                campaign_category=campaign_category,
-                                goal=goal,
-                                raised=raised,
-                                image=image,
-                                end_date=end_date,
-                                beneficiary_name=beneficiary_name,
-                                background_description=background_description,
-                                what_campaign_will_do=what_campaign_will_do,
-                                user_profile_id=user_id
-                        )
-
-                        campaign.save()
+                        # Serialize the data and create the campaign
+                        serializer = CampaignSerializer(data=data, context=serializer_context)
+                        serializer.is_valid(raise_exception=True)
+                        campaign = serializer.save()
 
                         # Serialize the campaign
-                        serializer = CampaignSerializer(campaign)
-
                         response_data = {
-                                'campaign': serializer.data,
-                                'message': 'Campaign created successfully'
+                            'campaign': CampaignSerializer(campaign).data,
+                            'message': 'Campaign created successfully'
                         }
-
                         return Response(response_data, status=status.HTTP_201_CREATED)
                 except Exception as e:
                         return Response({"message": str(e)}, status=status.HTTP_400_BAD_REQUEST)
@@ -186,4 +147,8 @@ class CampaignView(GenericViewSet):
                 except Campaign.DoesNotExist:
                         return Response({"message": "Campaign does not exist"}, status=status.HTTP_404_NOT_FOUND)
                 except Exception as e:
-                        return Response({"message": str(e)}, status=status.HTTP_400_BAD_REQUEST)
+                        return Response(
+                                {
+                                        "message": str(e)
+                                },
+                                status=status.HTTP_400_BAD_REQUEST)

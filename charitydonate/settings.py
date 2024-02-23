@@ -12,6 +12,11 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 from decouple import config
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+import os
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -48,6 +53,7 @@ THIRD_PARTY_APPS = [
     'rest_framework_simplejwt',
     'rest_framework_simplejwt.token_blacklist',
     'django_filters',
+    'treblle',
 ]
 
 
@@ -79,6 +85,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     "debug_toolbar.middleware.DebugToolbarMiddleware",
+    'treblle.middleware.TreblleMiddleware',
 ]
 
 ROOT_URLCONF = 'charitydonate.urls'
@@ -179,13 +186,17 @@ SPECTACULAR_SETTINGS = {
 
 ALLOWED_HOSTS = ['*']
 
-CORS_ALLOWED_ORIGINS = ['http://localhost:8000', 'http://localhost:3000']
+CORS_ALLOWED_ORIGINS = ['http://localhost:8000', 'http://localhost:3000', 'https://charity-donation.onrender.com']
 
-CSRF_TRUSTED_ORIGINS = ['http://localhost:8000', 'http://localhost:3000']
+CSRF_TRUSTED_ORIGINS = ['http://localhost:8000', 'http://localhost:3000', 'https://charity-donation.onrender.com']
 
 CSRF_COOKIE_SECURE = False
 CSRF_COOKIE_HTTPONLY = False
 
+TREBLLE_INFO = {
+'api_key': os.environ.get('TREBLLE_API_KEY'),
+'project_id': os.environ.get('TREBLLE_PROJECT_ID')
+}
 
 CORS_ALLOW_CREDENTIALS = True
 
@@ -208,6 +219,12 @@ DEFAULT_FROM_EMAIL = config("DEFAULT_SENDER")
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
+# Cloudinary
+cloudinary.config(
+    cloud_name=config("CLOUDINARY_CLOUD_NAME"),
+    api_key=config("CLOUDINARY_API_KEY"),
+    api_secret=config("CLOUDINARY_API_SECRET"),
+)
 
 LOGGING = {
     "version": 1,

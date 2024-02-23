@@ -9691,3 +9691,38 @@ Traceback (most recent call last):
 django.db.utils.OperationalError: no such column: campaign_campaign.donor_count
 2024-01-02 15:01:23,773 (ERROR) -  log django.request 105468 140061495522880 Internal Server Error: /api/v1/campaign/
 2024-01-02 15:05:25,935 (WARNING) -  log django.request 105720 140589777548864 Unauthorized: /api/v1/campaign/12692dfe-4b64-4bbe-91af-17aebec892aa/
+2024-01-16 15:37:42,671 (WARNING) -  log django.request 227036 140324255032896 Bad Request: /api/v1/auth/register/
+2024-01-16 15:37:47,530 (WARNING) -  log django.request 227036 140324255032896 Bad Request: /api/v1/auth/register/
+2024-01-16 15:37:58,043 (WARNING) -  log django.request 227036 140324255032896 Bad Request: /api/v1/auth/register/
+2024-01-16 15:46:40,162 (WARNING) -  log django.request 227036 140324255032896 Unauthorized: /api/v1/campaign/
+2024-01-16 17:11:16,210 (WARNING) -  log django.request 233589 139994367784512 Unauthorized: /api/v1/campaign/fdab073b-10ac-488a-a4a0-770232553901/create/
+2024-01-16 17:37:22,102 (WARNING) -  log django.request 235837 140306969261632 Bad Request: /api/v1/campaign/fdab073b-10ac-488a-a4a0-770232553901/create/
+2024-01-16 17:37:54,880 (WARNING) -  log django.request 235979 140030654805568 Bad Request: /api/v1/campaign/fdab073b-10ac-488a-a4a0-770232553901/create/
+2024-01-16 17:38:59,216 (WARNING) -  log django.request 235979 140030654805568 Bad Request: /api/v1/campaign/fdab073b-10ac-488a-a4a0-770232553901/create/
+2024-01-16 17:39:15,772 (WARNING) -  log django.request 235979 140030654805568 Bad Request: /api/v1/campaign/fdab073b-10ac-488a-a4a0-770232553901/create/
+2024-01-16 17:39:51,636 (WARNING) -  log django.request 235979 140030654805568 Bad Request: /api/v1/campaign/fdab073b-10ac-488a-a4a0-770232553901/create/
+2024-01-16 17:39:59,026 (WARNING) -  log django.request 235979 140030654805568 Bad Request: /api/v1/campaign/fdab073b-10ac-488a-a4a0-770232553901/create/
+2024-01-16 17:40:06,176 (WARNING) -  log django.request 235979 140030654805568 Bad Request: /api/v1/campaign/fdab073b-10ac-488a-a4a0-770232553901/create/
+2024-01-16 17:45:14,436 (WARNING) -  log django.request 235979 140030654805568 Bad Request: /api/v1/campaign/fdab073b-10ac-488a-a4a0-770232553901/create/
+2024-01-16 17:46:31,588 (WARNING) -  log django.request 236688 139753627317824 Bad Request: /api/v1/campaign/fdab073b-10ac-488a-a4a0-770232553901/create/
+2024-01-16 18:09:32,765 (WARNING) -  log django.request 237579 139846183024192 Unauthorized: /api/v1/campaign/fdab073b-10ac-488a-a4a0-770232553901/create/
+2024-01-16 18:09:42,836 (WARNING) -  log django.request 237579 139846183024192 Unauthorized: /api/v1/campaign/fdab073b-10ac-488a-a4a0-770232553901/create/
+2024-01-16 18:10:15,156 (WARNING) -  log django.request 237579 139846183024192 Bad Request: /api/v1/campaign/fdab073b-10ac-488a-a4a0-770232553901/create/
+2024-01-16 18:13:59,328 (WARNING) -  log django.request 238423 140720224597568 Bad Request: /api/v1/campaign/fdab073b-10ac-488a-a4a0-770232553901/create/
+2024-01-16 18:14:26,987 (WARNING) -  log django.request 238575 139766776460864 Bad Request: /api/v1/campaign/fdab073b-10ac-488a-a4a0-770232553901/create/
+2024-01-16 18:17:42,736 (WARNING) -  log django.request 238878 140500766029376 Bad Request: /api/v1/campaign/fdab073b-10ac-488a-a4a0-770232553901/create/
+2024-01-16 18:24:36,828 (WARNING) -  log django.request 239211 139696321590848 Bad Request: /api/v1/campaign/fdab073b-10ac-488a-a4a0-770232553901/create/
+2024-01-16 18:25:16,437 (WARNING) -  log django.request 239333 139855847749184 Bad Request: /api/v1/campaign/fdab073b-10ac-488a-a4a0-770232553901/create/
+2024-01-16 18:25:55,094 (WARNING) -  log django.request 239442 140613786793536 Bad Request: /api/v1/campaign/fdab073b-10ac-488a-a4a0-770232553901/create/
+2024-01-16 18:27:02,315 (WARNING) -  log django.request 239620 139811807557184 Bad Request: /api/v1/campaign/fdab073b-10ac-488a-a4a0-770232553901/create/
+2024-01-16 18:27:39,746 (WARNING) -  log django.request 239620 139811807557184 Bad Request: /api/v1/campaign/fdab073b-10ac-488a-a4a0-770232553901/create/
+2024-01-16 18:27:45,032 (WARNING) -  log django.request 239620 139811807557184 Bad Request: /api/v1/campaign/fdab073b-10ac-488a-a4a0-770232553901/create/
+2024-01-16 18:36:21,160 (WARNING) -  log django.request 240325 139723698861632 Bad Request: /api/v1/campaign/fdab073b-10ac-488a-a4a0-770232553901/create/
+2024-01-16 18:37:27,225 (WARNING) -  log django.request 240459 140481101035072 Bad Request: /api/v1/campaign/fdab073b-10ac-488a-a4a0-770232553901/create/
+2024-01-16 18:38:01,673 (WARNING) -  log django.request 240584 140628962833984 Bad Request: /api/v1/campaign/fdab073b-10ac-488a-a4a0-770232553901/create/
+2024-01-16 19:00:38,499 (WARNING) -  log django.request 241850 139927139382848 Unauthorized: /api/v1/campaign/fdab073b-10ac-488a-a4a0-770232553901/create/
+2024-01-16 19:00:46,157 (WARNING) -  log django.request 241850 139927139382848 Unauthorized: /api/v1/campaign/fdab073b-10ac-488a-a4a0-770232553901/create/
+2024-01-16 19:00:47,484 (WARNING) -  log django.request 241850 139927139382848 Unauthorized: /api/v1/campaign/fdab073b-10ac-488a-a4a0-770232553901/create/
+2024-01-16 19:01:09,002 (WARNING) -  log django.request 241850 139927139382848 Bad Request: /api/v1/campaign/fdab073b-10ac-488a-a4a0-770232553901/create/
+2024-01-16 19:01:47,710 (WARNING) -  log django.request 242098 140554395448896 Bad Request: /api/v1/campaign/fdab073b-10ac-488a-a4a0-770232553901/create/
+2024-02-23 21:13:18,372 (WARNING) -  log django.request 66405 140688207377984 Bad Request: /api/v1/auth/register/
