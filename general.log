@@ -9726,3 +9726,183 @@ django.db.utils.OperationalError: no such column: campaign_campaign.donor_count
 2024-01-16 19:01:09,002 (WARNING) -  log django.request 241850 139927139382848 Bad Request: /api/v1/campaign/fdab073b-10ac-488a-a4a0-770232553901/create/
 2024-01-16 19:01:47,710 (WARNING) -  log django.request 242098 140554395448896 Bad Request: /api/v1/campaign/fdab073b-10ac-488a-a4a0-770232553901/create/
 2024-02-23 21:13:18,372 (WARNING) -  log django.request 66405 140688207377984 Bad Request: /api/v1/auth/register/
+2024-02-24 00:09:22,048 (ERROR) -  middleware core.middleware 86806 139734054598208 An exception occurred: CustomUser has no userprofile., Request_ID: 7b01b173-fec3-4ea3-99c0-a5c2701d75d6
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/customauth/views.py", line 177, in get
+    profile = request.user.userprofile
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 524, in __get__
+    raise self.RelatedObjectDoesNotExist(
+customauth.models.CustomUser.userprofile.RelatedObjectDoesNotExist: CustomUser has no userprofile.
+2024-02-24 00:09:22,050 (ERROR) -  log django.request 86806 139734054598208 Internal Server Error: /api/v1/auth/profile/get/
+2024-02-24 00:09:45,432 (ERROR) -  middleware core.middleware 86894 140681671603776 An exception occurred: CustomUser has no userprofile., Request_ID: ee578d37-7b01-403e-bf53-057b34091cfc
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/customauth/views.py", line 177, in get
+    profile = request.user.userprofile
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 524, in __get__
+    raise self.RelatedObjectDoesNotExist(
+customauth.models.CustomUser.userprofile.RelatedObjectDoesNotExist: CustomUser has no userprofile.
+2024-02-24 00:09:45,436 (ERROR) -  log django.request 86894 140681671603776 Internal Server Error: /api/v1/auth/profiles/
+2024-02-24 00:14:15,062 (ERROR) -  middleware core.middleware 87063 139728866244160 An exception occurred: CustomUser has no userprofile., Request_ID: 9fc63d83-c996-4650-bab1-9de4874b02b1
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/customauth/views.py", line 219, in get
+    profile = request.user.userprofile
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 524, in __get__
+    raise self.RelatedObjectDoesNotExist(
+customauth.models.CustomUser.userprofile.RelatedObjectDoesNotExist: CustomUser has no userprofile.
+2024-02-24 00:14:15,066 (ERROR) -  log django.request 87063 139728866244160 Internal Server Error: /api/v1/auth/user-profile/
+2024-02-24 00:15:31,179 (ERROR) -  middleware core.middleware 87537 140202026726976 An exception occurred: CustomUser has no userprofile., Request_ID: b37f84b6-3eab-489b-974f-ae40c8889b0c
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/customauth/views.py", line 176, in get
+    profile = request.user.userprofile
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 524, in __get__
+    raise self.RelatedObjectDoesNotExist(
+customauth.models.CustomUser.userprofile.RelatedObjectDoesNotExist: CustomUser has no userprofile.
+2024-02-24 00:15:31,184 (ERROR) -  log django.request 87537 140202026726976 Internal Server Error: /api/v1/auth/user-profile/
+2024-02-24 00:16:56,882 (WARNING) -  log django.request 87923 140476837525056 Unauthorized: /api/v1/auth/user-profile/
+2024-02-24 00:19:08,998 (ERROR) -  middleware core.middleware 88263 140156057155136 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/api/v1/auth/user-profile” does not exist, Request_ID: 08437f54-38ce-456c-9171-990c983de1e6
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 50, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/api/v1/auth/user-profile” does not exist
+2024-02-24 00:19:09,002 (ERROR) -  log django.request 88263 140156057155136 Internal Server Error: /api/v1/auth/user-profile/
+2024-02-24 00:20:26,328 (WARNING) -  log django.request 88427 139659679102528 Unauthorized: /api/v1/auth/profile/delete/
+2024-02-24 00:20:51,421 (WARNING) -  log django.request 88427 139659679102528 Unauthorized: /api/v1/auth/login/
+2024-02-24 00:23:05,808 (WARNING) -  log django.request 88841 140017168021056 Unauthorized: /api/v1/auth/profile/update/
+2024-02-24 00:23:13,867 (WARNING) -  log django.request 88841 140017168021056 Unauthorized: /api/v1/auth/login/
+2024-02-24 00:23:33,036 (WARNING) -  log django.request 88841 140017168021056 Method Not Allowed: /api/v1/auth/profile/update/
+2024-02-24 00:23:39,445 (ERROR) -  middleware core.middleware 88841 140017168021056 An exception occurred: 'UpdateProfileView' object has no attribute 'get_object', Request_ID: f092df63-60b5-4c44-9a39-662d72dd6b44
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/customauth/views.py", line 174, in put
+    profile = self.get_object(request)
+AttributeError: 'UpdateProfileView' object has no attribute 'get_object'
+2024-02-24 00:23:39,448 (ERROR) -  log django.request 88841 140017168021056 Internal Server Error: /api/v1/auth/profile/update/
+2024-02-24 00:24:39,873 (ERROR) -  middleware core.middleware 89203 140263218476608 An exception occurred: can't set attribute 'name', Request_ID: f063695b-2d72-41c9-894d-48cdbd4fe7f2
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/customauth/views.py", line 177, in put
+    serializer.save()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/customauth/serializers.py", line 107, in update
+    instance.name = f"{instance.first_name} {instance.last_name}".strip() or ''
+AttributeError: can't set attribute 'name'
+2024-02-24 00:24:39,876 (ERROR) -  log django.request 89203 140263218476608 Internal Server Error: /api/v1/auth/profile/update/
+2024-02-24 00:26:01,584 (WARNING) -  log django.request 89387 139935376995904 Bad Request: /api/v1/auth/profile/update/
+2024-02-24 00:26:46,296 (ERROR) -  middleware core.middleware 89387 139935376995904 An exception occurred: can't set attribute 'name', Request_ID: 21f49a64-255b-49e1-99f2-1ad4e894a9d6
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/customauth/views.py", line 187, in put
+    serializer.save()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/customauth/serializers.py", line 107, in update
+    instance.name = f"{instance.first_name} {instance.last_name}".strip() or ''
+AttributeError: can't set attribute 'name'
+2024-02-24 00:26:46,300 (ERROR) -  log django.request 89387 139935376995904 Internal Server Error: /api/v1/auth/profile/update/
+2024-02-24 00:46:45,656 (WARNING) -  log django.request 92702 140323544102464 Bad Request: /api/v1/auth/profile/update/
+2024-02-24 00:47:04,402 (WARNING) -  log django.request 92702 140323544102464 Bad Request: /api/v1/auth/profile/update/
+2024-02-24 00:59:51,200 (WARNING) -  log django.request 94498 140263712355904 Bad Request: /api/v1/auth/profile/update/
+2024-02-24 01:00:43,085 (WARNING) -  log django.request 94612 140707053434432 Bad Request: /api/v1/auth/profile/update/
+2024-02-24 01:00:47,609 (WARNING) -  log django.request 94612 140707053434432 Bad Request: /api/v1/auth/profile/update/
+2024-02-24 01:02:34,964 (WARNING) -  log django.request 94940 140315220506176 Bad Request: /api/v1/auth/profile/update/
+2024-02-24 01:04:05,572 (WARNING) -  log django.request 95070 140167103903296 Bad Request: /api/v1/auth/profile/update/
+2024-02-24 01:05:20,712 (WARNING) -  log django.request 95219 140396369802816 Bad Request: /api/v1/auth/profile/update/
+2024-02-24 01:11:27,350 (WARNING) -  log django.request 96219 139925548693056 Bad Request: /api/v1/auth/profile/update/

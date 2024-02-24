@@ -12,8 +12,6 @@ class EmailThread(threading.Thread):
 
     def run(self):
         self.email.send()
-        print("Email sent!")
-
 
 def send_email(
     subject: str,

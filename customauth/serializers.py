@@ -1,12 +1,9 @@
 from django.contrib.auth import password_validation
-
 from .models import UserProfile
-
 from django.contrib.auth import get_user_model
-
 from rest_framework import serializers
 from django.contrib.auth.password_validation import validate_password
-
+from rest_framework.exceptions import ValidationError
 from rest_framework_simplejwt.tokens import RefreshToken
 
 class UserRegisterSerializer(serializers.ModelSerializer):
@@ -74,6 +71,7 @@ class UserProfileUpdateSerializer(serializers.ModelSerializer):
         new_password = data.get('new_password')
         new_password2 = data.get('new_password2')
 
+
         if (new_password or new_password2) and not current_password:
             raise serializers.ValidationError("Current password is required to change the password.")
 
@@ -89,6 +87,15 @@ class UserProfileUpdateSerializer(serializers.ModelSerializer):
         return data
 
     def update(self, instance, validated_data):
+        # valid_attributes = [
+        #     'first_name', 'last_name', 'about', 'short_description',
+        #     'instagram_link', 'facebook_link', 'twitter_link', 'profile_photo', 'new_password'
+        # ]
+
+        # for key in validated_data.keys():
+        #     if key not in valid_attributes:
+        #         raise ValidationError(f"Invalid attribute '{key}'")
+            
         instance.first_name = validated_data.get('first_name', instance.first_name)
         instance.last_name = validated_data.get('last_name', instance.last_name)
         instance.about = validated_data.get('about', instance.about)
@@ -103,8 +110,8 @@ class UserProfileUpdateSerializer(serializers.ModelSerializer):
             instance.user.set_password(new_password)
             instance.user.save()
 
-        # Combine first and last names or set to an empty string if both are None
-        instance.name = f"{instance.first_name} {instance.last_name}".strip() or ''
+        # # Combine first and last names or set to an empty string if both are None
+        # instance.name = f"{instance.first_name} {instance.last_name}".strip() or ''
 
         instance.save()
         return instance
