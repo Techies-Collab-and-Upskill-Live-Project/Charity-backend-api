@@ -9899,3 +9899,10 @@ AttributeError: can't set attribute 'name'
 2024-02-24 00:26:46,300 (ERROR) -  log django.request 89387 139935376995904 Internal Server Error: /api/v1/auth/profile/update/
 2024-02-24 00:46:45,656 (WARNING) -  log django.request 92702 140323544102464 Bad Request: /api/v1/auth/profile/update/
 2024-02-24 00:47:04,402 (WARNING) -  log django.request 92702 140323544102464 Bad Request: /api/v1/auth/profile/update/
+2024-02-24 00:59:51,200 (WARNING) -  log django.request 94498 140263712355904 Bad Request: /api/v1/auth/profile/update/
+2024-02-24 01:00:43,085 (WARNING) -  log django.request 94612 140707053434432 Bad Request: /api/v1/auth/profile/update/
+2024-02-24 01:00:47,609 (WARNING) -  log django.request 94612 140707053434432 Bad Request: /api/v1/auth/profile/update/
+2024-02-24 01:02:34,964 (WARNING) -  log django.request 94940 140315220506176 Bad Request: /api/v1/auth/profile/update/
+2024-02-24 01:04:05,572 (WARNING) -  log django.request 95070 140167103903296 Bad Request: /api/v1/auth/profile/update/
+2024-02-24 01:05:20,712 (WARNING) -  log django.request 95219 140396369802816 Bad Request: /api/v1/auth/profile/update/
+2024-02-24 01:11:27,350 (WARNING) -  log django.request 96219 139925548693056 Bad Request: /api/v1/auth/profile/update/

@@ -194,8 +194,8 @@ CSRF_COOKIE_SECURE = False
 CSRF_COOKIE_HTTPONLY = False
 
 TREBLLE_INFO = {
-'api_key': os.environ.get('TREBLLE_API_KEY'),
-'project_id': os.environ.get('TREBLLE_PROJECT_ID')
+'api_key': config('TREBLLE_API_KEY'),
+'project_id': config('TREBLLE_PROJECT_ID')
 }
 
 CORS_ALLOW_CREDENTIALS = True

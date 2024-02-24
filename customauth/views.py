@@ -189,8 +189,6 @@ class UpdateProfileView(APIView):
         for key in request.data.keys():
             if key not in valid_attributes:
                 raise ValidationError(f"Invalid attribute '{key}'")
-
-        
         try:
                 serializer = UserProfileUpdateSerializer(profile, data=request.data, partial=True)
                 serializer.is_valid(raise_exception=True)
