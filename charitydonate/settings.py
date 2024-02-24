@@ -61,7 +61,6 @@ CUSTOM_APPS = [
     'customauth.apps.UserAppConfig',
     "core",
     "emailer",
-    'signup',
     'donations',
     'campaign_category',
     'campaign',
