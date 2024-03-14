@@ -1,21 +1,24 @@
 from typing import Any
 from django.db import models
 from core.models import BaseModel
-from cloudinary.models import CloudinaryField
+# from cloudinary.models import CloudinaryField
 
+class CampaignDocument(models.Model):
+    campaign = models.ForeignKey('Campaign', related_name='documents', on_delete=models.CASCADE)
+    document_url = models.URLField(max_length=1024, blank=True, null=True)
+
+class CampaignImages(models.Model):
+    campaign = models.ForeignKey('Campaign', related_name='images', on_delete=models.CASCADE)
+    image = models.URLField(max_length=1024, blank=True, null=True, default='https://asset.cloudinary.com/dbn9ejpno/dcbb0fbcd596ecbbd4f91c9d47c7cdc7')
 
 class Campaign(BaseModel):
-        name = models.CharField(max_length=255)
         title = models.CharField(max_length=255)
         description = models.TextField()
         campaign_category = models.ForeignKey('campaign_category.CampaignCategory', on_delete=models.CASCADE)
         goal = models.IntegerField()
-        raised = models.IntegerField()
-        image = CloudinaryField(
-                'image',
-                null=True,
-                blank=True,
-                default='https://asset.cloudinary.com/dbn9ejpno/dcbb0fbcd596ecbbd4f91c9d47c7cdc7')
+        currency = models.CharField(max_length=255)
+        goals_obj = models.CharField(max_length=1000)
+        raised = models.IntegerField(default=0)
         end_date = models.DateTimeField()
         donor_count = models.IntegerField(default=0)
         is_active = models.BooleanField(default=False)
@@ -31,7 +34,12 @@ class Campaign(BaseModel):
         beneficiary_name = models.CharField(max_length=255)
         background_description = models.TextField()
         what_campaign_will_do = models.TextField()
+        bank_name = models.CharField(max_length=255)
+        account_name = models.CharField(max_length=255)
+        account_number = models.CharField(max_length=255)
+        
 
 
         def __str__(self):
                 return self.name
+        

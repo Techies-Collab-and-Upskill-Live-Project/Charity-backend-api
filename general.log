@@ -9908,3 +9908,325 @@ AttributeError: can't set attribute 'name'
 2024-02-24 01:11:27,350 (WARNING) -  log django.request 96219 139925548693056 Bad Request: /api/v1/auth/profile/update/
 2024-02-24 01:27:21,524 (WARNING) -  log django.request 99173 139850932024896 Unauthorized: /api/v1/auth/profile/update/
 2024-02-24 01:27:27,079 (WARNING) -  log django.request 99173 139850932024896 Bad Request: /api/v1/auth/register/
+2024-03-02 18:22:13,170 (WARNING) -  log django.security.csrf 148078 140116204975680 Forbidden (CSRF cookie not set.): /login
+2024-03-02 18:22:29,972 (WARNING) -  log django.security.csrf 148078 140116127381056 Forbidden (CSRF cookie not set.): /login
+2024-03-02 18:22:44,388 (WARNING) -  log django.security.csrf 148078 140116118988352 Forbidden (CSRF cookie not set.): /login
+2024-03-02 18:25:02,604 (WARNING) -  log django.security.csrf 148078 140116118988352 Forbidden (CSRF cookie not set.): /login
+2024-03-02 18:38:20,224 (WARNING) -  log django.security.csrf 148078 140116118988352 Forbidden (CSRF cookie not set.): /login
+2024-03-02 18:39:00,589 (WARNING) -  log django.security.csrf 148078 140116204975680 Forbidden (CSRF cookie not set.): /login
+2024-03-06 22:19:06,157 (WARNING) -  log django.request 31560 140044497057344 Bad Request: /api/v1/auth/login/
+2024-03-06 22:20:29,255 (WARNING) -  log django.request 31560 140044488664640 Bad Request: /api/v1/auth/login/
+2024-03-06 22:20:30,471 (WARNING) -  log django.request 31560 140044488664640 Bad Request: /api/v1/auth/login/
+2024-03-06 22:24:44,985 (WARNING) -  log django.request 31560 140044479223360 Bad Request: /api/v1/auth/register/
+2024-03-06 22:25:23,689 (WARNING) -  log django.request 31560 140044497057344 Bad Request: /api/v1/auth/register/
+2024-03-06 22:26:16,339 (WARNING) -  log django.request 31560 140044488664640 Bad Request: /api/v1/auth/register/
+2024-03-06 22:28:11,587 (WARNING) -  log django.request 31560 140044479223360 Bad Request: /api/v1/auth/register/
+2024-03-06 22:28:46,529 (WARNING) -  log django.request 31560 140044497057344 Bad Request: /api/v1/auth/register/
+2024-03-06 22:29:05,801 (WARNING) -  log django.request 31560 140044488664640 Bad Request: /api/v1/auth/register/
+2024-03-06 22:29:29,304 (WARNING) -  log django.request 31560 140044479223360 Bad Request: /api/v1/auth/register/
+2024-03-06 22:29:45,502 (WARNING) -  log django.request 31560 140044497057344 Bad Request: /api/v1/auth/register/
+2024-03-06 22:30:14,723 (WARNING) -  log django.request 31560 140044488664640 Bad Request: /api/v1/auth/register/
+2024-03-06 22:30:29,711 (WARNING) -  log django.request 31560 140044479223360 Bad Request: /api/v1/auth/register/
+2024-03-06 22:30:40,134 (WARNING) -  log django.request 31560 140044497057344 Bad Request: /api/v1/auth/register/
+2024-03-06 22:30:40,920 (WARNING) -  log django.request 31560 140044488664640 Bad Request: /api/v1/auth/register/
+2024-03-06 22:30:41,443 (WARNING) -  log django.request 31560 140044497057344 Bad Request: /api/v1/auth/register/
+2024-03-06 22:30:41,788 (WARNING) -  log django.request 31560 140044488664640 Bad Request: /api/v1/auth/register/
+2024-03-06 22:30:42,123 (WARNING) -  log django.request 31560 140044253787712 Bad Request: /api/v1/auth/register/
+2024-03-06 22:30:42,517 (WARNING) -  log django.request 31560 140044479223360 Bad Request: /api/v1/auth/register/
+2024-03-06 22:30:57,623 (WARNING) -  log django.request 31560 140044488664640 Bad Request: /api/v1/auth/register/
+2024-03-06 22:31:20,353 (WARNING) -  log django.request 31560 140044497057344 Bad Request: /api/v1/auth/register/
+2024-03-06 22:31:47,073 (WARNING) -  log django.request 31560 140044479223360 Bad Request: /api/v1/auth/register/
+2024-03-06 22:35:10,515 (WARNING) -  log django.request 31560 140044488664640 Bad Request: /api/v1/auth/register/
+2024-03-06 22:36:35,380 (WARNING) -  log django.request 31560 140044497057344 Bad Request: /api/v1/auth/register/
+2024-03-06 22:36:36,166 (WARNING) -  log django.request 31560 140044488664640 Bad Request: /api/v1/auth/register/
+2024-03-06 22:36:46,082 (WARNING) -  log django.request 31560 140044488664640 Bad Request: /api/v1/auth/register/
+2024-03-06 22:37:12,592 (WARNING) -  log django.request 31560 140044253787712 Bad Request: /api/v1/auth/register/
+2024-03-06 22:37:41,294 (WARNING) -  log django.request 31560 140044253787712 Bad Request: /api/v1/auth/register/
+2024-03-06 22:37:53,787 (WARNING) -  log django.request 31560 140044253787712 Bad Request: /api/v1/auth/register/
+2024-03-06 22:41:39,649 (WARNING) -  log django.request 31560 140044479223360 Bad Request: /api/v1/auth/register/
+2024-03-06 22:42:02,211 (WARNING) -  log django.request 31560 140044488664640 Bad Request: /api/v1/auth/register/
+2024-03-06 22:49:33,117 (WARNING) -  log django.request 31560 140044488664640 Bad Request: /api/v1/auth/register/
+2024-03-06 22:49:47,037 (WARNING) -  log django.request 31560 140044488664640 Bad Request: /api/v1/auth/register/
+2024-03-06 22:52:31,431 (WARNING) -  log django.request 31560 140044488664640 Bad Request: /api/v1/auth/register/
+2024-03-06 22:54:14,907 (WARNING) -  log django.request 31560 140044488664640 Unauthorized: /api/v1/auth/login/
+2024-03-06 22:55:19,659 (WARNING) -  log django.request 31560 140044253787712 Unauthorized: /api/v1/auth/login/
+2024-03-06 22:56:12,783 (WARNING) -  log django.request 31560 140044488664640 Unauthorized: /api/v1/auth/login/
+2024-03-11 23:09:43,300 (WARNING) -  log django.security.csrf 87580 132867404330560 Forbidden (CSRF cookie not set.): /api/v1/contactus
+2024-03-11 23:55:35,903 (WARNING) -  log django.request 87580 132867404330560 Bad Request: /api/v1/subscribe/ogboyesam@gmail.com
+2024-03-11 23:55:43,738 (WARNING) -  log django.request 87580 132867404330560 Bad Request: /api/v1/subscribe/ogboyesam@gmail.com
+2024-03-11 23:56:39,068 (WARNING) -  log django.request 87580 132867404330560 Bad Request: /api/v1/subscribe/ogboyesam@gmail.com
+2024-03-11 23:56:42,820 (WARNING) -  log django.request 87580 132867404330560 Bad Request: /api/v1/subscribe/ogboyesam@gmail.com
+2024-03-11 23:56:44,441 (WARNING) -  log django.request 87580 132867404330560 Bad Request: /api/v1/subscribe/ogboyesam@gmail.com
+2024-03-11 23:56:51,013 (WARNING) -  log django.request 87580 132867404330560 Bad Request: /api/v1/subscribe/ogboyesam@gmail.com
+2024-03-11 23:57:32,346 (WARNING) -  log django.request 87580 132867404330560 Bad Request: /api/v1/subscribe/ogboyesam@gmail.com
+2024-03-11 23:59:04,409 (WARNING) -  log django.request 87580 132867404330560 Bad Request: /api/v1/subscribe/ogboyesam@gmail.com
+2024-03-11 23:59:21,932 (WARNING) -  log django.request 87580 132867404330560 Bad Request: /api/v1/subscribe/ogboyesam@gmail.com
+2024-03-12 00:00:35,708 (WARNING) -  log django.request 87580 132867404330560 Bad Request: /api/v1/subscribe/ogboyesam@gmail.com
+2024-03-12 00:01:16,903 (WARNING) -  log django.request 87580 132867404330560 Bad Request: /api/v1/subscribe/ogboyesam@gmail.com
+2024-03-12 00:01:41,759 (WARNING) -  log django.request 87580 132867404330560 Bad Request: /api/v1/subscribe/ogboyesam@gmail.com
+2024-03-12 00:01:45,932 (WARNING) -  log django.request 87580 132867404330560 Bad Request: /api/v1/subscribe/ogboyesam@gmail.com
+2024-03-12 00:02:32,864 (WARNING) -  log django.request 87580 132867404330560 Bad Request: /api/v1/subscribe/ogboyesam@gmail.com
+2024-03-12 00:02:37,956 (WARNING) -  log django.request 87580 132867404330560 Bad Request: /api/v1/subscribe/ogboyesam@gmail.com
+2024-03-12 00:03:15,532 (WARNING) -  log django.request 87580 132867404330560 Bad Request: /api/v1/subscribe/ogboyesam@gmail.com
+2024-03-12 00:03:38,019 (WARNING) -  log django.request 87580 132867404330560 Bad Request: /api/v1/subscribe/ogboyesam@gmail.com
+2024-03-12 00:04:15,113 (WARNING) -  log django.request 87580 132867404330560 Bad Request: /api/v1/subscribe/ogboyesam@gmail.com
+2024-03-12 00:04:21,811 (WARNING) -  log django.request 87580 132867404330560 Bad Request: /api/v1/subscribe/ogboyesam@gmail.com
+2024-03-12 00:04:49,943 (WARNING) -  log django.request 87580 132867404330560 Bad Request: /api/v1/subscribe/ogboyesam@gmail.com
+2024-03-12 00:09:23,189 (WARNING) -  log django.request 87580 132867404330560 Bad Request: /api/v1/subscribe/ogboyesam@gmail.com
+2024-03-12 00:09:36,223 (WARNING) -  log django.request 87580 132867404330560 Bad Request: /api/v1/subscribe/ogboyesam@gmail.com
+2024-03-12 00:11:35,435 (WARNING) -  log django.request 87580 132867404330560 Bad Request: /api/v1/subscribe/ogboyesam@gmail.com
+2024-03-12 00:11:44,962 (WARNING) -  log django.request 87580 132867404330560 Bad Request: /api/v1/subscribe/ogboyesam@gmail.com
+2024-03-12 00:11:51,686 (WARNING) -  log django.request 87580 132867404330560 Bad Request: /api/v1/subscribe/ogboyesam@gmail.com
+2024-03-12 00:11:53,051 (WARNING) -  log django.request 87580 132867404330560 Bad Request: /api/v1/subscribe/ogboyesam@gmail.com
+2024-03-12 00:11:58,386 (WARNING) -  log django.request 87580 132867404330560 Bad Request: /api/v1/subscribe/ogboyesam1@gmail.com
+2024-03-12 21:53:19,995 (WARNING) -  log django.request 112187 130068789589568 Bad Request: /api/v1/campaign_category/create/
+2024-03-12 21:53:28,079 (WARNING) -  log django.request 112187 130068789589568 Bad Request: /api/v1/campaign_category/create/
+2024-03-12 21:59:59,501 (WARNING) -  log django.request 112187 130068789589568 Unauthorized: /api/v1/campaign/
+2024-03-12 22:00:49,388 (WARNING) -  log django.request 112187 130068789589568 Unauthorized: /api/v1/campaign/fdab073b-10ac-488a-a4a0-770232553901/create/
+2024-03-12 22:00:56,352 (WARNING) -  log django.request 112187 130068789589568 Bad Request: /api/v1/campaign/fdab073b-10ac-488a-a4a0-770232553901/create/
+2024-03-12 22:01:17,266 (WARNING) -  log django.request 112187 130068789589568 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 22:02:32,819 (WARNING) -  log django.request 123885 137052540630592 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 22:03:52,498 (WARNING) -  log django.request 124106 130902169482816 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 22:07:39,281 (WARNING) -  log django.request 124705 132786524517952 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 22:08:09,151 (WARNING) -  log django.request 124842 132501328623168 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 22:08:36,212 (WARNING) -  log django.request 124842 132501328623168 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 22:10:22,198 (WARNING) -  log django.request 125229 138700833945152 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 22:11:33,488 (WARNING) -  log django.request 125367 130030403319360 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 22:14:33,828 (WARNING) -  log django.request 125717 135703440651840 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 22:17:17,693 (WARNING) -  log django.request 125991 135224518243904 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 22:19:28,690 (WARNING) -  log django.request 126370 132838633502272 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 22:26:50,846 (WARNING) -  log django.request 127464 140613305497152 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 22:27:37,078 (WARNING) -  log django.request 127690 126696470607424 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 22:29:39,094 (WARNING) -  log django.request 127896 127981804582464 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 22:30:16,510 (WARNING) -  log django.request 128046 128668195092032 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 22:34:01,949 (WARNING) -  log django.request 128709 132773400540736 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 22:40:37,823 (WARNING) -  log django.request 129278 138063625844288 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 22:44:25,452 (WARNING) -  log django.request 129278 138063625844288 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 22:49:08,119 (WARNING) -  log django.request 130113 125660702963264 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 22:51:58,318 (WARNING) -  log django.request 130585 140395465930304 Unauthorized: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 22:52:22,832 (WARNING) -  log django.request 130585 140395465930304 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 22:55:49,555 (WARNING) -  log django.request 131173 127083653101120 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 22:55:54,481 (WARNING) -  log django.request 131173 127083653101120 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 22:56:12,747 (WARNING) -  log django.request 131291 128431064872512 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 22:56:14,125 (WARNING) -  log django.request 131291 128431064872512 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 22:56:40,565 (WARNING) -  log django.request 131407 126406817216064 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 22:56:55,051 (WARNING) -  log django.request 131485 125874383877696 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 22:57:24,042 (WARNING) -  log django.request 131591 128709476480576 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 22:58:06,702 (WARNING) -  log django.request 131704 124250136507968 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 22:59:34,245 (WARNING) -  log django.request 131998 129510305429056 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 23:01:30,437 (WARNING) -  log django.request 132327 134326493640256 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 23:03:58,372 (WARNING) -  log django.request 132872 128891803924032 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 23:05:15,683 (WARNING) -  log django.request 133136 124346819409472 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 23:06:40,736 (WARNING) -  log django.request 133371 138132577056320 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 23:07:04,623 (WARNING) -  log django.request 133447 127133488772672 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 23:07:17,537 (WARNING) -  log django.request 133606 134893011990080 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 23:09:21,312 (WARNING) -  log django.request 133965 129525919774272 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 23:10:26,245 (WARNING) -  log django.request 134223 126206377719360 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 23:11:12,008 (WARNING) -  log django.request 134354 126884964726336 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 23:11:49,126 (WARNING) -  log django.request 134548 140195244537408 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 23:12:22,924 (WARNING) -  log django.request 134548 140195244537408 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 23:13:48,150 (WARNING) -  log django.request 134843 137309266638400 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 23:15:05,699 (WARNING) -  log django.request 135079 126023019525696 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 23:15:27,946 (WARNING) -  log django.request 135214 135624817374784 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 23:16:13,900 (WARNING) -  log django.request 135375 135277051901504 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 23:17:06,029 (WARNING) -  log django.request 135650 128725107603008 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 23:17:37,425 (WARNING) -  log django.request 135791 135909555041856 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 23:19:50,663 (WARNING) -  log django.request 136017 134555146122816 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 23:24:45,495 (WARNING) -  log django.request 136906 124504323913280 Unauthorized: /api/v1/campaign/
+2024-03-12 23:36:12,324 (WARNING) -  log django.request 138323 127179392284224 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 23:47:39,333 (WARNING) -  log django.request 139152 138157128414784 Unauthorized: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 23:51:32,211 (WARNING) -  log django.request 139282 139626829313600 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 23:53:18,184 (WARNING) -  log django.request 140103 137039398827584 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-12 23:55:19,988 (WARNING) -  log django.request 140409 131654833141312 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-13 00:07:15,113 (WARNING) -  log django.request 142093 131584878442048 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-13 00:07:39,437 (WARNING) -  log django.request 142205 128357327959616 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-13 00:07:41,785 (WARNING) -  log django.request 142205 128357327959616 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-13 00:29:17,157 (WARNING) -  log django.request 144664 130268454188608 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-13 21:40:38,458 (WARNING) -  log django.request 150378 140525936047680 Unauthorized: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-13 21:42:30,758 (WARNING) -  log django.request 150755 134840590530112 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-13 21:43:30,968 (WARNING) -  log django.request 150978 134458783036992 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-13 21:45:32,990 (WARNING) -  log django.request 151298 140395980781120 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-13 21:48:34,091 (WARNING) -  log django.request 151715 130956452165184 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-13 21:49:02,465 (WARNING) -  log django.request 151850 131593316333120 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-13 21:50:34,320 (WARNING) -  log django.request 152026 127861109290560 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-13 21:53:45,047 (WARNING) -  log django.request 152375 136252210804288 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-13 21:54:13,528 (WARNING) -  log django.request 152492 137661464442432 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-13 21:54:54,307 (WARNING) -  log django.request 152610 132016204936768 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-13 21:55:23,404 (WARNING) -  log django.request 152740 136731089172032 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-13 21:55:32,174 (WARNING) -  log django.request 152740 136731089172032 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-13 21:55:52,352 (WARNING) -  log django.request 152874 140001773876800 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-13 21:56:14,616 (WARNING) -  log django.request 152989 128384919139904 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-13 21:58:51,780 (WARNING) -  log django.request 153255 130997300491840 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-13 22:01:18,650 (WARNING) -  log django.request 153595 123353446741568 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-13 22:02:14,020 (WARNING) -  log django.request 153595 123353446741568 Unauthorized: /api/v1/campaign/
+2024-03-13 22:02:25,377 (ERROR) -  middleware core.middleware 153595 123353446741568 An exception occurred: In order to use cloudinary storage, you need to provide CLOUDINARY_STORAGE dictionary with CLOUD_NAME, API_SECRET and API_KEY in the settings or set CLOUDINARY_URL variable (or CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET variables)., Request_ID: c0c02a47-3252-4a0b-8807-b746f1e31c4c
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/files/storage/handler.py", line 35, in __getitem__
+    return self._storages[alias]
+KeyError: 'default'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/cloudinary_storage/app_settings.py", line 18, in set_credentials
+    credentials = itemgetter('CLOUD_NAME', 'API_KEY', 'API_SECRET')(user_settings)
+KeyError: 'CLOUD_NAME'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/campaign/views.py", line 62, in list
+    "campaigns": serializer.data,
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 1517, in to_representation
+    url = value.url
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/fields/files.py", line 67, in url
+    return self.storage.url(self.name)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/functional.py", line 251, in inner
+    self._setup()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/files/storage/__init__.py", line 42, in _setup
+    self._wrapped = storages[DEFAULT_STORAGE_ALIAS]
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/files/storage/handler.py", line 43, in __getitem__
+    storage = self.create_storage(params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/files/storage/handler.py", line 52, in create_storage
+    storage_cls = import_string(backend)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/module_loading.py", line 30, in import_string
+    return cached_import(module_path, class_name)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/module_loading.py", line 15, in cached_import
+    module = import_module(module_path)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/cloudinary_storage/storage.py", line 18, in <module>
+    from . import app_settings
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/cloudinary_storage/app_settings.py", line 38, in <module>
+    set_credentials(user_settings)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/cloudinary_storage/app_settings.py", line 26, in set_credentials
+    raise ImproperlyConfigured('In order to use cloudinary storage, you need to provide '
+django.core.exceptions.ImproperlyConfigured: In order to use cloudinary storage, you need to provide CLOUDINARY_STORAGE dictionary with CLOUD_NAME, API_SECRET and API_KEY in the settings or set CLOUDINARY_URL variable (or CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET variables).
+2024-03-13 22:02:25,382 (ERROR) -  log django.request 153595 123353446741568 Internal Server Error: /api/v1/campaign/
+2024-03-13 22:02:54,497 (ERROR) -  middleware core.middleware 153595 123353446741568 An exception occurred: In order to use cloudinary storage, you need to provide CLOUDINARY_STORAGE dictionary with CLOUD_NAME, API_SECRET and API_KEY in the settings or set CLOUDINARY_URL variable (or CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET variables)., Request_ID: e389c30e-9d80-4cc6-9aa6-2156152969af
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/files/storage/handler.py", line 35, in __getitem__
+    return self._storages[alias]
+KeyError: 'default'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/cloudinary_storage/app_settings.py", line 18, in set_credentials
+    credentials = itemgetter('CLOUD_NAME', 'API_KEY', 'API_SECRET')(user_settings)
+KeyError: 'CLOUD_NAME'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/campaign/views.py", line 62, in list
+    "campaigns": serializer.data,
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 1517, in to_representation
+    url = value.url
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/fields/files.py", line 67, in url
+    return self.storage.url(self.name)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/functional.py", line 251, in inner
+    self._setup()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/files/storage/__init__.py", line 42, in _setup
+    self._wrapped = storages[DEFAULT_STORAGE_ALIAS]
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/files/storage/handler.py", line 43, in __getitem__
+    storage = self.create_storage(params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/files/storage/handler.py", line 52, in create_storage
+    storage_cls = import_string(backend)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/module_loading.py", line 30, in import_string
+    return cached_import(module_path, class_name)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/module_loading.py", line 15, in cached_import
+    module = import_module(module_path)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/cloudinary_storage/storage.py", line 18, in <module>
+    from . import app_settings
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/cloudinary_storage/app_settings.py", line 38, in <module>
+    set_credentials(user_settings)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/cloudinary_storage/app_settings.py", line 26, in set_credentials
+    raise ImproperlyConfigured('In order to use cloudinary storage, you need to provide '
+django.core.exceptions.ImproperlyConfigured: In order to use cloudinary storage, you need to provide CLOUDINARY_STORAGE dictionary with CLOUD_NAME, API_SECRET and API_KEY in the settings or set CLOUDINARY_URL variable (or CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET variables).
+2024-03-13 22:02:54,498 (ERROR) -  log django.request 153595 123353446741568 Internal Server Error: /api/v1/campaign/
+2024-03-13 22:03:33,042 (WARNING) -  log django.request 153595 123353446741568 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-13 22:06:58,842 (WARNING) -  log django.request 154745 132572383278656 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-13 22:07:32,083 (WARNING) -  log django.request 154865 136562708837952 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-13 22:10:19,258 (WARNING) -  log django.request 155160 131312710055488 Bad Request: /api/v1/campaign/
+2024-03-13 22:13:41,087 (WARNING) -  log django.request 155671 139936001947200 Bad Request: /api/v1/campaign/
+2024-03-13 22:13:49,385 (WARNING) -  log django.request 155671 139936001947200 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-13 22:14:52,360 (WARNING) -  log django.request 155960 124599568168512 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-13 22:17:30,921 (WARNING) -  log django.request 156488 125331025425984 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-13 22:24:17,307 (WARNING) -  log django.request 157137 133449599940160 Unauthorized: /api/v1/campaign/delete-all/
+2024-03-13 22:24:36,324 (WARNING) -  log django.request 157137 133449599940160 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-13 22:25:43,114 (WARNING) -  log django.request 157743 138997922788928 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-13 22:32:20,754 (WARNING) -  log django.request 158810 132265323525696 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-13 22:33:51,523 (WARNING) -  log django.request 159218 133182486738496 Bad Request: /api/v1/campaign/a265a516-ac4f-493d-a76b-9832b0325634/create/
+2024-03-13 22:36:29,461 (WARNING) -  log django.request 159769 139032950470208 Unauthorized: /api/v1/campaign/99765b7e-4e29-4d0d-b232-c6a56997e9e3/list/
+2024-03-13 22:36:41,545 (WARNING) -  log django.request 159769 139032950470208 Not Found: /api/v1/campaign/99765b7e-4e29-4d0d-b232-c6a56997e9e3/list/
+2024-03-13 22:37:03,583 (WARNING) -  log django.request 159769 139032950470208 Not Found: /api/v1/campaign/12692dfe-4b64-4bbe-91af-17aebec892aa/
+2024-03-13 22:37:49,076 (WARNING) -  log django.request 159769 139032950470208 Unauthorized: /api/v1/campaign/99765b7e-4e29-4d0d-b232-c6a56997e9e3/
+2024-03-13 23:06:47,301 (WARNING) -  log django.request 159769 139032950470208 Bad Request: /api/v1/campaign/54a82ef2-a377-4385-9b07-fe195584777b/create/
+2024-03-13 23:41:11,037 (WARNING) -  log django.request 165031 133403618833984 Bad Request: /api/v1/campaign/54a82ef2-a377-4385-9b07-fe195584777b/create/
+2024-03-13 23:47:31,375 (WARNING) -  log django.request 165778 136698357872192 Bad Request: /api/v1/campaign/99765b7e-4e29-4d0d-b232-c6a56997e9e3/
+2024-03-13 23:48:40,415 (WARNING) -  log django.request 166206 134547956037184 Not Found: /api/v1/campaign/99765b7e-4e29-4d0d-b232-c6a56997e9e3/
+2024-03-14 00:04:09,469 (WARNING) -  log django.request 167778 124614756791872 Bad Request: /api/v1/campaign/54a82ef2-a377-4385-9b07-fe195584777b/create/
+2024-03-14 08:04:03,321 (WARNING) -  log django.request 175014 136906542151232 Unauthorized: /api/v1/campaign/54a82ef2-a377-4385-9b07-fe195584777b/create/

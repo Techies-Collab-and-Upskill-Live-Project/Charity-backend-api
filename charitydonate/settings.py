@@ -203,7 +203,7 @@ from datetime import timedelta
 
 ACTIVATE_JWT = True
 SIMPLE_JWT = {
-    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=50),
+    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=500),
     "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
     "ROTATE_REFRESH_TOKENS": True,
     "BLACKLIST_AFTER_ROTATION": True,
@@ -219,11 +219,26 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
 # Cloudinary
+# cloudinary.config(
+#     cloud_name=config("CLOUDINARY_CLOUD_NAME"),
+#     api_key=config("CLOUDINARY_API_KEY"),
+#     api_secret=config("CLOUDINARY_API_SECRET"),
+# )
+
+# CLOUDINARY_STORAGE = {
+#     'cloud_name': config('CLOUDINARY_CLOUD_NAME'),
+#     'api_key': config('CLOUDINARY_API_KEY'),
+#     'api_secret': config('CLOUDINARY_API_SECRET'),
+# }
+
 cloudinary.config(
-    cloud_name=config("CLOUDINARY_CLOUD_NAME"),
-    api_key=config("CLOUDINARY_API_KEY"),
-    api_secret=config("CLOUDINARY_API_SECRET"),
+  cloud_name = config('CLOUDINARY_CLOUD_NAME'),
+  api_key = config('CLOUDINARY_API_KEY'),
+  api_secret = config('CLOUDINARY_API_SECRET')
 )
+
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 LOGGING = {
     "version": 1,

@@ -1,54 +1,56 @@
 from rest_framework import serializers
-from .models import Campaign
-import cloudinary
-from campaign_category.models import CampaignCategory
+from .models import Campaign, CampaignDocument, CampaignImages
+from utils import upload_pdf_and_get_url, upload_image_and_get_url
 
-class CampaignSerializer(serializers.Serializer):
-    name = serializers.CharField()
-    title = serializers.CharField()
-    description = serializers.CharField()
-    goal = serializers.DecimalField(max_digits=10, decimal_places=2)
-    end_date = serializers.DateTimeField()
-    image = serializers.ImageField()
-    beneficiary_name = serializers.CharField()
-    background_description = serializers.CharField()
-    what_campaign_will_do = serializers.CharField()
+
+class CampaignDocumentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CampaignDocument
+        fields = '__all__'
+
+class CampaignImagesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CampaignImages
+        fields = '__all__'
+
+class CampaignSerializer(serializers.ModelSerializer):
+    campaign_category_name = serializers.CharField(source='campaign_category.name', read_only=True)
+    user_profile_name = serializers.CharField(source='user_profile.name', read_only=True)
+    documents = CampaignDocumentSerializer(many=True, required=False)
+    images = CampaignImagesSerializer(many=True, required=False)
+
+
+    class Meta:
+        model = Campaign
+        fields = '__all__'
+        read_only_fields = ['id', 'raised', 'donor_count']  # Fields that should not be modified directly by the serializer
+
 
     def create(self, validated_data):
-        campaign_category_id = self.context.get('campaign_category_id')
-        campaign_category = CampaignCategory.objects.filter(id=campaign_category_id).first()
-        if not campaign_category:
-            raise serializers.ValidationError({'error': 'Campaign category does not exist.'})
+        documents_data = validated_data.pop('documents', [])
 
-        user_id = self.context.get('user_id')
+        images_data = validated_data.pop('images', [])
 
-        campaign = Campaign.objects.create(
-            campaign_category=campaign_category,
-            raised=0,
-            user_profile_id=user_id,
-            **validated_data
-        )
+        campaign = Campaign.objects.create(**validated_data)
 
-        image = validated_data.get('image')
-        if image:
+        document_files = self.context.get('document_files', [])
+        image_files = self.context.get('image_files', [])
+
+
+        for document_data in document_files:
+            # Upload each document and get the URL, then create a CampaignDocument instance
+            document_url = upload_pdf_and_get_url(document_data, 'campaign_documents')
             try:
-                print("before upload")
-                uploaded_image = cloudinary.uploader.upload(image, folder='campaign_images')
-                campaign.image = uploaded_image['url']
-            except Exception as upload_error:
-                raise serializers.ValidationError({'error': f'Image upload error: {str(upload_error)}'})
+                CampaignDocument.objects.create(campaign=campaign, document_url=document_url)
+            except Exception as e:
+                print("Error: ", e)
 
-        campaign.save()
+        for image_data in image_files:
+            # Upload each document and get the URL, then create a CampaignDocument instance
+            image_url = upload_image_and_get_url(image_data, 'campaign_images')
+            try:
+                CampaignImages.objects.create(campaign=campaign, image=image_url)
+            except Exception as e:
+                print("Error: ", e)
+
         return campaign
-
-#   def to_representation(self, instance):
-#              representation = super().to_representation(instance)
-#              representation['image'] = instance.image
-#              return representation
-#    def update(self, instance, validated_data):
-#              image = validated_data.get('image')
-#              if image:
-#                      image = cloudinary.uploader.upload(image)
-#                      instance.image = image['url']
-#              instance.save()
-#              return instance
