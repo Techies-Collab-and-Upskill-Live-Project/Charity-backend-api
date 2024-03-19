@@ -3,6 +3,9 @@ from core.exception_handlers import response_schemas
 from .serializers import CampaignSerializer
 from rest_framework.response import Response
 from rest_framework import status
+from django.utils import timezone
+from django.db.models import F, Q
+from datetime import timedelta
 from .models import Campaign
 from campaign_category.models import CampaignCategory
 from drf_spectacular.utils import extend_schema
@@ -16,7 +19,7 @@ from utils import upload_image_and_get_url
 class CampaignView(GenericViewSet):
         serializer_class = CampaignSerializer
 
-        permission_classes = [IsAuthenticated]
+        # permission_classes = [IsAuthenticated]
         parser_classes = (MultiPartParser, FormParser)
 
         # View to create a new campaign using the campaign category ID
@@ -28,6 +31,10 @@ class CampaignView(GenericViewSet):
         def create(self, request, campaign_category_id, *args, **kwargs):
                 try:
                         data = request.data.copy()
+                        # check if campaign category exists
+                        campaign_category = CampaignCategory.objects.get(id=campaign_category_id)
+                        if not campaign_category:
+                                return Response({"message": "Campaign category not found"}, status=status.HTTP_404_NOT_FOUND)
                         data['campaign_category'] = campaign_category_id
                         data['user_profile'] = request.user.id
                         # # Handle image separately if it's part of the data
@@ -168,5 +175,95 @@ class CampaignView(GenericViewSet):
                 try:
                         Campaign.objects.all().delete()
                         return Response({"message": "All campaigns deleted successfully"}, status=status.HTTP_200_OK)
+                except Exception as e:
+                        return Response({"message": str(e)}, status=status.HTTP_400_BAD_REQUEST)
+                
+        
+        # View to get trending campaigns
+        @response_schemas(
+            response_model=CampaignSerializer, code=200, schema_response_codes=[400]
+        )
+        @extend_schema(tags=['Campaign'], summary='Get trending campaigns')
+        def trending(self, request, *args, **kwargs):
+                try:
+                     # Get the current date and time
+                     now = timezone.now()
+             
+                     # Define a recent timeframe, e.g., campaigns that received donations in the last 7 days
+                     recent_days = 7
+                     recent_threshold = now - timedelta(days=recent_days)
+                     print("recent_threshold: ", recent_threshold)
+             
+                     # Filter for active campaigns that are not completed, cancelled, deleted, or rejected, and have an end date in the future
+                     campaigns = Campaign.objects.filter(
+                         is_active=True,
+                         is_completed=False,
+                         is_cancelled=False,
+                         is_deleted=False,
+                         is_rejected=False,
+                         end_date__gte=now,
+                     )
+
+                     # Further filter for campaigns that have recent activity
+                     # This requires a way to track when donations are made, which may require adjustments to your model
+                     # For this example, we'll assume 'raised' and 'donor_count' can reflect recent activity
+                     campaigns = campaigns.annotate(
+                         recent_activity=F('raised') + F('donor_count')
+                     ).filter(
+                         recent_activity__gt=0,  # Adjust this condition based on your data
+                         date_updated__gte=recent_threshold
+                     )
+             
+                     # Order the campaigns by 'recent_activity' and then by the total amount raised
+                     trending_campaigns = campaigns.order_by('-recent_activity', '-raised')[:3]  # Get the top 3 trending campaigns
+             
+                     # Serialize and return the trending campaigns
+                     serializer = CampaignSerializer(trending_campaigns, many=True)
+                     response = {
+                         "message": "Trending campaigns retrieved successfully",
+                         "data": serializer.data,
+                         "count": len(trending_campaigns)
+                     }
+                     return Response(response, status=status.HTTP_200_OK)
+                       
+                except Exception as e:
+                        return Response({"message": str(e)}, status=status.HTTP_400_BAD_REQUEST)
+                
+        
+        # View to approve a campaign
+        @response_schemas(
+            response_model=CampaignSerializer, code=200, schema_response_codes=[400]
+        )
+        @extend_schema(tags=['Campaign'], summary='Approve a campaign')
+        def approve(self, request, campaign_id, *args, **kwargs):
+                try:
+                        # check if campaign exists
+                        if not Campaign.objects.filter(id=campaign_id).exists():
+                                return Response({"message": "Campaign does not exist"}, status=status.HTTP_404_NOT_FOUND)
+                        campaign = Campaign.objects.get(id=campaign_id)
+                        campaign.is_active = True
+                        campaign.save()
+                        return Response({"message": "Campaign approved successfully"}, status=status.HTTP_200_OK)
+                except Campaign.DoesNotExist:
+                        return Response({"message": "Campaign does not exist"}, status=status.HTTP_404_NOT_FOUND)
+                except Exception as e:
+                        return Response({"message": str(e)}, status=status.HTTP_400_BAD_REQUEST)
+                
+        
+        # View to choose a featured campaign, a random campaign
+        @response_schemas(
+            response_model=CampaignSerializer, code=200, schema_response_codes=[400]
+        )
+        @extend_schema(tags=['Campaign'], summary='Choose a featured campaign')
+        def featured(self, request, *args, **kwargs):
+                try:
+                        # Get a random campaign
+                        campaign = Campaign.objects.order_by('?').first()
+                        serializer = CampaignSerializer(campaign)
+                        response = {
+                            "message": "Featured campaign chosen successfully",
+                            "data": serializer.data
+                        }
+                        return Response(response, status=status.HTTP_200_OK)
                 except Exception as e:
                         return Response({"message": str(e)}, status=status.HTTP_400_BAD_REQUEST)

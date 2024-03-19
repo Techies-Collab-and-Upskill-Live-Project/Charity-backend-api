@@ -10230,3 +10230,893 @@ django.core.exceptions.ImproperlyConfigured: In order to use cloudinary storage,
 2024-03-13 23:48:40,415 (WARNING) -  log django.request 166206 134547956037184 Not Found: /api/v1/campaign/99765b7e-4e29-4d0d-b232-c6a56997e9e3/
 2024-03-14 00:04:09,469 (WARNING) -  log django.request 167778 124614756791872 Bad Request: /api/v1/campaign/54a82ef2-a377-4385-9b07-fe195584777b/create/
 2024-03-14 08:04:03,321 (WARNING) -  log django.request 175014 136906542151232 Unauthorized: /api/v1/campaign/54a82ef2-a377-4385-9b07-fe195584777b/create/
+2024-03-18 23:06:34,022 (WARNING) -  log django.request 117666 128163166287424 Unauthorized: /api/v1/campaign/
+2024-03-18 23:07:49,283 (WARNING) -  log django.request 117666 128163166287424 Unauthorized: /api/v1/campaign/99765b7e-4e29-4d0d-b232-c6a56997e9e3/
+2024-03-18 23:07:53,103 (WARNING) -  log django.request 117666 128163166287424 Not Found: /api/v1/campaign/99765b7e-4e29-4d0d-b232-c6a56997e9e3/
+2024-03-18 23:10:58,034 (WARNING) -  log django.request 117666 128163166287424 Not Found: /api/v1/campaign/2b166bd3-2531-4f90-af38-1b092476ea27/
+2024-03-18 23:13:05,171 (WARNING) -  log django.security.csrf 117666 128163166287424 Forbidden (CSRF token missing.): /api/v1/campaign/94575d67-848d-4776-82d2-bac2e3b01fa9s/create/
+2024-03-18 23:14:22,277 (WARNING) -  log django.security.csrf 118611 133420061554240 Forbidden (CSRF token missing.): /api/v1/campaign/94575d67-848d-4776-82d2-bac2e3b01fa9s/create/
+2024-03-18 23:14:34,892 (WARNING) -  log django.request 118611 133420061554240 Bad Request: /api/v1/campaign/94575d67-848d-4776-82d2-bac2e3b01fa8/create/
+2024-03-18 23:14:49,909 (WARNING) -  log django.request 118759 134424679151168 Bad Request: /api/v1/campaign/94575d67-848d-4776-82d2-bac2e3b01fa8/create/
+2024-03-18 23:15:06,113 (WARNING) -  log django.request 118842 132889632044608 Bad Request: /api/v1/campaign/94575d67-848d-4776-82d2-bac2e3b01fa8/create/
+2024-03-18 23:23:36,615 (WARNING) -  log django.request 118842 132889632044608 Unauthorized: /api/v1/campaign/99765b7e-4e29-4d0d-b232-c6a56997e9e3/list/
+2024-03-18 23:24:10,463 (WARNING) -  log django.request 118842 132889632044608 Not Found: /api/v1/campaign/99765b7e-4e29-4d0d-b232-c6a56997e9e3/list/
+2024-03-18 23:41:15,203 (WARNING) -  log django.request 121398 135976109209152 Bad Request: /api/v1/campaign/trending/
+2024-03-18 23:42:54,491 (WARNING) -  log django.request 121398 135976109209152 Bad Request: /api/v1/campaign/trending/
+2024-03-18 23:48:34,983 (ERROR) -  middleware core.middleware 122508 125490622887488 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/api/v1/campaign/aa/approve” does not exist, Request_ID: 97cc81f9-a138-4ce3-abb8-c81e3ac06208
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/api/v1/campaign/aa/approve” does not exist
+2024-03-18 23:48:34,989 (ERROR) -  log django.request 122508 125490622887488 Internal Server Error: /api/v1/campaign/aa/approve/
+2024-03-18 23:49:03,702 (ERROR) -  middleware core.middleware 122711 128160547993152 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/api/v1/campaign/aa/approve” does not exist, Request_ID: 1f8bb535-6971-4078-a89f-ebd05452e269
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/api/v1/campaign/aa/approve” does not exist
+2024-03-18 23:49:03,704 (ERROR) -  log django.request 122711 128160547993152 Internal Server Error: /api/v1/campaign/aa/approve/
+2024-03-18 23:49:15,231 (ERROR) -  middleware core.middleware 122711 128160547993152 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/api/v1/campaign/a-99999a/approve” does not exist, Request_ID: 1695021e-f1f3-4d36-a175-83da82ef550d
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/api/v1/campaign/a-99999a/approve” does not exist
+2024-03-18 23:49:15,232 (ERROR) -  log django.request 122711 128160547993152 Internal Server Error: /api/v1/campaign/a-99999a/approve/
+2024-03-18 23:50:33,571 (ERROR) -  middleware core.middleware 122946 124583371863616 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/api/v1/campaign/a-99999a/approve” does not exist, Request_ID: 46a1caf8-e5c7-414b-926f-df96ee4072f9
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/api/v1/campaign/a-99999a/approve” does not exist
+2024-03-18 23:50:33,572 (ERROR) -  log django.request 122946 124583371863616 Internal Server Error: /api/v1/campaign/a-99999a/approve/
+2024-03-18 23:53:31,865 (WARNING) -  log django.request 123345 138411130222144 Bad Request: /api/v1/campaign/trending/
+2024-03-18 23:54:14,662 (WARNING) -  log django.request 123345 138411130222144 Bad Request: /api/v1/campaign/trending/
+2024-03-18 23:55:37,201 (WARNING) -  log django.request 123731 132846712780352 Bad Request: /api/v1/campaign/trending/
+2024-03-19 00:19:22,273 (WARNING) -  log django.request 125869 138034334922304 Bad Request: /api/v1/donations/create/
+2024-03-19 00:22:21,204 (WARNING) -  log django.request 125869 138034334922304 Bad Request: /api/v1/donations/create/
+2024-03-19 00:22:42,870 (ERROR) -  middleware core.middleware 125869 138034334922304 An exception occurred: 'str' object has no attribute 'code', Request_ID: 99dd2959-f6b2-46d8-8cc9-552563a01390
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/parsers.py", line 64, in parse
+    return json.load(decoded_stream, parse_constant=parse_constant)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/utils/json.py", line 31, in load
+    return json.load(*args, **kwargs)
+  File "/usr/lib/python3.10/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/usr/lib/python3.10/json/__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 4 column 1 (char 29)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/donations/views.py", line 25, in create
+    serializer = DonationsSerializer(data=request.data)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/request.py", line 216, in data
+    self._load_data_and_files()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/request.py", line 279, in _load_data_and_files
+    self._data, self._files = self._parse()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/request.py", line 354, in _parse
+    parsed = parser.parse(stream, media_type, self.parser_context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/parsers.py", line 66, in parse
+    raise ParseError('JSON parse error - %s' % str(exc))
+rest_framework.exceptions.ParseError: JSON parse error - Expecting property name enclosed in double quotes: line 4 column 1 (char 29)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 466, in handle_exception
+    response = exception_handler(exc, context)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/core/exception_handlers.py", line 131, in custom_exception_handler
+    custom_response = ErrorResponse(
+  File "/home/samuel/Documents/freelance/Charity-backend-api/core/exception_handlers.py", line 90, in __init__
+    [
+  File "/home/samuel/Documents/freelance/Charity-backend-api/core/exception_handlers.py", line 91, in <listcomp>
+    {"loc": ["body", field], "msg": error[0], "type": error[0].code}
+AttributeError: 'str' object has no attribute 'code'
+2024-03-19 00:22:42,900 (ERROR) -  log django.request 125869 138034334922304 Internal Server Error: /api/v1/donations/create/
+2024-03-19 00:22:48,644 (WARNING) -  log django.request 125869 138034334922304 Bad Request: /api/v1/donations/create/
+2024-03-19 00:22:59,678 (WARNING) -  log django.request 125869 138034334922304 Bad Request: /api/v1/donations/create/
+2024-03-19 00:23:44,287 (WARNING) -  log django.request 125869 138034334922304 Bad Request: /api/v1/donations/create/
+2024-03-19 00:25:27,692 (WARNING) -  log django.request 126754 134934825006656 Bad Request: /api/v1/donations/create/
+2024-03-19 00:25:49,158 (ERROR) -  middleware core.middleware 126842 129517265876544 An exception occurred: 'request', Request_ID: 136b27f2-9a43-40aa-ab74-33dad9da7c4d
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/donations/views.py", line 27, in create
+    serializer.is_valid(raise_exception=True)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 429, in run_validation
+    value = self.validate(value)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/donations/serializers.py", line 19, in validate
+    donation = Donation(**attrs, donor=self.context['request'].user)
+KeyError: 'request'
+2024-03-19 00:25:49,167 (ERROR) -  log django.request 126842 129517265876544 Internal Server Error: /api/v1/donations/create/
+2024-03-19 00:27:05,904 (WARNING) -  log django.request 127017 140502386079296 Bad Request: /api/v1/donations/create/
+2024-03-19 00:27:26,162 (ERROR) -  middleware core.middleware 127017 140502386079296 An exception occurred: no such table: donations_donation, Request_ID: e53c1018-b40c-4496-b054-2363e3077c44
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 329, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: donations_donation
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/donations/views.py", line 32, in create
+    serializer.save()
+  File "/home/samuel/Documents/freelance/Charity-backend-api/donations/serializers.py", line 16, in save
+    return super().save(**kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/donations/models.py", line 25, in save
+    super().save(*args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/base.py", line 909, in save_base
+    updated = self._save_table(
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1067, in _save_table
+    results = self._do_insert(
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1108, in _do_insert
+    return manager._insert(
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 329, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: donations_donation
+2024-03-19 00:27:26,176 (ERROR) -  log django.request 127017 140502386079296 Internal Server Error: /api/v1/donations/create/
+2024-03-19 00:50:13,836 (ERROR) -  middleware core.middleware 129581 140105167664704 An exception occurred: The field 'donor_name' was declared on serializer DonationsSerializer, but has not been included in the 'fields' option., Request_ID: 7dbd649c-da71-453e-b10a-2ed26bfbbbe4
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/donations/views.py", line 28, in create
+    serializer.is_valid(raise_exception=True)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 426, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 479, in to_internal_value
+    for field in fields:
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 362, in _writable_fields
+    for field in self.fields.values():
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1148, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'donor_name' was declared on serializer DonationsSerializer, but has not been included in the 'fields' option.
+2024-03-19 00:50:13,840 (ERROR) -  log django.request 129581 140105167664704 Internal Server Error: /api/v1/donations/create/
+2024-03-19 00:51:03,119 (WARNING) -  log django.request 129799 136813874247232 Bad Request: /api/v1/donations/create/
+2024-03-19 00:54:57,633 (WARNING) -  log django.security.csrf 130325 128373539993152 Forbidden (CSRF token missing.): /api/v1/donations/delete/1/
+2024-03-19 00:55:53,749 (WARNING) -  log django.security.csrf 130571 137099931022912 Forbidden (CSRF token missing.): /api/v1/donations/delete/1/
+2024-03-19 00:56:08,429 (WARNING) -  log django.request 130665 130416795186752 Bad Request: /api/v1/donations/delete/1/
+2024-03-19 00:56:49,256 (ERROR) -  middleware core.middleware 130665 130416766871104 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist, Request_ID: 450b8b3a-7fae-4dd6-be0d-af887494193b
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
+2024-03-19 00:56:49,258 (ERROR) -  log django.request 130665 130416766871104 Internal Server Error: /favicon.ico
+2024-03-19 00:56:52,012 (ERROR) -  middleware core.middleware 130665 130416766871104 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist, Request_ID: 687619f6-ddce-42ca-92c3-c750e415d585
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
+2024-03-19 00:56:52,013 (ERROR) -  log django.request 130665 130416766871104 Internal Server Error: /favicon.ico
+2024-03-19 00:57:01,774 (ERROR) -  middleware core.middleware 130665 130416766871104 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist, Request_ID: bd00c387-1f0a-485f-9224-b91217df32c2
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
+2024-03-19 00:57:01,775 (ERROR) -  log django.request 130665 130416766871104 Internal Server Error: /favicon.ico
+2024-03-19 00:57:12,238 (ERROR) -  middleware core.middleware 130665 130416766871104 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist, Request_ID: 1b088864-e29f-418e-9493-4a0646ee59ef
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
+2024-03-19 00:57:12,240 (ERROR) -  log django.request 130665 130416766871104 Internal Server Error: /favicon.ico
+2024-03-19 01:03:32,188 (ERROR) -  middleware core.middleware 131734 127456922039872 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist, Request_ID: 20a93a98-b415-43fc-a473-309f7ae9ee56
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
+2024-03-19 01:03:32,189 (ERROR) -  log django.request 131734 127456922039872 Internal Server Error: /favicon.ico
+2024-03-19 01:03:52,311 (ERROR) -  middleware core.middleware 131734 127456836052544 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist, Request_ID: 82f16da8-b7d3-41b4-95cb-0853756ef923
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
+2024-03-19 01:03:52,313 (ERROR) -  log django.request 131734 127456836052544 Internal Server Error: /favicon.ico
+2024-03-19 01:03:56,787 (ERROR) -  middleware core.middleware 131734 127456817169984 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist, Request_ID: 6b480948-9857-4b17-b550-d1955e8ef561
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
+2024-03-19 01:03:56,788 (ERROR) -  log django.request 131734 127456817169984 Internal Server Error: /favicon.ico
+2024-03-19 01:04:05,194 (ERROR) -  middleware core.middleware 131734 127456817169984 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist, Request_ID: fffd6c86-8247-45b2-a19e-dc4088e56010
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
+2024-03-19 01:04:05,195 (ERROR) -  log django.request 131734 127456817169984 Internal Server Error: /favicon.ico
+2024-03-19 01:04:13,165 (ERROR) -  middleware core.middleware 131734 127456817169984 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist, Request_ID: f14dda16-50b3-4734-a5f9-99805fe95074
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
+2024-03-19 01:04:13,167 (ERROR) -  log django.request 131734 127456817169984 Internal Server Error: /favicon.ico
+2024-03-19 01:04:26,190 (ERROR) -  middleware core.middleware 131734 127456817169984 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist, Request_ID: 9fce32b7-7d1d-4bba-9bba-7510acf3915e
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
+2024-03-19 01:04:26,192 (ERROR) -  log django.request 131734 127456817169984 Internal Server Error: /favicon.ico
+2024-03-19 01:04:28,788 (ERROR) -  middleware core.middleware 131734 127456817169984 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist, Request_ID: f2dc943e-d9fa-49b1-b197-46011da96cf8
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
+2024-03-19 01:04:28,789 (ERROR) -  log django.request 131734 127456817169984 Internal Server Error: /favicon.ico
+2024-03-19 01:04:30,583 (ERROR) -  middleware core.middleware 131734 127456817169984 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist, Request_ID: b8215916-79c6-4385-8491-bee3916c21fc
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
+2024-03-19 01:04:30,584 (ERROR) -  log django.request 131734 127456817169984 Internal Server Error: /favicon.ico
+2024-03-19 01:04:33,615 (ERROR) -  middleware core.middleware 131734 127456836052544 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist, Request_ID: a29e3feb-ae18-4b5d-8fa6-026b34b75d39
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
+2024-03-19 01:04:33,617 (ERROR) -  log django.request 131734 127456836052544 Internal Server Error: /favicon.ico
+2024-03-19 01:05:04,361 (ERROR) -  middleware core.middleware 131734 127456836052544 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist, Request_ID: 7e198b07-8cdf-48b7-a154-780aa00dbc2c
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
+2024-03-19 01:05:04,363 (ERROR) -  log django.request 131734 127456836052544 Internal Server Error: /favicon.ico
+2024-03-19 01:05:06,697 (ERROR) -  middleware core.middleware 131734 127456836052544 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist, Request_ID: d8770408-559f-464d-88c6-15655b413e70
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
+2024-03-19 01:05:06,699 (ERROR) -  log django.request 131734 127456836052544 Internal Server Error: /favicon.ico
+2024-03-19 01:05:17,760 (ERROR) -  middleware core.middleware 131734 127456836052544 An exception occurred: 'DonationsView' object has no attribute 'update', Request_ID: 9acc61a2-520f-4d90-b07d-07f9feeaef6a
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 281, in get_schema
+    paths=self.parse(request, public),
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 202, in parse
+    endpoints = self._get_paths_and_endpoints()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 192, in _get_paths_and_endpoints
+    view = self.create_view(callback, method)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 143, in create_view
+    action = getattr(view, view.action)
+AttributeError: 'DonationsView' object has no attribute 'update'
+2024-03-19 01:05:17,763 (ERROR) -  log django.request 131734 127456836052544 Internal Server Error: /api/schema/
+2024-03-19 01:05:17,823 (ERROR) -  middleware core.middleware 131734 127456836052544 An exception occurred: 'DonationsView' object has no attribute 'update', Request_ID: dbe224dc-5e8b-4859-9f20-745a826ed2ff
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 281, in get_schema
+    paths=self.parse(request, public),
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 202, in parse
+    endpoints = self._get_paths_and_endpoints()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 192, in _get_paths_and_endpoints
+    view = self.create_view(callback, method)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 143, in create_view
+    action = getattr(view, view.action)
+AttributeError: 'DonationsView' object has no attribute 'update'
+2024-03-19 01:05:17,824 (ERROR) -  log django.request 131734 127456836052544 Internal Server Error: /api/schema/
+2024-03-19 01:05:20,548 (ERROR) -  middleware core.middleware 131734 127456836052544 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist, Request_ID: 45e9081d-62ed-40a7-a1b9-7d0746b3c61f
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
+2024-03-19 01:05:20,549 (ERROR) -  log django.request 131734 127456836052544 Internal Server Error: /favicon.ico
+2024-03-19 01:05:30,301 (ERROR) -  middleware core.middleware 131734 127456836052544 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist, Request_ID: ed69cc33-317c-406d-850a-635c23c53a49
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
+2024-03-19 01:05:30,303 (ERROR) -  log django.request 131734 127456836052544 Internal Server Error: /favicon.ico
+2024-03-19 01:05:33,642 (ERROR) -  middleware core.middleware 131734 127456836052544 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist, Request_ID: 53db0adc-1a97-4cdf-ae64-bdf7a0e9c7e9
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
+2024-03-19 01:05:33,644 (ERROR) -  log django.request 131734 127456836052544 Internal Server Error: /favicon.ico
+2024-03-19 01:05:35,730 (ERROR) -  middleware core.middleware 131734 127456836052544 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist, Request_ID: a5d6cb3f-7b47-40f9-88de-854a8f44539a
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
+2024-03-19 01:05:35,731 (ERROR) -  log django.request 131734 127456836052544 Internal Server Error: /favicon.ico
+2024-03-19 01:05:37,695 (ERROR) -  middleware core.middleware 131734 127456836052544 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist, Request_ID: 59509f75-9bb8-4621-897f-c3a285016695
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
+2024-03-19 01:05:37,696 (ERROR) -  log django.request 131734 127456836052544 Internal Server Error: /favicon.ico
+2024-03-19 01:05:39,746 (ERROR) -  middleware core.middleware 131734 127456836052544 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist, Request_ID: 3a1d3d48-65bd-49fe-a8da-fecc2a52114e
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
+2024-03-19 01:05:39,747 (ERROR) -  log django.request 131734 127456836052544 Internal Server Error: /favicon.ico
+2024-03-19 01:06:53,621 (ERROR) -  middleware core.middleware 132351 135590469170752 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist, Request_ID: 84cf0b39-fbec-4526-85ab-b1f400495a14
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
+2024-03-19 01:06:53,623 (ERROR) -  log django.request 132351 135590469170752 Internal Server Error: /favicon.ico
+2024-03-19 01:08:06,665 (ERROR) -  middleware core.middleware 132693 132052373468736 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist, Request_ID: d92e3c8b-9186-4c7a-baff-6ac71fa60a23
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
+2024-03-19 01:08:06,666 (ERROR) -  log django.request 132693 132052373468736 Internal Server Error: /favicon.ico
+2024-03-19 01:08:11,981 (ERROR) -  middleware core.middleware 132693 132052373468736 An exception occurred: no such column: donations_donation.date_created, Request_ID: 967c6109-31ab-41d0-aea2-35405f6bff0e
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 329, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such column: donations_donation.date_created
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 715, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 240, in inner
+    return view(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 2123, in changelist_view
+    "selection_note": _("0 of %(cnt)s selected") % {"cnt": len(cl.result_list)},
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/query.py", line 382, in __len__
+    self._fetch_all()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 329, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such column: donations_donation.date_created
+2024-03-19 01:08:11,990 (ERROR) -  log django.request 132693 132052373468736 Internal Server Error: /admin/donations/donation/
+2024-03-19 01:08:12,064 (ERROR) -  middleware core.middleware 132693 132052373468736 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist, Request_ID: 725136d4-3308-47ef-aaa4-3895258b3d63
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
+2024-03-19 01:08:12,065 (ERROR) -  log django.request 132693 132052373468736 Internal Server Error: /favicon.ico
+2024-03-19 01:11:22,581 (ERROR) -  middleware core.middleware 133119 125970249938496 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist, Request_ID: 6cda8bf2-69de-4ea6-ac0d-f5efb578c606
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
+2024-03-19 01:11:22,583 (ERROR) -  log django.request 133119 125970249938496 Internal Server Error: /favicon.ico
+2024-03-19 01:11:24,977 (ERROR) -  middleware core.middleware 133119 125970249938496 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist, Request_ID: 31d374ba-f02e-4224-85ea-bf2f0bc5ad48
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
+2024-03-19 01:11:24,979 (ERROR) -  log django.request 133119 125970249938496 Internal Server Error: /favicon.ico
+2024-03-19 01:11:32,046 (ERROR) -  middleware core.middleware 133119 125970249938496 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist, Request_ID: 2bd68d80-4ed3-4d45-882a-16e3400d573f
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
+2024-03-19 01:11:32,048 (ERROR) -  log django.request 133119 125970249938496 Internal Server Error: /favicon.ico
+2024-03-19 01:11:36,208 (ERROR) -  middleware core.middleware 133119 125970249938496 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist, Request_ID: 9c64959f-1b0e-43e4-9896-71d8aaf02083
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
+2024-03-19 01:11:36,210 (ERROR) -  log django.request 133119 125970249938496 Internal Server Error: /favicon.ico
+2024-03-19 01:11:39,326 (ERROR) -  middleware core.middleware 133119 125970249938496 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist, Request_ID: e4c5c13a-6f3f-42c6-89a2-d297e1355c69
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
+2024-03-19 01:11:39,328 (ERROR) -  log django.request 133119 125970249938496 Internal Server Error: /favicon.ico
+2024-03-19 01:11:44,735 (ERROR) -  middleware core.middleware 133119 125970249938496 An exception occurred: 'Campaign' object has no attribute 'name', Request_ID: 25d6e04a-b1e7-41cd-97a9-d473e6903a6e
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/options.py", line 681, in get_field
+    return self.fields_map[field_name]
+KeyError: 'action_checkbox'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 289, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 322, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/options.py", line 683, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: Campaign has no field named 'action_checkbox'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/base.py", line 45, in render
+    return super().render(context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/template/library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 345, in result_list
+    "results": list(results(cl)),
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 321, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 312, in __init__
+    super().__init__(*items)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 217, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 298, in lookup_field
+    value = attr(obj)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 998, in action_checkbox
+    "aria-label": format_html(_("Select this object for an action - {}"), obj),
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/html.py", line 135, in format_html
+    return mark_safe(format_string.format(*args_safe, **kwargs_safe))
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/html.py", line 117, in conditional_escape
+    return escape(text)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/functional.py", line 231, in wrapper
+    return func(*args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/html.py", line 50, in escape
+    return SafeString(html.escape(str(text)))
+  File "/home/samuel/Documents/freelance/Charity-backend-api/campaign/models.py", line 44, in __str__
+    return self.name
+AttributeError: 'Campaign' object has no attribute 'name'
+2024-03-19 01:11:44,744 (ERROR) -  log django.request 133119 125970249938496 Internal Server Error: /admin/campaign/campaign/
+2024-03-19 01:11:44,815 (ERROR) -  middleware core.middleware 133119 125970249938496 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist, Request_ID: e0771b22-48e7-4a20-9f03-9c410f690b3d
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
+2024-03-19 01:11:44,816 (ERROR) -  log django.request 133119 125970249938496 Internal Server Error: /favicon.ico
+2024-03-19 01:12:53,799 (ERROR) -  middleware core.middleware 133408 133737966728768 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist, Request_ID: 3d750719-9aaa-4c5a-9b0f-3b2612777ef1
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
+2024-03-19 01:12:53,801 (ERROR) -  log django.request 133408 133737966728768 Internal Server Error: /favicon.ico
+2024-03-19 01:13:01,613 (ERROR) -  middleware core.middleware 133408 133737966728768 An exception occurred: no such column: donations_donation.date_created, Request_ID: db674f92-b6eb-4cb5-b37c-ec936b4036ba
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 329, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such column: donations_donation.date_created
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 715, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 240, in inner
+    return view(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 2123, in changelist_view
+    "selection_note": _("0 of %(cnt)s selected") % {"cnt": len(cl.result_list)},
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/query.py", line 382, in __len__
+    self._fetch_all()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 329, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such column: donations_donation.date_created
+2024-03-19 01:13:01,618 (ERROR) -  log django.request 133408 133737966728768 Internal Server Error: /admin/donations/donation/
+2024-03-19 01:13:01,693 (ERROR) -  middleware core.middleware 133408 133737966728768 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist, Request_ID: 5f53612c-65df-4ed2-a764-07c783473fc5
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
+2024-03-19 01:13:01,695 (ERROR) -  log django.request 133408 133737966728768 Internal Server Error: /favicon.ico
+2024-03-19 01:26:30,784 (WARNING) -  log django.request 134700 125031261664832 Bad Request: /api/v1/donations/delete/1/
+2024-03-19 01:26:38,007 (ERROR) -  middleware core.middleware 134700 125031242790464 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist, Request_ID: b1fa4d79-6fcb-4c5f-acb0-aa9fbde5a3e9
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
+2024-03-19 01:26:38,009 (ERROR) -  log django.request 134700 125031242790464 Internal Server Error: /favicon.ico
+2024-03-19 01:26:41,147 (ERROR) -  middleware core.middleware 134700 125031242790464 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist, Request_ID: 08a4bf41-0c4b-436e-a7a9-e20269a1f05e
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
+2024-03-19 01:26:41,149 (ERROR) -  log django.request 134700 125031242790464 Internal Server Error: /favicon.ico
+2024-03-19 01:26:42,919 (ERROR) -  middleware core.middleware 134700 125031242790464 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist, Request_ID: b88f5324-a1bb-4193-b5db-e3bf0c9c557a
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
+2024-03-19 01:26:42,920 (ERROR) -  log django.request 134700 125031242790464 Internal Server Error: /favicon.ico
+2024-03-19 01:27:03,385 (ERROR) -  middleware core.middleware 134700 125031242790464 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist, Request_ID: edd26036-da67-4209-8a93-6407f154b303
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
+2024-03-19 01:27:03,386 (ERROR) -  log django.request 134700 125031242790464 Internal Server Error: /favicon.ico
+2024-03-19 01:27:15,184 (WARNING) -  log django.request 134700 125031261664832 Bad Request: /api/v1/donations/create/
+2024-03-19 01:31:07,479 (WARNING) -  log django.request 135470 133571971905088 Bad Request: /api/v1/donations/create/
+2024-03-19 01:31:09,464 (WARNING) -  log django.request 135470 133571971905088 Bad Request: /api/v1/donations/create/
+2024-03-19 01:31:35,774 (WARNING) -  log django.request 135587 137127082849856 Bad Request: /api/v1/donations/create/
+2024-03-19 01:32:08,771 (ERROR) -  middleware core.middleware 135697 123782027015744 An exception occurred: Donation() got unexpected keyword arguments: 'donor', Request_ID: 045d9152-804d-47a1-83e2-8e83b0f36191
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/donations/views.py", line 31, in create
+    serializer.is_valid(raise_exception=True)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 429, in run_validation
+    value = self.validate(value)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/donations/serializers.py", line 21, in validate
+    donation = Donation(**attrs, donor=self.context['request'].user)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/base.py", line 567, in __init__
+    raise TypeError(
+TypeError: Donation() got unexpected keyword arguments: 'donor'
+2024-03-19 01:32:08,774 (ERROR) -  log django.request 135697 123782027015744 Internal Server Error: /api/v1/donations/create/
+2024-03-19 01:35:46,428 (WARNING) -  log django.request 136154 139614910150208 Bad Request: /api/v1/donations/create/
+2024-03-19 01:42:55,777 (WARNING) -  log django.request 137216 123747671471680 Bad Request: /api/v1/donations/create/
+2024-03-19 07:21:27,539 (WARNING) -  log django.request 138584 129325881882176 Bad Request: /api/v1/donations/create/
+2024-03-19 07:23:07,864 (WARNING) -  log django.request 138757 127915639436864 Bad Request: /api/v1/donations/create/
+2024-03-19 07:25:54,116 (WARNING) -  log django.request 139084 126255944955456 Unauthorized: /api/v1/donations/create/
+2024-03-19 07:25:56,586 (WARNING) -  log django.request 139084 126255944955456 Unauthorized: /api/v1/donations/create/
+2024-03-19 07:26:29,361 (WARNING) -  log django.request 139084 126255944955456 Bad Request: /api/v1/donations/create/
+2024-03-19 07:26:38,087 (WARNING) -  log django.request 139084 126255944955456 Unauthorized: /api/v1/campaign/1fb0af6b-b8ee-4a51-b478-977e8a98e52b/approve/
+2024-03-19 07:27:24,982 (WARNING) -  log django.request 139084 126255944955456 Unauthorized: /api/v1/campaign/trending/
+2024-03-19 07:27:33,980 (WARNING) -  log django.request 139084 126255944955456 Unauthorized: /api/v1/campaign/
+2024-03-19 07:47:49,082 (WARNING) -  log django.request 141288 130849360049728 Unauthorized: /api/v1/campaign/trending/
+2024-03-19 07:47:49,098 (WARNING) -  log django.request 141288 130849343264320 Unauthorized: /api/v1/campaign/trending/
+2024-03-19 21:40:12,721 (WARNING) -  log django.request 142056 129304943912512 Bad Request: /api/v1/donations/create/
+2024-03-19 21:41:09,891 (ERROR) -  middleware core.middleware 142056 129304934471232 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist, Request_ID: e3cd9f3e-32bc-4833-a6ef-43a53716633b
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
+2024-03-19 21:41:09,892 (ERROR) -  log django.request 142056 129304934471232 Internal Server Error: /favicon.ico
+2024-03-19 21:41:14,074 (ERROR) -  middleware core.middleware 142056 129304934471232 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist, Request_ID: 196926ae-0f7a-4937-b663-2c399528ce34
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
+2024-03-19 21:41:14,076 (ERROR) -  log django.request 142056 129304934471232 Internal Server Error: /favicon.ico
+2024-03-19 21:41:26,301 (ERROR) -  middleware core.middleware 142056 129304934471232 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist, Request_ID: 9e500df1-04d5-4ba0-b767-21a9d07c22e2
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
+2024-03-19 21:41:26,302 (ERROR) -  log django.request 142056 129304934471232 Internal Server Error: /favicon.ico
+2024-03-19 21:41:32,175 (ERROR) -  middleware core.middleware 142056 129304934471232 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist, Request_ID: 7937fb51-ce3d-4491-81d3-f2926decd5ef
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
+2024-03-19 21:41:32,176 (ERROR) -  log django.request 142056 129304934471232 Internal Server Error: /favicon.ico
+2024-03-19 21:41:37,654 (ERROR) -  middleware core.middleware 142056 129304934471232 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist, Request_ID: 37476867-be8f-41a3-ba7e-7e2614699410
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
+2024-03-19 21:41:37,655 (ERROR) -  log django.request 142056 129304934471232 Internal Server Error: /favicon.ico
