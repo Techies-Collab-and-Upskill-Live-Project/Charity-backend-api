@@ -11120,3 +11120,234 @@ Traceback (most recent call last):
     raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
 django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
 2024-03-19 21:41:37,655 (ERROR) -  log django.request 142056 129304934471232 Internal Server Error: /favicon.ico
+2024-03-19 23:35:42,578 (WARNING) -  log django.request 159503 138222986327616 Unauthorized: /api/v1/campaign/trending/
+2024-03-20 07:56:14,414 (WARNING) -  log django.request 159503 138220192900672 Unauthorized: /api/v1/campaign/featured/
+2024-03-20 07:57:11,588 (WARNING) -  log django.request 182727 124600558024256 Unauthorized: /api/v1/campaign/featured/
+2024-03-20 07:57:37,814 (WARNING) -  log django.request 182727 124600558024256 Unauthorized: /api/v1/campaign/trending/
+2024-03-20 08:01:37,493 (WARNING) -  log django.request 182727 124600558024256 Unauthorized: /api/v1/campaign/trending/
+2024-03-20 08:01:39,706 (WARNING) -  log django.request 182727 124600558024256 Unauthorized: /api/v1/campaign/trending/
+2024-03-20 08:01:46,410 (WARNING) -  log django.request 182727 124600558024256 Unauthorized: /api/v1/campaign/featured/
+2024-03-20 21:19:21,621 (WARNING) -  log django.request 182727 124600558024256 Unauthorized: /api/v1/campaign/featured/
+2024-03-20 21:19:59,267 (WARNING) -  log django.request 182727 124600558024256 Unauthorized: /api/v1/campaign/featured/
+2024-03-20 21:20:00,791 (WARNING) -  log django.request 182727 124600558024256 Unauthorized: /api/v1/campaign/featured/
+2024-03-20 21:20:02,199 (WARNING) -  log django.request 182727 124600558024256 Unauthorized: /api/v1/campaign/featured/
+2024-03-20 21:20:24,680 (WARNING) -  log django.request 182727 124600558024256 Unauthorized: /api/v1/campaign/trending/
+2024-03-20 21:20:26,098 (WARNING) -  log django.request 182727 124600558024256 Unauthorized: /api/v1/campaign/trending/
+2024-03-20 23:33:25,992 (WARNING) -  log django.request 186197 134678451316288 Unauthorized: /api/token/
+2024-03-20 23:37:25,636 (WARNING) -  log django.request 186197 134678451316288 Unauthorized: /api/token/
+2024-03-20 23:37:39,300 (WARNING) -  log django.request 186197 134678451316288 Unauthorized: /api/token/
+2024-03-20 23:40:04,237 (WARNING) -  log django.request 196231 124739267851840 Unauthorized: /api/v1/auth/login/
+2024-03-20 23:41:46,106 (ERROR) -  middleware core.middleware 196231 124739267851840 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/api/todo/2” does not exist, Request_ID: 414f9131-28f1-4cef-a1b3-9222226b9264
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/api/todo/2” does not exist
+2024-03-20 23:41:46,114 (ERROR) -  log django.request 196231 124739267851840 Internal Server Error: /api/todo/2/
+2024-03-20 23:42:08,278 (ERROR) -  middleware core.middleware 196231 124739240588864 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/api/test” does not exist, Request_ID: 5b64f121-a888-405d-804c-08735961e176
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/api/test” does not exist
+2024-03-20 23:42:08,280 (ERROR) -  log django.request 196231 124739240588864 Internal Server Error: /api/test/
+2024-03-20 23:42:08,287 (WARNING) -  log django.security.csrf 196231 124739267851840 Forbidden (CSRF cookie not set.): /api/test/
+2024-03-20 23:42:18,682 (ERROR) -  middleware core.middleware 196231 124739267851840 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/api/my-messages/2” does not exist, Request_ID: ea79f22b-63e0-4c9b-b4b8-b2e18e5e9b3d
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/api/my-messages/2” does not exist
+2024-03-20 23:42:18,684 (ERROR) -  log django.request 196231 124739267851840 Internal Server Error: /api/my-messages/2/
+2024-03-20 23:42:25,591 (WARNING) -  log django.security.csrf 196231 124739240588864 Forbidden (CSRF cookie not set.): /api/test/
+2024-03-20 23:42:25,592 (ERROR) -  middleware core.middleware 196231 124739267851840 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/api/test” does not exist, Request_ID: 4990fd73-b6c9-4886-a397-7ccab0f8c051
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/api/test” does not exist
+2024-03-20 23:42:25,595 (ERROR) -  log django.request 196231 124739267851840 Internal Server Error: /api/test/
+2024-03-21 22:18:42,042 (ERROR) -  middleware core.middleware 196231 124739267851840 An exception occurred: 'DonationsView' object has no attribute 'update', Request_ID: c2ec4569-97c2-4ffd-b116-5a066209de03
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 281, in get_schema
+    paths=self.parse(request, public),
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 202, in parse
+    endpoints = self._get_paths_and_endpoints()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 192, in _get_paths_and_endpoints
+    view = self.create_view(callback, method)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 143, in create_view
+    action = getattr(view, view.action)
+AttributeError: 'DonationsView' object has no attribute 'update'
+2024-03-21 22:18:42,045 (ERROR) -  log django.request 196231 124739267851840 Internal Server Error: /api/schema/
+2024-03-21 22:18:42,141 (ERROR) -  middleware core.middleware 196231 124739267851840 An exception occurred: 'DonationsView' object has no attribute 'update', Request_ID: b61824a6-1ff2-4109-9d02-c31cc47430f3
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 281, in get_schema
+    paths=self.parse(request, public),
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 202, in parse
+    endpoints = self._get_paths_and_endpoints()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 192, in _get_paths_and_endpoints
+    view = self.create_view(callback, method)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 143, in create_view
+    action = getattr(view, view.action)
+AttributeError: 'DonationsView' object has no attribute 'update'
+2024-03-21 22:18:42,142 (ERROR) -  log django.request 196231 124739267851840 Internal Server Error: /api/schema/
+2024-03-21 22:19:05,816 (ERROR) -  middleware core.middleware 196231 124739267851840 An exception occurred: 'DonationsView' object has no attribute 'update', Request_ID: 5836201c-86cf-43dd-aa07-f34feacdc34a
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 281, in get_schema
+    paths=self.parse(request, public),
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 202, in parse
+    endpoints = self._get_paths_and_endpoints()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 192, in _get_paths_and_endpoints
+    view = self.create_view(callback, method)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 143, in create_view
+    action = getattr(view, view.action)
+AttributeError: 'DonationsView' object has no attribute 'update'
+2024-03-21 22:19:05,818 (ERROR) -  log django.request 196231 124739267851840 Internal Server Error: /api/schema/
+2024-03-21 22:19:05,853 (ERROR) -  middleware core.middleware 196231 124739267851840 An exception occurred: 'DonationsView' object has no attribute 'update', Request_ID: 8fb435e3-03c0-4394-b297-91840d1f0b21
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 281, in get_schema
+    paths=self.parse(request, public),
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 202, in parse
+    endpoints = self._get_paths_and_endpoints()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 192, in _get_paths_and_endpoints
+    view = self.create_view(callback, method)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 143, in create_view
+    action = getattr(view, view.action)
+AttributeError: 'DonationsView' object has no attribute 'update'
+2024-03-21 22:19:05,854 (ERROR) -  log django.request 196231 124739267851840 Internal Server Error: /api/schema/
+2024-03-21 22:19:19,725 (ERROR) -  middleware core.middleware 196231 124739267851840 An exception occurred: 'DonationsView' object has no attribute 'update', Request_ID: b2a66e14-70a7-4cf5-bd84-c754b7f96858
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 281, in get_schema
+    paths=self.parse(request, public),
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 202, in parse
+    endpoints = self._get_paths_and_endpoints()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 192, in _get_paths_and_endpoints
+    view = self.create_view(callback, method)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 143, in create_view
+    action = getattr(view, view.action)
+AttributeError: 'DonationsView' object has no attribute 'update'
+2024-03-21 22:19:19,726 (ERROR) -  log django.request 196231 124739267851840 Internal Server Error: /api/schema/
+2024-03-21 22:19:19,776 (ERROR) -  middleware core.middleware 196231 124739267851840 An exception occurred: 'DonationsView' object has no attribute 'update', Request_ID: f60bf858-9610-4b3a-973b-2e9933a6d515
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 281, in get_schema
+    paths=self.parse(request, public),
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 202, in parse
+    endpoints = self._get_paths_and_endpoints()
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 192, in _get_paths_and_endpoints
+    view = self.create_view(callback, method)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 143, in create_view
+    action = getattr(view, view.action)
+AttributeError: 'DonationsView' object has no attribute 'update'
+2024-03-21 22:19:19,777 (ERROR) -  log django.request 196231 124739267851840 Internal Server Error: /api/schema/

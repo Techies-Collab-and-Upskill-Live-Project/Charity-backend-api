@@ -11,8 +11,7 @@ from campaign_category.models import CampaignCategory
 from drf_spectacular.utils import extend_schema
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.parsers import MultiPartParser, FormParser
-import cloudinary
-from utils import upload_image_and_get_url
+import random
 
 
 
@@ -258,8 +257,27 @@ class CampaignView(GenericViewSet):
         def featured(self, request, *args, **kwargs):
                 try:
                         # Get a random campaign
-                        campaign = Campaign.objects.order_by('?').first()
-                        serializer = CampaignSerializer(campaign)
+                        now = timezone.now()
+
+                        # Filter campaigns based on your conditions
+                        campaigns = Campaign.objects.filter(
+                            is_active=True,
+                            is_completed=False,
+                            is_cancelled=False,
+                            is_deleted=False,
+                            is_rejected=False,
+                            end_date__gte=now,
+                        )
+                        
+                        # Get a list of IDs for campaigns that match the filter
+                        campaign_ids = list(campaigns.values_list('id', flat=True))
+                        # Randomly choose one ID from the list, if the list is not empty
+                        random_id = random.choice(campaign_ids) if campaign_ids else None
+                        
+                        # Retrieve the campaign corresponding to the randomly chosen ID, if there was one
+                        random_campaign = Campaign.objects.get(id=random_id) if random_id else None
+                        
+                        serializer = CampaignSerializer(random_campaign)
                         response = {
                             "message": "Featured campaign chosen successfully",
                             "data": serializer.data

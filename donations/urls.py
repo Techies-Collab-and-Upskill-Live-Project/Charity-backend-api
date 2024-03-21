@@ -6,6 +6,5 @@ urlpatterns = [
         path('create/', DonationsView.as_view({"post": "create"})),
         path('list/', DonationsView.as_view({"get": "list"})),
         path('<uuid:campaign_id>/', DonationsView.as_view({"get": "retrieve"})),
-        path('update/<uuid:donation_id>/', DonationsView.as_view({"put": "update"})),
         path('delete/<donation_id>/', DonationsView.as_view({"delete": "destroy"})),
 ]
