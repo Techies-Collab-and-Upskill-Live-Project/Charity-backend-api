@@ -11664,3 +11664,5 @@ kk
 2024-03-23 10:54:11,930 (WARNING) -  log django.request 33301 135778636117568 Unauthorized: /api/v1/campaign/featured/
 2024-03-23 10:54:11,940 (WARNING) -  log django.request 33301 135778669688384 Unauthorized: /api/v1/campaign/trending/
 2024-03-23 10:54:11,962 (WARNING) -  log django.request 33301 135778661295680 Unauthorized: /api/v1/campaign_category/list/
+2024-03-23 14:56:05,773 (WARNING) -  log django.request 13770 128505220167232 Bad Request: /api/v1/auth/register/
+2024-03-23 14:56:37,580 (WARNING) -  log django.request 13979 125283170514496 Bad Request: /api/v1/auth/register/

@@ -31,7 +31,7 @@ class UserRegisterSerializer(serializers.ModelSerializer):
         # Check if a user with the same email already exists
         existing_user = get_user_model().objects.filter(email=email).first()
         if existing_user:
-            raise serializers.ValidationError({"email": [" user with this email already exists."]})
+            raise serializers.ValidationError({"email": ["User with this email already exists."]})
 
         # If no existing user, proceed with creating the new user
         user = get_user_model().objects.create_user(
