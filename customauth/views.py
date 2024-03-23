@@ -10,6 +10,7 @@ from drf_spectacular.utils import extend_schema
 import datetime
 from emailer.email_backend import send_email
 from rest_framework.exceptions import ValidationError
+from customauth.models import CustomUser
 
 class UserRegisterView(GenericViewSet):
     serializer_class = UserRegisterSerializer
@@ -232,3 +233,48 @@ class PasswordResetView(APIView):
             return Response({'detail': 'Password reset successfully'}, status=status.HTTP_200_OK)
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+# forget password view
+# takes email and send a link to reset password
+# link should be valid for 24 hours
+# link should be unique for each user
+# link should be sent to the user's email
+# link should be a one-time use link
+# link should be invalidated after use
+# link should be invalidated after 24 hours
+# link should be invalidated if user changes password
+# link should be invalidated if user logs in
+class ForgotPasswordView(APIView):
+    permission_classes = []
+
+    @extend_schema(tags=['Authentication'], summary='Forgot password')
+    def post(self, request, *args, **kwargs):
+        email = request.data.get('email')
+        if email:
+            user = CustomUser.objects.get(email=email)
+            print("user", user)
+            if user:
+                users_name = user.first_name 
+                # Generate a unique token
+                token = RefreshToken.for_user(user)
+                # Set the token expiry time
+                token.set_exp(lifetime=datetime.timedelta(days=1))
+                # Get the metadata from where the request is coming from
+                # including device and IP address
+                try:
+                    user_agent = request.META.get('HTTP_USER_AGENT', None)
+                    ip_address = request.META.get('REMOTE_ADDR', None)
+                except AttributeError:
+                    print(AttributeError)
+                    user_agent = None
+                    ip_address = None
+                # Prepare the HTML content from the template
+                context = {'user': user, 'user_agent': user_agent, 'ip_address': ip_address, 'token': token, 'name': users_name}
+                # Send email using the existing backend
+                subject = 'Donation Trace - Reset Password'
+                recipient_list = [email]
+                template = 'reset_password.html'
+                send_email(subject=subject, recipient_list=recipient_list, context=context, template=template)
+                return Response({'detail': 'Password reset link sent to your email'}, status=status.HTTP_200_OK)
+        return Response({'detail': 'User not found'}, status=status.HTTP_404_NOT_FOUND)

@@ -1,5 +1,6 @@
 from rest_framework.viewsets import GenericViewSet
 from core.exception_handlers import response_schemas
+from core.permissions import IsAdminUser
 from .serializers import CampaignSerializer
 from rest_framework.response import Response
 from rest_framework import status
@@ -15,12 +16,26 @@ import random
 
 
 
+
 class CampaignView(GenericViewSet):
         serializer_class = CampaignSerializer
 
         # permission_classes = [IsAuthenticated]
         parser_classes = (MultiPartParser, FormParser)
-
+        def get_permissions(self):
+            """
+            Instantiates and returns the list of permissions that this view requires.
+            """
+            # For example, if you want the 'destroy_all' method to require the user to be an admin
+            if self.action in ['destroy_all', 'approve']:
+                permission_classes = [IsAdminUser]
+            elif self.action in ['create', 'update', 'destroy']:
+                permission_classes = [IsAuthenticated]
+            else:
+                permission_classes = []
+                
+            return [permission() for permission in permission_classes]
+        
         # View to create a new campaign using the campaign category ID
 
         @response_schemas(

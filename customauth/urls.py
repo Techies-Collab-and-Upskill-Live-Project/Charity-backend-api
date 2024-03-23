@@ -1,5 +1,5 @@
 from django.urls import path, re_path, include
-from customauth.views import UserRegisterView,UserLoginView,UpdateProfileView,UserLogoutView,UserProfileView, PasswordResetView, DeleteUserView
+from customauth.views import UserRegisterView,UserLoginView,UpdateProfileView,UserLogoutView,UserProfileView, PasswordResetView, DeleteUserView, ForgotPasswordView
 
 urlpatterns = [
     path('register/', UserRegisterView.as_view({"post": "register"}, name='register')),
@@ -9,4 +9,5 @@ urlpatterns = [
     path('profile/get/', UserProfileView.as_view(), name='user-profile'),
     path('profile/update/', UpdateProfileView.as_view(), name='update_profile'),
     path('profile/delete/', DeleteUserView.as_view(), name='delete-user'),
+    path('forgotpassword/', ForgotPasswordView.as_view(), name='forgot-password'),
 ]

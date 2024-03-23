@@ -14,7 +14,7 @@ class CampaignImages(models.Model):
 class Campaign(BaseModel):
         title = models.CharField(max_length=255)
         description = models.TextField()
-        campaign_category = models.ForeignKey('campaign_category.CampaignCategory', on_delete=models.CASCADE)
+        campaign_category = models.ForeignKey('campaign_category.CampaignCategory', related_name='campaigns', on_delete=models.CASCADE)
         goal = models.IntegerField()
         currency = models.CharField(max_length=255)
         goals_obj = models.CharField(max_length=1000)

@@ -11351,3 +11351,316 @@ Traceback (most recent call last):
     action = getattr(view, view.action)
 AttributeError: 'DonationsView' object has no attribute 'update'
 2024-03-21 22:19:19,777 (ERROR) -  log django.request 196231 124739267851840 Internal Server Error: /api/schema/
+2024-03-21 22:23:08,395 (WARNING) -  log django.security.csrf 216111 127639820953152 Forbidden (CSRF token missing.): /api/v1/api/token/
+2024-03-21 22:27:50,680 (WARNING) -  log django.request 216111 127639820953152 Unauthorized: /api/token/refresh/
+2024-03-21 22:28:24,698 (WARNING) -  log django.request 216111 127639820953152 Unauthorized: /api/token/refresh/
+2024-03-21 22:46:23,062 (WARNING) -  log django.request 216111 127639829345856 Bad Request: /api/v1/auth/login/
+2024-03-21 22:46:29,814 (WARNING) -  log django.request 216111 127639829345856 Bad Request: /api/v1/auth/login/
+2024-03-22 01:15:11,097 (ERROR) -  middleware core.middleware 233289 123195424241216 An exception occurred: 'CampaignCategory' object has no attribute 'campaigns', Request_ID: f72a9c37-5036-4927-a0f0-83756e7469e6
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/campaign_category/views.py", line 43, in list
+    "campaign_categories": serializer.data,
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 1838, in to_representation
+    return method(value)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/campaign_category/serializers.py", line 19, in get_featured_campaign
+    campaigns = obj.campaigns.all()  # Adjust 'campaigns' if your related name is different
+AttributeError: 'CampaignCategory' object has no attribute 'campaigns'
+2024-03-22 01:15:11,105 (ERROR) -  log django.request 233289 123195424241216 Internal Server Error: /api/v1/campaign_category/list/
+2024-03-22 01:16:29,622 (ERROR) -  middleware core.middleware 233488 132390756283968 An exception occurred: 'CampaignCategory' object has no attribute 'campaign', Request_ID: 409c7db0-24f0-4b30-a5d0-76bc8945bcb3
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/campaign_category/views.py", line 43, in list
+    "campaign_categories": serializer.data,
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 1838, in to_representation
+    return method(value)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/campaign_category/serializers.py", line 19, in get_featured_campaign
+    campaigns = obj.campaign.all()  # Adjust 'campaigns' if your related name is different
+AttributeError: 'CampaignCategory' object has no attribute 'campaign'
+2024-03-22 01:16:29,631 (ERROR) -  log django.request 233488 132390756283968 Internal Server Error: /api/v1/campaign_category/list/
+2024-03-22 01:21:29,181 (WARNING) -  log django.request 233488 132390756283968 Unauthorized: /api/v1/campaign/
+2024-03-22 01:21:37,871 (WARNING) -  log django.request 233488 132390756283968 Unauthorized: /api/v1/campaign/
+2024-03-22 02:27:39,962 (WARNING) -  log django.request 243361 132805287736896 Unauthorized: /api/v1/campaign/
+2024-03-22 02:27:54,803 (WARNING) -  log django.request 243361 132805267813952 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 02:27:54,818 (WARNING) -  log django.request 243361 132805258372672 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 02:27:54,827 (WARNING) -  log django.request 243361 132804885083712 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 02:27:54,899 (WARNING) -  log django.request 243361 132805267813952 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 02:30:00,482 (WARNING) -  log django.request 243361 132805249979968 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 02:30:00,484 (WARNING) -  log django.request 243361 132805258372672 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 02:31:16,904 (WARNING) -  log django.request 243361 132805249979968 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 02:31:16,907 (WARNING) -  log django.request 243361 132805258372672 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 02:31:22,289 (WARNING) -  log django.request 243361 132805258372672 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 02:31:22,300 (WARNING) -  log django.request 243361 132805249979968 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 02:31:30,897 (WARNING) -  log django.request 243361 132805249979968 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 02:31:30,899 (WARNING) -  log django.request 243361 132805258372672 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 02:31:30,921 (WARNING) -  log django.request 243361 132804885083712 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 02:31:30,942 (WARNING) -  log django.request 243361 132805249979968 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 02:32:38,879 (WARNING) -  log django.request 243361 132805267813952 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 02:32:38,894 (WARNING) -  log django.request 243361 132804885083712 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 02:32:38,922 (WARNING) -  log django.request 243361 132805258372672 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 02:32:38,938 (WARNING) -  log django.request 243361 132804843120192 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 02:33:03,542 (WARNING) -  log django.request 243361 132805249979968 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 02:33:03,551 (WARNING) -  log django.request 243361 132805258372672 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 02:33:26,246 (WARNING) -  log django.request 243361 132805258372672 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 02:33:26,251 (WARNING) -  log django.request 243361 132805249979968 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 02:33:26,273 (WARNING) -  log django.request 243361 132804885083712 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 02:33:26,278 (WARNING) -  log django.request 243361 132805258372672 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 02:33:32,690 (WARNING) -  log django.request 243361 132804843120192 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 02:33:32,708 (WARNING) -  log django.request 243361 132804885083712 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 02:33:32,743 (WARNING) -  log django.request 243361 132805249979968 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 02:33:32,753 (WARNING) -  log django.request 243361 132804843120192 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 02:33:49,753 (WARNING) -  log django.request 243361 132805249979968 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 02:33:49,756 (WARNING) -  log django.request 243361 132805258372672 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 02:34:19,303 (WARNING) -  log django.request 243361 132805249979968 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 02:34:19,308 (WARNING) -  log django.request 243361 132805258372672 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 02:34:19,339 (WARNING) -  log django.request 243361 132804885083712 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 02:34:19,362 (WARNING) -  log django.request 243361 132805249979968 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 02:38:54,441 (WARNING) -  log django.request 243361 132804885083712 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 02:38:54,442 (WARNING) -  log django.request 243361 132804843120192 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 02:39:00,247 (WARNING) -  log django.request 243361 132804843120192 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 02:39:00,252 (WARNING) -  log django.request 243361 132804885083712 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 02:39:00,274 (WARNING) -  log django.request 243361 132805258372672 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 02:39:00,277 (WARNING) -  log django.request 243361 132804843120192 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 02:39:46,571 (WARNING) -  log django.request 243361 132805258372672 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 02:39:46,571 (WARNING) -  log django.request 243361 132805249979968 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 08:15:49,430 (WARNING) -  log django.request 10621 135717327988288 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 08:15:49,431 (WARNING) -  log django.request 10621 135717319595584 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 08:15:49,475 (WARNING) -  log django.request 10621 135717294417472 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 08:15:49,483 (WARNING) -  log django.request 10621 135717327988288 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 08:15:50,043 (WARNING) -  log django.request 10621 135716770133568 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 08:15:50,051 (WARNING) -  log django.request 10621 135716753348160 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 08:15:50,068 (WARNING) -  log django.request 10621 135716260537920 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 08:15:50,078 (WARNING) -  log django.request 10621 135716770133568 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 08:16:03,534 (WARNING) -  log django.request 10621 135717294417472 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 08:16:03,590 (WARNING) -  log django.request 10621 135717336380992 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 08:16:03,597 (WARNING) -  log django.request 10621 135717319595584 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 08:16:03,629 (WARNING) -  log django.request 10621 135717294417472 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 08:16:04,444 (WARNING) -  log django.request 10621 135716260537920 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 08:16:04,448 (WARNING) -  log django.request 10621 135716778526272 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 08:16:04,465 (WARNING) -  log django.request 10621 135716260537920 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 08:16:04,469 (WARNING) -  log django.request 10621 135716753348160 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 08:16:11,968 (WARNING) -  log django.request 10621 135717327988288 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 08:16:11,969 (WARNING) -  log django.request 10621 135717319595584 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 08:16:12,037 (WARNING) -  log django.request 10621 135717336380992 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 08:16:12,042 (WARNING) -  log django.request 10621 135716252145216 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 08:16:12,814 (WARNING) -  log django.request 10621 135716770133568 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 08:16:12,840 (WARNING) -  log django.request 10621 135716753348160 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 08:16:12,845 (WARNING) -  log django.request 10621 135716770133568 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 08:16:12,876 (WARNING) -  log django.request 10621 135716778526272 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 08:16:21,819 (WARNING) -  log django.request 10621 135717294417472 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 08:16:21,822 (WARNING) -  log django.request 10621 135717336380992 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 08:16:21,879 (WARNING) -  log django.request 10621 135717327988288 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 08:16:21,887 (WARNING) -  log django.request 10621 135717294417472 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 08:16:22,560 (WARNING) -  log django.request 10621 135716260537920 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 08:16:22,567 (WARNING) -  log django.request 10621 135716778526272 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 08:16:22,602 (WARNING) -  log django.request 10621 135716260537920 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 08:16:22,634 (WARNING) -  log django.request 10621 135716753348160 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 08:16:50,261 (WARNING) -  log django.request 10621 135716252145216 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 08:16:50,275 (WARNING) -  log django.request 10621 135717327988288 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 08:16:50,294 (WARNING) -  log django.request 10621 135717336380992 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 08:16:50,316 (WARNING) -  log django.request 10621 135716252145216 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 08:16:51,059 (WARNING) -  log django.request 10621 135716770133568 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 08:16:51,064 (WARNING) -  log django.request 10621 135716753348160 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 08:16:51,091 (WARNING) -  log django.request 10621 135716778526272 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 08:16:51,092 (WARNING) -  log django.request 10621 135716770133568 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 08:17:09,374 (WARNING) -  log django.request 10621 135717336380992 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 08:17:09,375 (WARNING) -  log django.request 10621 135716260537920 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 08:17:09,379 (WARNING) -  log django.request 10621 135717294417472 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 08:17:09,398 (WARNING) -  log django.request 10621 135716778526272 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 08:17:16,732 (WARNING) -  log django.request 10621 135716260537920 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 08:17:16,736 (WARNING) -  log django.request 10621 135716778526272 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 08:17:16,761 (WARNING) -  log django.request 10621 135716787967552 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 08:17:16,766 (WARNING) -  log django.request 10621 135716753348160 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 08:17:23,593 (WARNING) -  log django.request 10621 135716787967552 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 08:17:23,594 (WARNING) -  log django.request 10621 135716770133568 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 08:17:23,617 (WARNING) -  log django.request 10621 135716260537920 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 08:17:23,619 (WARNING) -  log django.request 10621 135716778526272 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 20:09:31,402 (WARNING) -  log django.request 8916 138255178655296 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 20:09:31,424 (WARNING) -  log django.request 8916 138255170262592 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 20:09:31,464 (WARNING) -  log django.request 8916 138255144035904 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 20:09:31,475 (WARNING) -  log django.request 8916 138255178655296 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 20:09:44,163 (WARNING) -  log django.request 8916 138255187048000 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 20:09:44,164 (WARNING) -  log django.request 8916 138255178655296 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 20:09:44,190 (WARNING) -  log django.request 8916 138255187048000 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 20:09:44,193 (WARNING) -  log django.request 8916 138255178655296 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 20:12:59,089 (WARNING) -  log django.request 8916 138254795929152 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 20:12:59,089 (WARNING) -  log django.request 8916 138254770751040 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 20:12:59,112 (WARNING) -  log django.request 8916 138254779143744 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 20:12:59,115 (WARNING) -  log django.request 8916 138254795929152 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 20:12:59,607 (WARNING) -  log django.request 8916 138255144035904 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 20:12:59,608 (WARNING) -  log django.request 8916 138255187048000 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 20:12:59,623 (WARNING) -  log django.request 8916 138255170262592 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 20:12:59,629 (WARNING) -  log django.request 8916 138255144035904 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 20:13:07,758 (WARNING) -  log django.request 8916 138255170262592 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 20:13:07,759 (WARNING) -  log django.request 8916 138255178655296 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 20:13:07,774 (WARNING) -  log django.request 8916 138255187048000 Unauthorized: /api/v1/campaign/featured/
+2024-03-22 20:13:07,781 (WARNING) -  log django.request 8916 138255170262592 Unauthorized: /api/v1/campaign/trending/
+2024-03-22 21:32:11,973 (WARNING) -  log django.request 13905 133867748980288 Unauthorized: /api/v1/campaign/
+2024-03-22 21:32:57,216 (WARNING) -  log django.request 14071 126613975987776 Unauthorized: /api/v1/campaign/6d44e335-97ec-4f1d-9115-6c9cdedd64e3/approve/
+2024-03-22 21:35:27,434 (WARNING) -  log django.request 14071 126613975987776 Unauthorized: /api/v1/campaign/6d44e335-97ec-4f1d-9115-6c9cdedd64e3/approve/
+2024-03-22 23:16:26,575 (WARNING) -  log django.request 14071 126613872174656 Unauthorized: /api/v1/auth/login/
+2024-03-22 23:16:35,151 (WARNING) -  log django.request 14071 126613872174656 Unauthorized: /api/v1/auth/login/
+2024-03-22 23:16:52,389 (WARNING) -  log django.request 14071 126613872174656 Unauthorized: /api/v1/auth/login/
+2024-03-22 23:16:58,836 (WARNING) -  log django.request 14071 126613872174656 Unauthorized: /api/v1/auth/login/
+2024-03-22 23:17:02,198 (WARNING) -  log django.request 14071 126613872174656 Unauthorized: /api/v1/auth/login/
+2024-03-22 23:41:40,723 (WARNING) -  log django.request 28444 139868442195520 Not Found: /api/v1/auth/forgotpassword/
+2024-03-22 23:42:11,310 (ERROR) -  middleware core.middleware 28444 139868442195520 An exception occurred: reset_password.html, Request_ID: 8219716f-dfff-4038-b698-4179cba3023f
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/customauth/views.py", line 276, in post
+    send_email(subject=subject, recipient_list=recipient_list, context=context, template=template)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/emailer/email_backend.py", line 31, in send_email
+    html_content = render_to_string(template, context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: reset_password.html
+2024-03-22 23:42:11,316 (ERROR) -  log django.request 28444 139868442195520 Internal Server Error: /api/v1/auth/forgotpassword/
+2024-03-22 23:44:46,114 (ERROR) -  middleware core.middleware 29088 125294373500480 An exception occurred: reset_password.html, Request_ID: 5863dbb2-ef8d-4fd0-9646-43dbfcb81866
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/customauth/views.py", line 277, in post
+    send_email(subject=subject, recipient_list=recipient_list, context=context, template=template)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/emailer/email_backend.py", line 31, in send_email
+    html_content = render_to_string(template, context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: reset_password.html
+2024-03-22 23:44:46,117 (ERROR) -  log django.request 29088 125294373500480 Internal Server Error: /api/v1/auth/forgotpassword/
+2024-03-22 23:45:18,794 (ERROR) -  middleware core.middleware 29191 130139095561792 An exception occurred: reset_password.html, Request_ID: afba2275-0b6b-4a7e-910d-626fd1d5ec3c
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/customauth/views.py", line 277, in post
+    send_email(subject=subject, recipient_list=recipient_list, context=context, template=template)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/emailer/email_backend.py", line 31, in send_email
+    html_content = render_to_string(template, context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: reset_password.html
+2024-03-22 23:45:18,796 (ERROR) -  log django.request 29191 130139095561792 Internal Server Error: /api/v1/auth/forgotpassword/
+2024-03-22 23:46:59,328 (ERROR) -  middleware core.middleware 29191 130139095561792 An exception occurred: reset_password.html, Request_ID: d22bf11a-4803-474e-9192-5d5f86c5dff5
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/customauth/views.py", line 277, in post
+    send_email(subject=subject, recipient_list=recipient_list, context=context, template=template)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/emailer/email_backend.py", line 31, in send_email
+    html_content = render_to_string(template, context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: reset_password.html
+2024-03-22 23:46:59,329 (ERROR) -  log django.request 29191 130139095561792 Internal Server Error: /api/v1/auth/forgotpassword/
+
+
+
+kk
+2024-03-23 10:54:11,894 (WARNING) -  log django.request 33301 135778636117568 Unauthorized: /api/v1/campaign/trending/
+2024-03-23 10:54:11,896 (WARNING) -  log django.request 33301 135778652902976 Unauthorized: /api/v1/campaign_category/list/
+2024-03-23 10:54:11,904 (WARNING) -  log django.request 33301 135778202019392 Unauthorized: /api/v1/campaign/featured/
+2024-03-23 10:54:11,930 (WARNING) -  log django.request 33301 135778636117568 Unauthorized: /api/v1/campaign/featured/
+2024-03-23 10:54:11,940 (WARNING) -  log django.request 33301 135778669688384 Unauthorized: /api/v1/campaign/trending/
+2024-03-23 10:54:11,962 (WARNING) -  log django.request 33301 135778661295680 Unauthorized: /api/v1/campaign_category/list/
