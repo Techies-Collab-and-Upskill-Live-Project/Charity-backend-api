@@ -204,7 +204,7 @@ class CampaignView(GenericViewSet):
                      now = timezone.now()
              
                      # Define a recent timeframe, e.g., campaigns that received donations in the last 7 days
-                     recent_days = 7
+                     recent_days = 30
                      recent_threshold = now - timedelta(days=recent_days)
                      print("recent_threshold: ", recent_threshold)
              

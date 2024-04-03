@@ -5,11 +5,26 @@ from rest_framework.response import Response
 from rest_framework import status
 from .models import CampaignCategory
 from drf_spectacular.utils import extend_schema
-import uuid
+from core.permissions import IsAdminUser
+from rest_framework.permissions import IsAuthenticated
 
 
 class CampaignCategoryView(GenericViewSet):
         serializer_class = CampaignCategorySerializer
+
+        def get_permissions(self):
+            """
+            Instantiates and returns the list of permissions that this view requires.
+            """
+            # For example, if you want the 'destroy_all' method to require the user to be an admin
+            if self.action in ['destroy_all', 'approve']:
+                permission_classes = [IsAdminUser]
+            elif self.action in ['create', 'update', 'destroy']:
+                permission_classes = [IsAuthenticated]
+            else:
+                permission_classes = []
+                
+            return [permission() for permission in permission_classes]
 
         @response_schemas(
             response_model=CampaignCategorySerializer, code=201, schema_response_codes=[400]

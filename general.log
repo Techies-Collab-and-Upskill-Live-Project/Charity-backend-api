@@ -11666,3 +11666,328 @@ kk
 2024-03-23 10:54:11,962 (WARNING) -  log django.request 33301 135778661295680 Unauthorized: /api/v1/campaign_category/list/
 2024-03-23 14:56:05,773 (WARNING) -  log django.request 13770 128505220167232 Bad Request: /api/v1/auth/register/
 2024-03-23 14:56:37,580 (WARNING) -  log django.request 13979 125283170514496 Bad Request: /api/v1/auth/register/
+2024-04-01 18:50:06,970 (WARNING) -  log django.request 43854 134858526422592 Unauthorized: /api/v1/donations/create/
+2024-04-01 18:50:42,816 (WARNING) -  log django.request 43854 134858526422592 Bad Request: /api/v1/donations/create/
+2024-04-01 18:51:18,552 (WARNING) -  log django.request 43854 134858526422592 Bad Request: /api/v1/donations/create/
+2024-04-01 18:52:23,191 (WARNING) -  log django.request 43854 134858526422592 Bad Request: /api/v1/donations/create/
+2024-04-01 18:53:03,367 (WARNING) -  log django.request 43854 134858526422592 Forbidden: /api/v1/campaign/cbbabe49-969d-4b3a-a95b-9e7438999171/approve/
+2024-04-01 18:53:27,057 (ERROR) -  middleware core.middleware 43854 134858273711680 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist, Request_ID: efcc27da-6f16-4ec4-92af-975656ae5c4e
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
+2024-04-01 18:53:27,059 (ERROR) -  log django.request 43854 134858273711680 Internal Server Error: /favicon.ico
+2024-04-01 18:53:32,954 (ERROR) -  middleware core.middleware 43854 134858265318976 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist, Request_ID: acdfb3a9-1a62-4d7e-a75e-a7ef2983122f
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
+2024-04-01 18:53:32,956 (ERROR) -  log django.request 43854 134858265318976 Internal Server Error: /favicon.ico
+2024-04-01 18:54:03,960 (WARNING) -  log django.request 43854 134858526422592 Unauthorized: /api/token/
+2024-04-01 18:54:18,166 (ERROR) -  middleware core.middleware 43854 134858265318976 An exception occurred: Unknown field(s) (date_joined) specified for CustomUser. Check fields/fieldsets/exclude attributes of class CustomUserAdmin., Request_ID: eed9a51c-39ce-467d-9a1c-ace9a24674fe
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 836, in get_form
+    return modelform_factory(self.model, **defaults)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/forms/models.py", line 652, in modelform_factory
+    return type(form)(class_name, (form,), form_class_attrs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/forms/models.py", line 332, in __new__
+    raise FieldError(message)
+django.core.exceptions.FieldError: Unknown field(s) (date_joined) specified for CustomUser
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 715, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 240, in inner
+    return view(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1947, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1803, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1838, in _changeform_view
+    ModelForm = self.get_form(
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/auth/admin.py", line 98, in get_form
+    return super().get_form(request, obj, **defaults)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 838, in get_form
+    raise FieldError(
+django.core.exceptions.FieldError: Unknown field(s) (date_joined) specified for CustomUser. Check fields/fieldsets/exclude attributes of class CustomUserAdmin.
+2024-04-01 18:54:18,175 (ERROR) -  log django.request 43854 134858265318976 Internal Server Error: /admin/customauth/customuser/2/change/
+2024-04-01 18:54:18,289 (ERROR) -  middleware core.middleware 43854 134858265318976 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist, Request_ID: b155c9dd-ce24-4360-8a1e-b0d6be562997
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/favicon.ico” does not exist
+2024-04-01 18:54:18,291 (ERROR) -  log django.request 43854 134858265318976 Internal Server Error: /favicon.ico
+2024-04-01 18:56:08,427 (ERROR) -  middleware core.middleware 43854 134858265318976 An exception occurred: Unknown field(s) (date_joined) specified for CustomUser. Check fields/fieldsets/exclude attributes of class CustomUserAdmin., Request_ID: 60dcf510-c6c9-409f-ba7a-911d7b15a6cf
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 836, in get_form
+    return modelform_factory(self.model, **defaults)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/forms/models.py", line 652, in modelform_factory
+    return type(form)(class_name, (form,), form_class_attrs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/forms/models.py", line 332, in __new__
+    raise FieldError(message)
+django.core.exceptions.FieldError: Unknown field(s) (date_joined) specified for CustomUser
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 715, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 240, in inner
+    return view(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1947, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1803, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1838, in _changeform_view
+    ModelForm = self.get_form(
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/auth/admin.py", line 98, in get_form
+    return super().get_form(request, obj, **defaults)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 838, in get_form
+    raise FieldError(
+django.core.exceptions.FieldError: Unknown field(s) (date_joined) specified for CustomUser. Check fields/fieldsets/exclude attributes of class CustomUserAdmin.
+2024-04-01 18:56:08,429 (ERROR) -  log django.request 43854 134858265318976 Internal Server Error: /admin/customauth/customuser/2/change/
+2024-04-01 18:56:09,667 (ERROR) -  middleware core.middleware 43854 134858265318976 An exception occurred: Unknown field(s) (date_joined) specified for CustomUser. Check fields/fieldsets/exclude attributes of class CustomUserAdmin., Request_ID: 2d47079a-8ccf-422e-82ed-45a09c5b58ef
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 836, in get_form
+    return modelform_factory(self.model, **defaults)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/forms/models.py", line 652, in modelform_factory
+    return type(form)(class_name, (form,), form_class_attrs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/forms/models.py", line 332, in __new__
+    raise FieldError(message)
+django.core.exceptions.FieldError: Unknown field(s) (date_joined) specified for CustomUser
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 715, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 240, in inner
+    return view(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1947, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1803, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1838, in _changeform_view
+    ModelForm = self.get_form(
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/auth/admin.py", line 98, in get_form
+    return super().get_form(request, obj, **defaults)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 838, in get_form
+    raise FieldError(
+django.core.exceptions.FieldError: Unknown field(s) (date_joined) specified for CustomUser. Check fields/fieldsets/exclude attributes of class CustomUserAdmin.
+2024-04-01 18:56:09,669 (ERROR) -  log django.request 43854 134858265318976 Internal Server Error: /admin/customauth/customuser/2/change/
+2024-04-01 18:56:13,087 (ERROR) -  middleware core.middleware 43854 134858265318976 An exception occurred: Unknown field(s) (date_joined) specified for CustomUser. Check fields/fieldsets/exclude attributes of class CustomUserAdmin., Request_ID: d2fd39d6-ca41-43ee-a808-11e7de56d102
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 836, in get_form
+    return modelform_factory(self.model, **defaults)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/forms/models.py", line 652, in modelform_factory
+    return type(form)(class_name, (form,), form_class_attrs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/forms/models.py", line 332, in __new__
+    raise FieldError(message)
+django.core.exceptions.FieldError: Unknown field(s) (date_joined) specified for CustomUser
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 715, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 240, in inner
+    return view(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1947, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1803, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1838, in _changeform_view
+    ModelForm = self.get_form(
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/auth/admin.py", line 98, in get_form
+    return super().get_form(request, obj, **defaults)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 838, in get_form
+    raise FieldError(
+django.core.exceptions.FieldError: Unknown field(s) (date_joined) specified for CustomUser. Check fields/fieldsets/exclude attributes of class CustomUserAdmin.
+2024-04-01 18:56:13,088 (ERROR) -  log django.request 43854 134858265318976 Internal Server Error: /admin/customauth/customuser/2/change/
+
+fih
+
+
+2024-04-01 18:56:49,663 (ERROR) -  middleware core.middleware 43854 134858265318976 An exception occurred: Unknown field(s) (date_joined) specified for CustomUser. Check fields/fieldsets/exclude attributes of class CustomUserAdmin., Request_ID: c2a0720f-8bfc-4441-afdc-2fb844a998ed
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 836, in get_form
+    return modelform_factory(self.model, **defaults)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/forms/models.py", line 652, in modelform_factory
+    return type(form)(class_name, (form,), form_class_attrs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/forms/models.py", line 332, in __new__
+    raise FieldError(message)
+django.core.exceptions.FieldError: Unknown field(s) (date_joined) specified for CustomUser
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 715, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 240, in inner
+    return view(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1947, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1803, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1838, in _changeform_view
+    ModelForm = self.get_form(
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/auth/admin.py", line 98, in get_form
+    return super().get_form(request, obj, **defaults)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 838, in get_form
+    raise FieldError(
+django.core.exceptions.FieldError: Unknown field(s) (date_joined) specified for CustomUser. Check fields/fieldsets/exclude attributes of class CustomUserAdmin.
+2024-04-01 18:56:49,664 (ERROR) -  log django.request 43854 134858265318976 Internal Server Error: /admin/customauth/customuser/2/change/
+2024-04-01 19:03:49,304 (WARNING) -  log django.request 45351 131294331663936 Unauthorized: /api/v1/campaign/trending/
+2024-04-01 19:03:49,320 (WARNING) -  log django.request 45351 131294323271232 Unauthorized: /api/v1/campaign/featured/
+2024-04-01 19:03:49,322 (WARNING) -  log django.request 45351 131294314878528 Unauthorized: /api/v1/campaign_category/list/
+2024-04-01 19:03:49,364 (WARNING) -  log django.request 45351 131294748997184 Unauthorized: /api/v1/campaign/trending/
+2024-04-01 19:03:49,367 (WARNING) -  log django.request 45351 131295014278720 Unauthorized: /api/v1/campaign_category/list/
+2024-04-01 19:03:49,367 (WARNING) -  log django.request 45351 131294767855168 Unauthorized: /api/v1/campaign/featured/
+2024-04-01 19:04:35,217 (WARNING) -  log django.request 45351 131295014278720 Unauthorized: /api/v1/campaign/trending/
+2024-04-01 19:04:35,220 (WARNING) -  log django.request 45351 131294767855168 Unauthorized: /api/v1/campaign_category/list/
+2024-04-01 19:04:35,223 (WARNING) -  log django.request 45351 131294748997184 Unauthorized: /api/v1/campaign/featured/
+2024-04-01 19:04:35,242 (WARNING) -  log django.request 45351 131294323271232 Unauthorized: /api/v1/campaign/trending/
+2024-04-01 19:04:35,261 (WARNING) -  log django.request 45351 131295014278720 Unauthorized: /api/v1/campaign_category/list/
+2024-04-01 19:04:35,270 (WARNING) -  log django.request 45351 131294314878528 Unauthorized: /api/v1/campaign/featured/
+2024-04-01 19:05:47,268 (WARNING) -  log django.request 46267 130541091288640 Unauthorized: /api/v1/campaign_category/list/
+2024-04-01 19:05:47,282 (WARNING) -  log django.request 46267 130541082895936 Unauthorized: /api/v1/campaign/trending/
+2024-04-01 19:05:47,284 (WARNING) -  log django.request 46267 130541074503232 Unauthorized: /api/v1/campaign/featured/
+2024-04-01 19:05:47,325 (WARNING) -  log django.request 46267 130540690728512 Unauthorized: /api/v1/campaign_category/list/
+2024-04-01 19:05:47,332 (WARNING) -  log django.request 46267 130540673943104 Unauthorized: /api/v1/campaign/featured/
+2024-04-01 19:05:47,336 (WARNING) -  log django.request 46267 130540682335808 Unauthorized: /api/v1/campaign/trending/
+2024-04-01 19:06:28,379 (WARNING) -  log django.request 46267 130540682335808 Unauthorized: /api/v1/campaign_category/list/
+2024-04-01 19:06:46,757 (WARNING) -  log django.request 46267 130540673943104 Unauthorized: /api/v1/campaign/trending/
+2024-04-01 19:06:46,758 (WARNING) -  log django.request 46267 130540682335808 Unauthorized: /api/v1/campaign_category/list/
+2024-04-01 19:06:46,763 (WARNING) -  log django.request 46267 130540690728512 Unauthorized: /api/v1/campaign/featured/
+2024-04-01 19:06:46,783 (WARNING) -  log django.request 46267 130541074503232 Unauthorized: /api/v1/campaign/trending/
+2024-04-01 19:06:46,804 (WARNING) -  log django.request 46267 130541091288640 Unauthorized: /api/v1/campaign_category/list/
+2024-04-01 19:06:46,807 (WARNING) -  log django.request 46267 130541082895936 Unauthorized: /api/v1/campaign/featured/
+2024-04-01 19:06:59,436 (WARNING) -  log django.request 46267 130540690728512 Unauthorized: /api/v1/campaign/featured/
+2024-04-01 19:06:59,445 (WARNING) -  log django.request 46267 130540673943104 Unauthorized: /api/v1/campaign/trending/
+2024-04-01 19:06:59,449 (WARNING) -  log django.request 46267 130540682335808 Unauthorized: /api/v1/campaign_category/list/
+2024-04-01 19:06:59,509 (WARNING) -  log django.request 46267 130540682335808 Unauthorized: /api/v1/campaign_category/list/
+2024-04-01 19:06:59,513 (WARNING) -  log django.request 46267 130541074503232 Unauthorized: /api/v1/campaign/featured/
+2024-04-01 19:06:59,517 (WARNING) -  log django.request 46267 130541082895936 Unauthorized: /api/v1/campaign/trending/
+2024-04-01 19:07:33,558 (WARNING) -  log django.request 46267 130541082895936 Unauthorized: /api/v1/campaign_category/list/
+2024-04-01 19:12:31,881 (WARNING) -  log django.request 47145 137272013866560 Unauthorized: /api/v1/campaign/featured/
+2024-04-01 19:12:31,885 (WARNING) -  log django.request 47145 137272023307840 Unauthorized: /api/v1/campaign/trending/
+2024-04-01 19:12:31,894 (WARNING) -  log django.request 47145 137272032749120 Unauthorized: /api/v1/campaign_category/list/
+2024-04-01 19:12:31,914 (WARNING) -  log django.request 47145 137271760111168 Unauthorized: /api/v1/campaign/trending/
+2024-04-01 19:12:31,916 (WARNING) -  log django.request 47145 137272023307840 Unauthorized: /api/v1/campaign_category/list/
+2024-04-01 19:12:31,958 (WARNING) -  log django.request 47145 137271734933056 Unauthorized: /api/v1/campaign/featured/
+2024-04-01 19:14:22,390 (WARNING) -  log django.request 47145 137272023307840 Unauthorized: /api/v1/campaign/trending/
+2024-04-01 19:14:29,424 (WARNING) -  log django.request 47145 137271760111168 Unauthorized: /api/v1/campaign/featured/
+2024-04-01 19:14:29,426 (WARNING) -  log django.request 47145 137271734933056 Unauthorized: /api/v1/campaign/trending/
+2024-04-01 19:14:29,429 (WARNING) -  log django.request 47145 137272023307840 Unauthorized: /api/v1/campaign_category/list/
+2024-04-01 19:14:29,450 (WARNING) -  log django.request 47145 137272013866560 Unauthorized: /api/v1/campaign/featured/
+2024-04-01 19:14:29,472 (WARNING) -  log django.request 47145 137271760111168 Unauthorized: /api/v1/campaign/trending/
+2024-04-01 19:14:29,475 (WARNING) -  log django.request 47145 137272032749120 Unauthorized: /api/v1/campaign_category/list/
+2024-04-01 19:15:08,366 (WARNING) -  log django.request 47145 137271760111168 Unauthorized: /api/v1/campaign/trending/
+2024-04-01 19:15:17,144 (WARNING) -  log django.request 47145 137272032749120 Unauthorized: /api/v1/campaign/trending/
+2024-04-01 19:15:17,154 (WARNING) -  log django.request 47145 137272013866560 Unauthorized: /api/v1/campaign/featured/
+2024-04-01 19:15:17,155 (WARNING) -  log django.request 47145 137271760111168 Unauthorized: /api/v1/campaign_category/list/
+2024-04-01 19:15:17,200 (WARNING) -  log django.request 47145 137272013866560 Unauthorized: /api/v1/campaign_category/list/
+2024-04-01 19:15:17,204 (WARNING) -  log django.request 47145 137272032749120 Unauthorized: /api/v1/campaign/trending/
+2024-04-01 19:15:17,222 (WARNING) -  log django.request 47145 137272023307840 Unauthorized: /api/v1/campaign/featured/
+2024-04-01 19:15:32,576 (WARNING) -  log django.request 47145 137272032749120 Unauthorized: /api/v1/campaign/featured/
+2024-04-01 19:15:38,912 (WARNING) -  log django.request 47145 137272032749120 Unauthorized: /api/v1/campaign_category/list/
+2024-04-01 19:15:38,940 (WARNING) -  log django.request 47145 137272023307840 Unauthorized: /api/v1/campaign/featured/
+2024-04-01 19:15:38,945 (WARNING) -  log django.request 47145 137272013866560 Unauthorized: /api/v1/campaign/trending/
+2024-04-01 19:15:38,967 (WARNING) -  log django.request 47145 137272032749120 Unauthorized: /api/v1/campaign_category/list/
+2024-04-01 19:15:38,990 (WARNING) -  log django.request 47145 137272013866560 Unauthorized: /api/v1/campaign/trending/
+2024-04-01 19:15:39,001 (WARNING) -  log django.request 47145 137272023307840 Unauthorized: /api/v1/campaign/featured/
+2024-04-01 19:18:48,369 (WARNING) -  log django.request 47145 137272032749120 Unauthorized: /api/v1/campaign_category/list/
+2024-04-01 19:18:48,374 (WARNING) -  log django.request 47145 137272013866560 Unauthorized: /api/v1/campaign/trending/
+2024-04-01 19:18:48,376 (WARNING) -  log django.request 47145 137271760111168 Unauthorized: /api/v1/campaign/featured/
+2024-04-01 19:18:48,429 (WARNING) -  log django.request 47145 137272023307840 Unauthorized: /api/v1/campaign_category/list/
+2024-04-01 19:18:48,461 (WARNING) -  log django.request 47145 137271734933056 Unauthorized: /api/v1/campaign/featured/
+2024-04-01 19:18:48,463 (WARNING) -  log django.request 47145 137272032749120 Unauthorized: /api/v1/campaign/trending/
+2024-04-02 22:58:31,537 (WARNING) -  log django.request 47145 137271776896576 Unauthorized: /api/v1/auth/login/
+2024-04-02 22:58:45,167 (WARNING) -  log django.request 47145 137271776896576 Unauthorized: /api/v1/auth/login/
+2024-04-02 22:59:22,865 (WARNING) -  log django.request 47145 137271776896576 Unauthorized: /api/v1/auth/login/
+2024-04-02 23:01:08,002 (WARNING) -  log django.request 47145 137271776896576 Unauthorized: /api/v1/auth/login/
+2024-04-02 23:01:21,099 (WARNING) -  log django.request 47145 137271776896576 Unauthorized: /api/v1/auth/login/
+2024-04-02 23:02:04,594 (WARNING) -  log django.request 47145 137271776896576 Unauthorized: /api/v1/auth/login/
+2024-04-02 23:02:38,947 (WARNING) -  log django.request 47145 137271776896576 Unauthorized: /api/v1/auth/login/
+2024-04-02 23:03:41,487 (WARNING) -  log django.request 47145 137271776896576 Unauthorized: /api/v1/auth/login/
+2024-04-02 23:03:58,232 (WARNING) -  log django.request 47145 137271776896576 Unauthorized: /api/v1/auth/login/
+2024-04-02 23:04:33,717 (WARNING) -  log django.request 47145 137271776896576 Unauthorized: /api/v1/auth/login/
+2024-04-02 23:05:24,526 (WARNING) -  log django.request 47145 137271776896576 Unauthorized: /api/v1/auth/login/
