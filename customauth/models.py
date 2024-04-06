@@ -30,8 +30,24 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     date_joined = models.DateTimeField(default=timezone.now)
     objects = CustomUserManager()
 
+    # Add the new field for registration method
+    REGISTRATION_CHOICES = [
+        ('email', 'Email'),
+        ('google', 'Google'),
+    ]
+    registration_method = models.CharField(
+        max_length=10,
+        choices=REGISTRATION_CHOICES,
+        default='email'
+    )
+
+    # Your existing USERNAME_FIELD, REQUIRED_FIELDS, and objects
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
+    objects = CustomUserManager()
+
+    def __str__(self):
+        return self.email 
 
 
 class UserProfile(models.Model):

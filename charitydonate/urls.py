@@ -53,6 +53,7 @@ urlpatterns = [
                 path("campaign/", include("campaign.urls")),
                 path("contactus/", include("contactus.urls")),
                 path("donations/", include("donations.urls")),
+                path('auth/login/', include('socialauth.urls')),
             ]
         ),
     ),

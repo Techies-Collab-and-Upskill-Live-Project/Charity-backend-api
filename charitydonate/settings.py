@@ -65,6 +65,7 @@ CUSTOM_APPS = [
     'campaign_category',
     'campaign',
     'contactus',
+    'socialauth'
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + CUSTOM_APPS
@@ -196,6 +197,11 @@ TREBLLE_INFO = {
 'api_key': config('TREBLLE_API_KEY'),
 'project_id': config('TREBLLE_PROJECT_ID')
 }
+
+# Google Oauth2 settings
+GOOGLE_OAUTH2_CLIENT_ID = config('GOOGLE_OAUTH2_CLIENT_ID')
+GOOGLE_OAUTH2_CLIENT_SECRET = config('GOOGLE_OAUTH2_CLIENT_SECRET')
+BASE_FRONTEND_URL = config('BASE_FRONTEND_URL')
 
 CORS_ALLOW_CREDENTIALS = True
 

@@ -116,7 +116,7 @@ class CampaignView(GenericViewSet):
 
                         # Create a dictionary including both the serialized data and the count
                         response_data = {
-                                f"campaigns in {campaign_category.name} ": serializer.data,
+                                "campaigns": serializer.data,
                                 "count": count,
                                 "message": f"All campaigns in {campaign_category.name} category retrieved successfully"
                         }
@@ -139,7 +139,11 @@ class CampaignView(GenericViewSet):
 
                         campaign = Campaign.objects.get(id=campaign_id)
                         serializer = CampaignSerializer(campaign)
-                        return Response(serializer.data, status=status.HTTP_200_OK)
+                        response_data = {
+                                "campaign": serializer.data,
+                                "message": "Campaign retrieved successfully"
+                        }
+                        return Response(response_data, status=status.HTTP_200_OK)
                 except Campaign.DoesNotExist:
                         return Response({"message": "Campaign does not exist"}, status=status.HTTP_404_NOT_FOUND)
 

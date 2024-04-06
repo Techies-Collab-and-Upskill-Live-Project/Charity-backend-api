@@ -11991,3 +11991,5 @@ django.core.exceptions.FieldError: Unknown field(s) (date_joined) specified for 
 2024-04-02 23:03:58,232 (WARNING) -  log django.request 47145 137271776896576 Unauthorized: /api/v1/auth/login/
 2024-04-02 23:04:33,717 (WARNING) -  log django.request 47145 137271776896576 Unauthorized: /api/v1/auth/login/
 2024-04-02 23:05:24,526 (WARNING) -  log django.request 47145 137271776896576 Unauthorized: /api/v1/auth/login/
+2024-04-04 23:44:10,690 (WARNING) -  log django.request 14597 134297587545664 Not Found: /api/v1/campaign/99765b7e-4e29-4d0d-b232-c6a56997e9e3/
+2024-04-06 14:06:59,355 (WARNING) -  log django.request 33434 129601259959872 Unauthorized: /api/v1/donations/create/
