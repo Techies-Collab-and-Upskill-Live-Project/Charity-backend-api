@@ -11993,3 +11993,16 @@ django.core.exceptions.FieldError: Unknown field(s) (date_joined) specified for 
 2024-04-02 23:05:24,526 (WARNING) -  log django.request 47145 137271776896576 Unauthorized: /api/v1/auth/login/
 2024-04-04 23:44:10,690 (WARNING) -  log django.request 14597 134297587545664 Not Found: /api/v1/campaign/99765b7e-4e29-4d0d-b232-c6a56997e9e3/
 2024-04-06 14:06:59,355 (WARNING) -  log django.request 33434 129601259959872 Unauthorized: /api/v1/donations/create/
+2024-04-06 19:04:22,369 (WARNING) -  log django.security.csrf 7255 132325582038592 Forbidden (CSRF cookie not set.): /api/v1/campaign/1fb0af6b-b8ee-4a51-b478-977e8a98e52b/report/
+2024-04-06 19:04:22,386 (WARNING) -  log django.security.csrf 7255 132325593577024 Forbidden (CSRF cookie not set.): /api/v1/campaign/1fb0af6b-b8ee-4a51-b478-977e8a98e52b/report/
+2024-04-06 19:05:35,089 (WARNING) -  log django.security.csrf 7255 132325593577024 Forbidden (CSRF cookie not set.): /api/v1/campaign/1fb0af6b-b8ee-4a51-b478-977e8a98e52b/report/
+2024-04-06 19:05:35,106 (WARNING) -  log django.security.csrf 7255 132325014742592 Forbidden (CSRF cookie not set.): /api/v1/campaign/1fb0af6b-b8ee-4a51-b478-977e8a98e52b/report/
+2024-04-06 19:05:35,252 (WARNING) -  log django.security.csrf 7255 132325593577024 Forbidden (CSRF cookie not set.): /api/v1/campaign/1fb0af6b-b8ee-4a51-b478-977e8a98e52b/report/
+2024-04-07 20:46:03,298 (ERROR) -  middleware core.middleware 6224 130836999411264 An exception occurred: “/home/samuel/Documents/freelance/Charity-backend-api/admin” does not exist, Request_ID: cb9494ea-c060-43dc-9e7f-92c87a119d8d
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/admin” does not exist
+2024-04-07 20:46:03,313 (ERROR) -  log django.request 6224 130836999411264 Internal Server Error: /admin
