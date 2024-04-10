@@ -6,15 +6,12 @@ class DonationsSerializer(serializers.ModelSerializer):
     donor_name = serializers.CharField(source='donor_id.name', read_only=True)
     class Meta:
         model = Donation
-        fields = '__all__'
+        fields = ['campaign', 'amount', 'id', 'campaign_title', 'donor_name']
         read_only_fields = ['id']
-
-#     # call save in model
-#     def save(self, **kwargs):    
-#         super().save(**kwargs)
-#         self.instance.save()
 
     def validate(self, attrs):
         donation = Donation(**attrs)
         donation.clean()  # Use the model's clean method to apply custom validation
         return attrs
+
+   

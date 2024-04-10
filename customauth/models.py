@@ -56,7 +56,7 @@ class UserProfile(models.Model):
     last_name = models.CharField(max_length=100, null=True, blank=True)
     name = models.CharField(max_length=255)
     about = models.TextField()
-    profile_photo = models.ImageField(upload_to='profile_photos/')
+    profile_photo = models.URLField(blank=True)
     short_description = models.CharField(max_length=255)
     instagram_link = models.URLField(blank=True)
     facebook_link = models.URLField(blank=True)

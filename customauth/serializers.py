@@ -1,10 +1,16 @@
 from django.contrib.auth import password_validation
 from .models import UserProfile
+from django.db.models import Sum
+
 from django.contrib.auth import get_user_model
 from rest_framework import serializers
 from django.contrib.auth.password_validation import validate_password
 from rest_framework.exceptions import ValidationError
 from rest_framework_simplejwt.tokens import RefreshToken
+from donations.models import Donation
+from donations.serializers import DonationsSerializer
+from campaign.models import Campaign
+from campaign.serializers import CampaignSerializer
 
 class UserRegisterSerializer(serializers.ModelSerializer):
     first_name = serializers.CharField(max_length=50, required=True)
@@ -52,10 +58,32 @@ class UserLoginSerializer(serializers.Serializer):
     password = serializers.CharField()
 
 class UserProfileSerializer(serializers.ModelSerializer):
+    donations = serializers.SerializerMethodField()
+    total_donations = serializers.SerializerMethodField(read_only=True)
+    campaigns = serializers.SerializerMethodField()
+    total_campaigns = serializers.SerializerMethodField(read_only=True)
+
     class Meta:
         model = UserProfile
-        fields = ('first_name', 'last_name', 'name', 'about', 'profile_photo', 'short_description', 'instagram_link', 'facebook_link', 'twitter_link')
-
+        fields = ('first_name', 'last_name', 'name', 'about', 'profile_photo', 'short_description', 'instagram_link', 'facebook_link', 'twitter_link', 'donations', 'total_donations', 'campaigns', 'total_campaigns')
+    
+     # Get all donations by id
+    def get_donations(self, obj):
+        # Fetch donations by the user profile, assuming a ForeignKey from Donation to UserProfile
+        donations = Donation.objects.filter(donor_id=obj)
+        return DonationsSerializer(donations, many=True).data
+    
+    def get_total_donations(self, obj):
+        total = Donation.objects.filter(donor_id=obj.id).aggregate(total=Sum('amount'))['total']
+        return total if total is not None else 0
+    
+    def get_campaigns(self, obj):
+        campaigns = Campaign.objects.filter(user_profile=obj)
+        return CampaignSerializer(campaigns, many=True).data
+    
+    def get_total_campaigns(self, obj):
+        total = Campaign.objects.filter(user_profile=obj.id).count()
+        return total if total is not None else 0
 
 class UserProfileUpdateSerializer(serializers.ModelSerializer):
     current_password = serializers.CharField(write_only=True, required=False)

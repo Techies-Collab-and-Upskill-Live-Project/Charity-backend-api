@@ -12006,3 +12006,281 @@ Traceback (most recent call last):
     raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
 django.http.response.Http404: “/home/samuel/Documents/freelance/Charity-backend-api/admin” does not exist
 2024-04-07 20:46:03,313 (ERROR) -  log django.request 6224 130836999411264 Internal Server Error: /admin
+2024-04-09 22:59:07,966 (WARNING) -  log django.request 6224 130837425153600 Unauthorized: /api/v1/auth/profile/get/
+2024-04-09 23:25:25,942 (ERROR) -  middleware core.middleware 133951 126280541951552 An exception occurred: Cannot resolve keyword 'user_profile' into field. Choices are: amount, campaign, campaign_id, date_created, date_updated, donor_id, donor_id_id, id, Request_ID: 7440dbbd-ebd1-45f3-a415-aeab504ddc4f
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/customauth/views.py", line 152, in get
+    return Response(serializer.data)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 1838, in to_representation
+    return method(value)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/customauth/serializers.py", line 65, in get_donations
+    donations = Donation.objects.filter(user_profile=obj)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1613, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1645, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1495, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1307, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1772, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'user_profile' into field. Choices are: amount, campaign, campaign_id, date_created, date_updated, donor_id, donor_id_id, id
+2024-04-09 23:25:25,950 (ERROR) -  log django.request 133951 126280541951552 Internal Server Error: /api/v1/auth/profile/get/
+2024-04-09 23:55:36,944 (ERROR) -  middleware core.middleware 136969 129329827653184 An exception occurred: Field name `created_at` is not valid for model `Donation`., Request_ID: 797ef5a2-b5b2-40eb-9fc8-01a9dbee726b
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/customauth/views.py", line 152, in get
+    return Response(serializer.data)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 1838, in to_representation
+    return method(value)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/customauth/serializers.py", line 66, in get_donations
+    return DonationsSerializer(donations, many=True).data
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `created_at` is not valid for model `Donation`.
+2024-04-09 23:55:36,947 (ERROR) -  log django.request 136969 129329827653184 Internal Server Error: /api/v1/auth/profile/get/
+2024-04-09 23:56:42,023 (ERROR) -  middleware core.middleware 137157 123993072166464 An exception occurred: name 'models' is not defined, Request_ID: 260165d1-d8d7-4025-902d-d1a4380c9990
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/customauth/views.py", line 152, in get
+    return Response(serializer.data)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 1838, in to_representation
+    return method(value)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/customauth/serializers.py", line 66, in get_donations
+    return DonationsSerializer(donations, many=True).data
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 1838, in to_representation
+    return method(value)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/donations/serializers.py", line 19, in get_total_donations
+    total = Donation.objects.filter(donor_id=obj.donor_id).aggregate(total=models.Sum('amount'))['total']
+NameError: name 'models' is not defined
+2024-04-09 23:56:42,026 (ERROR) -  log django.request 137157 123993072166464 Internal Server Error: /api/v1/auth/profile/get/
+2024-04-10 00:04:15,490 (ERROR) -  middleware core.middleware 138522 132220903749184 An exception occurred: 'UserProfile' object has no attribute 'donor_id', Request_ID: 5dff47e9-4424-43f8-87b4-814749cb12b3
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/customauth/views.py", line 152, in get
+    return Response(serializer.data)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 1838, in to_representation
+    return method(value)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/customauth/serializers.py", line 73, in get_total_donations
+    total = Donation.objects.filter(donor_id=obj.donor_id).aggregate(total=Sum('amount'))['total']
+AttributeError: 'UserProfile' object has no attribute 'donor_id'
+2024-04-10 00:04:15,493 (ERROR) -  log django.request 138522 132220903749184 Internal Server Error: /api/v1/auth/profile/get/
+2024-04-10 07:20:02,330 (WARNING) -  log django.request 142258 135259486328384 Unauthorized: /api/v1/auth/profile/get/
+2024-04-10 07:20:33,380 (ERROR) -  middleware core.middleware 142258 135259486328384 An exception occurred: 'UserProfileSerializer' object has no attribute 'get_campaigns', Request_ID: 3a050cdc-5c23-408a-b093-ae1ab3b99474
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/customauth/views.py", line 152, in get
+    return Response(serializer.data)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 1837, in to_representation
+    method = getattr(self.parent, self.method_name)
+AttributeError: 'UserProfileSerializer' object has no attribute 'get_campaigns'
+2024-04-10 07:20:33,382 (ERROR) -  log django.request 142258 135259486328384 Internal Server Error: /api/v1/auth/profile/get/
+2024-04-10 07:21:29,468 (ERROR) -  middleware core.middleware 142589 133212417193536 An exception occurred: 'UserProfileSerializer' object has no attribute 'get_total_campaigns', Request_ID: 4df7b671-5e6e-4e17-ad6f-a239706954d3
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/customauth/views.py", line 152, in get
+    return Response(serializer.data)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 1837, in to_representation
+    method = getattr(self.parent, self.method_name)
+AttributeError: 'UserProfileSerializer' object has no attribute 'get_total_campaigns'
+2024-04-10 07:21:29,470 (ERROR) -  log django.request 142589 133212417193536 Internal Server Error: /api/v1/auth/profile/get/
+2024-04-10 07:22:32,463 (ERROR) -  middleware core.middleware 142750 129387668940352 An exception occurred: Cannot resolve keyword 'amount' into field. Choices are: account_name, account_number, background_description, bank_name, beneficiary_name, campaign_category, campaign_category_id, currency, date_created, date_updated, description, documents, donations, donor_count, end_date, goal, goals_obj, id, images, is_active, is_approved, is_cancelled, is_completed, is_deleted, is_draft, is_featured, is_rejected, is_successful, raised, title, user_profile, user_profile_id, what_campaign_will_do, Request_ID: c3b8ca8a-051b-4283-b59d-462eb8c4c321
+Traceback (most recent call last):
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/customauth/views.py", line 152, in get
+    return Response(serializer.data)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 1838, in to_representation
+    return method(value)
+  File "/home/samuel/Documents/freelance/Charity-backend-api/customauth/serializers.py", line 85, in get_total_campaigns
+    total = Campaign.objects.filter(user_profile=obj.id).aggregate(total=Sum('amount'))['total']
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/query.py", line 604, in aggregate
+    return self.query.chain().get_aggregation(self.db, kwargs)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 459, in get_aggregation
+    aggregate = aggregate_expr.resolve_expression(
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/aggregates.py", line 65, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/expressions.py", line 975, in resolve_expression
+    c.source_expressions[pos] = arg.resolve_expression(
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/expressions.py", line 854, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 2014, in resolve_ref
+    join_info = self.setup_joins(
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1867, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+  File "/home/samuel/Documents/freelance/CharityDonate/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1772, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'amount' into field. Choices are: account_name, account_number, background_description, bank_name, beneficiary_name, campaign_category, campaign_category_id, currency, date_created, date_updated, description, documents, donations, donor_count, end_date, goal, goals_obj, id, images, is_active, is_approved, is_cancelled, is_completed, is_deleted, is_draft, is_featured, is_rejected, is_successful, raised, title, user_profile, user_profile_id, what_campaign_will_do
+2024-04-10 07:22:32,473 (ERROR) -  log django.request 142750 129387668940352 Internal Server Error: /api/v1/auth/profile/get/
